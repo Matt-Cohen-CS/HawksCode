@@ -1,0 +1,71 @@
+import java.util.ArrayList;
+
+public class AddingItems {
+
+	public static void main(String[] args) {
+		/*
+		Now that we know how to create ArrayLists, we can start working with data.
+		The most basic operation we can do with an ArrayList is adding an item:
+		
+		ArrayList<String> stringArrayList = new ArrayList<String>();
+		stringArrayList.add("Example string");
+		
+		We can also get the size of the ArrayList with the ".size()" method:
+		
+		System.out.println(stringArrayList.size()); // 1
+		
+		For your challenge, we have already imported ArrayList and created an 
+		ArrayList called "myNums":
+		
+		ArrayList<Integer> myNums = new ArrayList<Integer>();
+		
+		Add the numbers: 1, 2, 3, 4 and 5 to the ArrayList in that order. Bonus points
+		if you use a For loop.
+		*/
+		AddingItems addingItems = new AddingItems();
+		ArrayList<Integer> myNums = new ArrayList<Integer>();
+		
+		//INJECT HERE
+		/*
+		for(int i = 1; i <= 5; i++) {
+			myNums.add(i);
+		}
+		*/
+		
+		addingItems.test(myNums);
+	}
+	
+	public void test(ArrayList<Integer> myNums) {
+		int score = 0;
+		String tests = "";
+		if(myNums.get(0) == 1)
+			score++;
+		else
+			tests += "Test 1 Failed: Did not get the expected value from myNums.get(0)\n";
+			
+		if(myNums.get(1) == 2)
+			score++;
+		else
+			tests += "Test 2 Failed: Did not get the expected value from myNums.get(1)\n";
+		
+		if(myNums.get(2) == 3)
+			score++;
+		else
+			tests += "Test 3 Failed: Did not get the expected value from myNums.get(2)\n";
+		
+		if(myNums.get(3) == 4)
+			score++;
+		else
+			tests += "Test 4 Failed: Did not get the expected value from myNums.get(3)\n";
+		
+		if(myNums.get(4) == 5)
+			score++;
+		else
+			tests += "Test 5 Failed: Did not get the expected value from myNums.get(4)\n";
+
+		String result = score == 5 ? "Congratulations!!! You got a perfect score!!! " + score + "/5 Test Cases Passed" : "You have some bugs to fix! " + score + "/5 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+
+}

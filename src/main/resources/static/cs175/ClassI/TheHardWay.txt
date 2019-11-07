@@ -1,0 +1,63 @@
+public class TheHardWay{
+	
+	
+	public static void main (String[] args){
+	//INJECT HERE
+	int score = 0;
+	if(book0Name.equals("The Gallic Wars")){
+	   score++;
+	}else{
+	   System.out.println("Variable book0Name has the wrong value");
+	}
+	
+	if(book0Author.equals("Julius Caesar")){
+	   score++;
+	}else{
+	   System.out.println("Variable book0Author has the wrong value");
+	}
+	
+	if(book0Pages == 901){
+	   score++;
+	}else{
+	   System.out.println("Variable book0Pages has the wrong value");
+	}
+	
+	if(book0Price == 2.99){
+	   score++;
+	}else{
+	   System.out.println("Variable book0Price has the wrong value");
+	}
+	
+	if(book1Name.equals("The Stand")){
+	   score++;
+	}else{
+	   System.out.println("Variable book1Name has the wrong value");
+	}
+	
+	if(book1Author.equals("Stephen King")){
+	   score++;
+	}else{
+	   System.out.println("Variable book1Author has the wrong value");
+	}
+	
+	if(book1Pages == 501){
+	   score++;
+	}else{
+	   System.out.println("Variable book1Pages has the wrong value");
+	}
+	
+	if(book1Price == 14.99){
+	   score++;
+	}else{
+	   System.out.println("Variable book1Price has the wrong value");
+	}
+	
+	if(score == 8)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+		}
+}
+}

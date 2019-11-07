@@ -1,0 +1,12 @@
+public class Constructors {
+//INJECT HERE
+
+	
+	public static void main(String[] args) 
+	{
+		System.out.println("An error indicates a failure\n");
+		Constructors test = new Constructors(5);
+		System.out.println("\nCongratulations!!! You passed the challenge!!!"); //implement ConstructorSift.
+	}
+
+}

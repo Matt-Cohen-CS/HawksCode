@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+
+public class CreatingArrayLists {
+
+	public static void main(String[] args) {
+		/*
+		Creating an ArrayList is different from declaring and instantiating an array. Since ArrayList is a class,
+		we must create an object:
+		
+		ArrayList<Integer> intArrayList = new ArrayList<Integer>();
+
+		This syntax is very similar to the usual object instantiation in Java, with one minor difference.
+		We put the type of data we want to put in the ArrayList in angle brackets (<>). This is known as a
+		"generic" in Java which won't be covered until CS205, but for now just think of it as setting 
+		the type of the ArrayList as you would with an array.
+		Also, with ArrayLists we must use "reference types" instead of primitive types. A reference type is simply
+		a data type that's based on a class rather than one of the primitive types. In our example, you can see we 
+		used the "Integer" class that Java provides. There are also classes for Double, Boolean, etc. 
+		
+		For your challenge, we have already imported the ArrayList class. Create an ArrayList of the type String and 
+		call it "stringArrayList".
+		*/
+		
+		CreatingArrayLists creatingArrayLists = new CreatingArrayLists();
+		
+		//INJECT HERE
+//		ArrayList<String> stringArrayList = new ArrayList<String>();
+		
+		creatingArrayLists.test(stringArrayList); // TESTING YOUR CODE
+	}
+	
+	public void test(ArrayList<String> stringArrayList) {
+		int score = 0;
+		
+		stringArrayList.add("test");
+		
+		if(stringArrayList.size() == 1) {
+			score++;
+		}
+
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+	}
+
+}

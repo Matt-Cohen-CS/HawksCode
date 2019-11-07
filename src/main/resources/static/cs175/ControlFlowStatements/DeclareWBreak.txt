@@ -1,0 +1,64 @@
+
+
+/* Declare an integer named a and set the value to 10. Declare an int called counter and set it to 1.
+ *  Use a while loop to increment counter 5 times while the condition is true. Once the condition is false, 
+ *  use a break statement to �break� out of the loop. Then return the concatenated phrase ��Sum is �+ variable�� 
+ *  so that all 5 sum totals will print in sequential order.
+
+HINT: the break statement should be nested within the while loop in an if statement.
+
+*/
+
+
+public class DeclareWBreak {
+
+
+			public static void main(String[] args) 
+			{	
+				//INJECT HERE
+				/*
+				int counter = 0;
+				int a = 10;
+				while(counter < 5) {
+					
+					if(counter == 5) {
+						break;
+					}
+					
+					counter++;
+					a = a + counter;
+					System.out.println("Sum is " + a);
+				}
+			*/
+				
+				 int tests = 0;
+				 int totalTests = 2;
+						
+					if(a == 25){ //total sum of a should be 25 when initialized to 10.
+						tests++;
+					}else {
+						System.out.println("\nThe variable a is not set to the value of 10.");
+					}
+					
+					if(counter == 5){
+						tests++;
+					}else {
+						System.out.println("\nInside the while loop, the variable counter is not set to the value of 5, which should break you out of the loop.");
+					}
+
+					
+					
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+
+	}
+
+}

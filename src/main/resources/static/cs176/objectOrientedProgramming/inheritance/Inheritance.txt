@@ -1,0 +1,98 @@
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+public class Inheritance {
+	
+	/*
+	In order to inherit from a class, we use the "extends" keyword:
+	
+	class Musician {
+		private String name;
+		private String gender;
+		private int age;
+	}
+	
+	class GuitarPlayer extends Musician {
+		...
+	}
+	
+	Whenever you see the extends keyword in a class declaration, then the class
+	is said to have an "IS-A" relationship. In our example, we say a GuitarPlayer IS-A Musician.
+	We refer to GuitarPlayer as the subclass or child class, and Musician as the superclass or parent
+	class. When we inherit from another class, we get that class's instance variables and
+	methods. 
+	Let's say that a GuitarPlayer has additional fields that are unique only to them. For example, maybe 
+	a GuitarPlayer has a band that they play in. We can any additional fields we want to GuitarPlayer.
+	
+	class GuitarPlayer extends Musician {
+		private String bandName;
+	}
+	
+	For your challenge, we have created the classes "Athlete" and "BasketballPlayer". 
+	It is your task to make BasketballPlayer class inherit from Athlete with 
+	some additional fields: league and gamesPlayed.
+	
+	*/
+	
+	public static void main(String[] args) {
+		Inheritance inheritance = new Inheritance();
+		
+		Athlete testObj = new BasketballPlayer("", "", 0, "", 0); // TESTING YOUR CODE
+		
+		int score = 0;
+		String tests = "";
+		if(inheritance.modifiersAreCorrect("private"))
+			score++;
+		else
+			tests += "Test 1 Failed: One or more instance variables were expected to be \"private\" but were not.";
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	
+	//INJECT HERE
+	/*
+	// DON'T CHANGE THIS CODE
+	static class Athlete {
+		private String name;
+		private String gender;
+		private int age;
+		
+		public Athlete(String name, String gender, int age) {
+			this.name = name;
+			this.gender = gender;
+			this.age = age;
+		}
+	}
+
+	// ENTER CODE BELOW
+	static class BasketballPlayer extends Athlete {
+		private String league;
+		private int gamesPlayed;
+		
+		// DON'T CHANGE THIS CODE
+		public BasketballPlayer(String name, String gender, int age, String league, int gamesPlayed) {
+			super(name, gender, age);
+			this.league = league;
+			this.gamesPlayed = gamesPlayed;
+		}
+	}
+	*/
+	// Tests if the instance variables of a class are private, public, protected, etc.
+	private boolean modifiersAreCorrect(String expectedModifier) {
+		Field[] reflectedClass = BasketballPlayer.class.getDeclaredFields();
+		boolean isCorrectModifier = false;
+		
+	    for (Field field : reflectedClass) {
+	        int mod = field.getModifiers();
+	        if(Modifier.toString(mod).equals(expectedModifier))
+	        	isCorrectModifier = true;
+	        else {
+	        	isCorrectModifier = false;
+	        	break;
+	        }
+	    }
+	    
+	    return isCorrectModifier;
+	}
+	
+}

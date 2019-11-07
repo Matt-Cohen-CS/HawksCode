@@ -1,0 +1,81 @@
+public class UsingGettersAndSetters{
+	public static class Book{
+		private String name;
+		private String author;
+		private int pages;
+		private double price;
+		
+		public String getName(){
+			return name;
+		}
+		
+		public String getAuthor(){
+			return author;
+		}
+	
+		public int getPages(){
+			return pages;
+		}
+		
+		public double getPrice(){
+			return price;
+		}
+		
+		public void setName(String newName){
+			name = newName;
+		}
+		
+		public void setAuthor(String newAuthor){
+			author = newAuthor;
+		}
+		
+		public void setPages(int newPages){
+			pages = newPages;
+		}
+		
+		public void setPrice(double newPrice){
+			price = newPrice;
+		}
+	}
+	
+	
+	
+	public static void main(String[] args){
+		//INJECT HERE
+		int score = 0;
+		if(theGallicWars.getPrice() == 2.99){
+			score++;
+		}else{
+			System.out.println("You did not properly set the price variable");
+		}
+		
+		if(theGallicWars.getAuthor().equals("Julius Caesar")){
+			score++;
+		}else{
+			System.out.println("You did not properly set the author variable");
+		}
+		
+		if(theGallicWars.getName().equals("The Gallic Wars")){
+			score++;
+		}else{
+			System.out.println("You did not properly set the name variable");
+		}
+		
+		if(theGallicWars.getPages() == 901){
+			score++;
+		}else{
+			System.out.println("You did not properly set the pages variable");
+		}
+		
+		if(pageNumber == 901){
+			score++;
+		}else{
+			System.out.println("You did not properly set the pageNumber variable");
+		}
+		
+		if(score == 5){
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}
+	}
+	
+}

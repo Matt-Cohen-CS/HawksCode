@@ -1,0 +1,52 @@
+/*
+	Declare three int variables called numOne, numTwo and subtract. 
+	Set the value of numOne to 31, set the value of numTwo to 10 
+	and set the value of subtract to numOne minus numTwo.
+*/
+
+public class SubtractionInt 
+{
+	public static void main(String[] args) 
+	{
+		//INJECT HERE
+		
+	/* EXPECTED INPUT: 
+	   	int numOne = 31; 
+		int numTwo = 10; 
+		int subtract = numOne - numTwo; 
+	*/
+		
+		int tests = 0;
+		int totalTests = 3;
+			
+		/* ************************ TEST ************************ */ 
+		if(numOne == 31) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable numOne is not set to the value of 31.");
+		}
+		
+		if(numTwo == 10) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable numTwo is not set to the value of 10.");
+		}
+		
+		if(subtract == numOne - numTwo) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable subtract is not set to numOne minus numTwo.");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+
+}

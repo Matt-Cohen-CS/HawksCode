@@ -1,0 +1,80 @@
+
+/* Similar to the DeclareSwitch example, write a program using switch statements
+ * that assigns the day of the week based on which number is assigned to the variable day. 
+ * Use int day for number 1-7, set it equal to 7 for testing purposes. Use String dayName for 
+ * each day of week, initialize it to ��. This time, put break statements in between. 
+ * Also, write the statement default: dayName=�Invalid Day�; Break; This will be a catch
+ * all for any number not between 1 and 7.
+
+HINT: You will need to make separate �cases� for every day of the week. You will have 
+cases 1-7. Make Sunday #1, Monday #2 and so on. Notice what will print when you write 
+the print statement for dayName. Notice now what happens when including the break 
+statements. Compare it to what happened with the DeclareSwitch problem. Do you recall 
+what the output gave you?
+
+*/
+
+
+public class DeclareSBreak {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//INJECT HERE
+		/*
+		int day = 7;
+		String dayName="";
+		
+		switch (day) {
+		case 1:
+			dayName="Sunday";
+			break;
+		case 2:
+			dayName="Monday";
+			break;
+		case 3:
+			dayName="Tuesday";
+			break;
+		case 4:
+			dayName="Wednesday";
+			break;
+		case 5:
+			dayName="Thursday";
+			break;
+		case 6:
+			dayName="Friday";
+			break;
+		case 7:
+			dayName="Saturday";
+			break;
+		default:
+			dayName="Invalid Day";
+			break;
+		}
+		
+		System.out.print(dayName);
+		*/
+		int tests = 0;
+		int totalTests = 1;
+		if (day == 7 && dayName == "Saturday") {
+			tests++;
+		}
+		
+		
+		 
+		
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+
+	}
+
+   }
+	

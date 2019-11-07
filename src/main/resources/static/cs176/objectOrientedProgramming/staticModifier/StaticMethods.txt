@@ -1,0 +1,53 @@
+public class StaticMethods {
+	/*
+	Methods declared as static are known "static methods".
+	Like static variables, static methods belongs to the class
+	rather than the object of a class. 
+	
+	class A {
+		static void display() {
+			System.out.println("Hello from A class");
+		}
+	}
+	
+	class B {
+		public static void main(String[] args) {
+			A.display();
+		}
+	}
+	
+	When you have code that needs to be shared among all objects
+	of a class, it should be placed in a static method.
+	
+	For your challenge, we have created a class called "StaticMethod"
+	with a static field "counter". Create a static method called "increaseCounter"
+	that increments the counter by 1. This static method will return void.
+	*/
+	public static void main(String[] args) {
+
+		StaticMethod.increaseCounter(); // TESTING YOUR CODE
+
+		int score = 0;
+		String tests = "";
+		
+		if(StaticMethod.counter == 1)
+			score++;
+		else
+			tests += "";
+		
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	//INJECT HERE
+	/*
+	static class StaticMethod {
+		static int counter;
+		
+		static void increaseCounter() {
+			counter++;
+		}
+	}
+	*/
+
+}

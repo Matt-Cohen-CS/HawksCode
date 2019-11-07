@@ -1,0 +1,35 @@
+/*
+src/main/resources/cs175/boolean/logicalOR
+*/
+public class BooleanMethod{
+	//INJECT HERE
+	
+	public static void main(String[] args){
+	BooleanMethod booleanMeth = new BooleanMethod();
+		
+		int tests = 0;
+		int totalTests = 2;
+		/* ************************ TEST ************************ */
+	
+	if(booleanMeth.booleanMethod(true)==false){
+	tests++;
+	}else{
+	System.out.println("Failed tests booleanMethod(true);");
+	}
+	if(booleanMeth.booleanMethod(false)==true){
+	tests++;
+	}else{
+	System.out.println("Failed tests booleanMethod(false);");
+	}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

@@ -1,0 +1,38 @@
+public class FirstClassTest{
+    static
+    //INJECT HERE
+    public static void main(String[] args){
+    FirstClassTest myTest = new FirstClassTest();
+    
+    Book myBook = new Book();
+    int score = 0;
+    if(myBook.name == null){
+       score++;
+    }else{
+       System.out.println("You did not give the Book class a String variable called name!");
+    }
+    
+    if(myBook.author == null){
+       score++;
+    }else{
+       System.out.println("You did not give the Book class a String variable called author!");
+    }
+    
+    if(myBook.ID == 0){
+       score++;
+    }else{
+       System.out.println("You did not give the Book class an int variable called ID!");
+    }
+    
+    if(myBook.price == 0.0){
+       score++;
+    }else{
+       System.out.println("You did not give the Book class a double variable called price!");
+    }
+    if (score == 4){
+    System.out.println("\nCongratulations!!! You passed the challenge!!!");
+    }else {
+        System.out.println("\nYou have bugs to fix!");
+    }
+    }
+}

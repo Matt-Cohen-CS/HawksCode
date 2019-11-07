@@ -1,0 +1,20 @@
+public class GettersAndSettersTest{
+
+	static
+	//INJECT HERE
+	
+	public static void main(String[] args){
+		Book myBook = new Book();
+		
+		myBook.setPrice(1.99);
+		double test = myBook.getPrice();
+		if (test == 1.99){
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}
+		else{
+			System.out.println("\n< Either your setter is not correctly setting the value of price, or your getter is not properly retrieving the value.");
+			System.out.println("\n< You have some bugs to fix!");
+		}
+	}
+
+}

@@ -1,0 +1,38 @@
+/*
+	QUESTION: 
+	Declare an int variable called myInt and set its value 
+	to 7. Using a print statement, print the variable name.
+*/
+
+public class DeclarePrintInteger 
+{
+	public static void main(String[] args) 
+	{
+		//INJECT HERE
+		
+	/* EXPECTED INPUT: 
+	   int myInt = 7; 
+	   System.out.println(myInt);
+	*/
+		
+		int tests = 0;
+		int totalTests = 1;
+			
+		if(myInt == 7) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myInt is not set to the value of 7.");
+		}
+					
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}
+

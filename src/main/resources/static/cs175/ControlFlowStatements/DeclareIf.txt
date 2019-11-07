@@ -1,0 +1,39 @@
+public class DeclareIf {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		
+		//INJECT HERE
+		
+		 
+		 /* EXPECTED INPUT:
+		  		int score = 76;
+		 if(score > 75)
+		 {
+			 System.out.print("Congrats! You passed.");
+		 }
+		  */
+		 
+		 int tests = 0;
+		 int totalTests = 1;
+				
+			if(score == 76){
+				tests++;
+			}else {
+				System.out.println("\nThe variable Score is not set to the value of '76'.");
+			}
+						
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+	}
+
+}

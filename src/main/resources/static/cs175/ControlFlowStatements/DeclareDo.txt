@@ -1,0 +1,63 @@
+
+/* The do loop in Java is meant for situations in which you want the code to execute at least
+ *  once before going through the condition associated with the loop.
+
+	Declare an integer int1 = 1. Declare an integer int2 = 2. Declare an integer called product set equal to 0.
+	Write a do-while loop that first says int1=int1*int2 then sets product=int1. Check if the variable product 
+	is less than 20. Let the program run until the variable product is greater than or equal to 20. 
+	
+	HINT: the numbers in sequential order will go something like this: 2,4,8,16,32. (Since number 16 is NOT 
+	greater than 20, the loop goes one more time around, doubling to 32 at which point it checks that product
+	is now greater than 20 and cuts out of the loop.
+*/
+
+
+
+public class DeclareDo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//INJECT HERE
+		/*
+		int int1 = 1;
+		int int2 = 2;
+		int product = 0;
+		do {
+			int1=int1*int2;
+			product=int1;
+			
+			System.out.println(product);
+			
+		} while (product < 20);
+		*/
+		
+		int tests = 0;
+		int totalTests = 2;
+		/* ************************ TEST ************************ */
+				
+			if(int2 == 2){ 
+				tests++;
+			}else {
+				System.out.println("\nThe variable int2 is not set to the value 2");
+			}
+			
+			if(int1 == 32){ 
+				tests++;
+			}else {
+				System.out.println("\nThe variable int1 is not set to the value of int1*int2");
+			}
+
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+	}
+
+}

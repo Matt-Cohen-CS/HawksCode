@@ -1,0 +1,34 @@
+/* 
+	Declare a String variable called str and assign the value of “Hello World”. 
+*/
+
+public class DeclareString
+{
+	public static void main(String[] args)
+	{		
+		//INJECT HERE
+		
+		/* EXPECTED INPUT: 
+		   String str = "Hello World";  
+		*/
+		
+		int tests = 0;
+		int totalTests = 1;
+		
+		if(str.equals("Hello World")) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable str is not the value of 'Hello World'.");
+		}
+				
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

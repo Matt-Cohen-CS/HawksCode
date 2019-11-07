@@ -1,0 +1,51 @@
+/*
+	Declare three int variables called numOne, numTwo and add. 
+	Set the value of numOne to 10, set the value of numTwo to 
+	11 and set the value of add to numOne plus numTwo 
+*/
+
+public class AdditionInt
+{
+	public static void main(String[] args) 
+	{
+		//INJECT HERE
+		
+	/* EXPECTED INPUT: 
+	   	int numOne = 10; 
+		int numTwo = 11; 
+		int add = numOne + numTwo; 
+	*/
+		
+		int tests = 0;
+		int totalTests = 3;
+			
+		/* ************************ TEST ************************ */ 
+		if(numOne == 10) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable numOne is not set to the value of 10.");
+		}
+		
+		if(numTwo == 11) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable numTwo is not set to the value of 11.");
+		}
+		
+		if(add == numOne + numTwo) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable add is not set to numOne plus numTwo.");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

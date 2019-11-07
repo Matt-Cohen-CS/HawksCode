@@ -1,0 +1,31 @@
+/*
+	In Big O Notation, what is the run time that grows depending on an exponentiated factor by user input.
+
+ 	** For this challenge you have 3 attempts.
+*/
+import java.util.Scanner;  // Import the Scanner class
+
+public class Question6
+{
+	public static void main(String [] args)
+	{			
+		int score = 0;
+		//INJECT HERE
+		if (answer.equals("BigO(n!)")){
+		 score++;
+		}	
+		//comment
+			/* EXPECTED INPUT
+			 * O(n)
+			 */
+		/* ************************ TEST CASES ************************ */ 
+		if(score == 1)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\nYou have some bugs to fix!");
+			System.out.println(answer + " is not the correct answer!");
+		}
+	}
+}

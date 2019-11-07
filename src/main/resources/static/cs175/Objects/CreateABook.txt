@@ -1,0 +1,18 @@
+public class CreateABook{
+	private static class Book{
+		private String title;
+		private String author;
+		private int pages;
+		private double price;
+	
+	}
+	
+	public static void main(String[] args){
+		//INJECT HERE
+		
+		if(theStand.title == null){
+		    System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}
+	}
+
+}

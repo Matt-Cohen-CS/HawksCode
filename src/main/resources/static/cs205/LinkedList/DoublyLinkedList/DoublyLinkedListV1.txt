@@ -1,0 +1,138 @@
+public class DoublyLinkedListV1 
+{
+	Node head; 
+	
+	static class Node
+	{
+		int data; 
+		Node next; 
+		Node prev; 
+		Node (int d) 
+		{
+			data = d; next = null; prev = null; 
+		}
+	}
+	
+	public static void printListForward(DoublyLinkedListV1 list) 
+    { 
+        Node start = list.head; 
+   
+        System.out.print("Forward Traverse LinkedList: "); 
+   
+        // Forward Traverse through the LinkedList 
+        while (start != null) 
+        { 
+            // Print the data at current node 
+            System.out.print(start.data + " "); 
+   
+            // Go to next node 
+            start = start.next; 
+        }     
+    }
+	
+	public static void printListBackwards(DoublyLinkedListV1 list) 
+    { 
+        Node end = list.head; 
+        
+        System.out.print("\nBackward Traverse LinkedList: "); 
+   
+        // Traverse through the LinkedList 
+        while (end.next != null) 
+        { 
+        	end = end.next; 
+        }     
+        
+        // Backward Traverse through the LinkedList 
+        while (end != list.head.prev) 
+        { 
+            // Print the data at current node 
+            System.out.print(end.data + " "); 
+            
+            // Go to next node 
+            end = end.prev; 
+        } 
+    }
+
+	public static void main(String [] args)
+	{	
+		DoublyLinkedListV1 mylist = new DoublyLinkedListV1();
+		//INJECT HERE
+		
+		/* EXPECTED OUTPUT
+		// declaring Nodes 
+		mylist.head = new Node(1); 
+		Node second = new Node(2); 
+		Node third = new Node(3); 
+		
+		// set Node data 
+		mylist.head.data = 11; 
+		second.data = 12; 
+		third.data = 13; 
+		
+		// Linking them together 
+		mylist.head.prev = new Node(0); 
+		mylist.head.next = second;
+		
+		second.prev = mylist.head; 
+		second.next = third; 
+		
+		third.prev = second; 
+		*/
+		
+		//DoublyLinkedListV1.printListForward(mylist); 
+		//DoublyLinkedListV1.printListBackwards(mylist); 
+		
+		/* ************************ TEST ************************ */
+		int tests = 0;
+		int totalTests = 5;	
+	
+		/* TESTING Variables */ 
+		
+		if (mylist.head.data == 11)
+		{
+			tests++; 
+		}else {
+			System.out.println("\nThe value for head(first Node) is not set to 11.");
+		}
+		
+		if (second.data == 12)
+		{
+			tests++; 
+		}else {
+			System.out.println("\nThe value for second is not set to 12.");
+		}
+		
+		if (third.data == 13)
+		{
+			tests++; 
+		}else {
+			System.out.println("\nThe value for third is not set to 13.");
+		}
+		
+		/* TESTING Node Next */ 
+		
+		if (mylist.head.next == second)
+		{
+			tests++; 
+		}else {
+			System.out.println("\nThe next value for head(first Node) was not set to the correct value.");
+		}
+		
+		if (second.next == third)
+		{
+			tests++; 
+		}else {
+			System.out.println("\nThe next value for second was not set to the correct value.");
+		}
+			
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

@@ -1,0 +1,80 @@
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+
+public class BasketballPlayerPart4 {
+	/*
+	You will use what you've learned in the last couple of sections
+	to complete the Basketball program. The end goal is a program
+	that can calculate a team's statistics from its players at the end of a game.
+	We first need to do some setup with the BasketballPlayer class. We want
+	to be able to calculate a team's total points, rebounds, and assists from its player 
+	which requires us to first get each player's points, rebounds, and assists. 
+	We've created the class and fields, it is your task to create the getter methods
+	for the fields.
+	*/
+	public static void main(String[] args) {
+		BasketballPlayerPart4 basketballPlayerPart4 = new BasketballPlayerPart4();
+		BasketballPlayer testObj = new BasketballPlayer(25, 10, 15); // TESTING YOUR CODE
+		
+		int score = 0;
+		String tests = "";
+		if(basketballPlayerPart4.modifiersAreCorrect("public"))
+			score++;
+		else
+			tests += "Test 1 Failed: One or more methods were expected to be \"public\" but were not.";
+
+
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+		
+	}
+	
+	// Tests if the methods of a class are private, public, protected, etc.
+	private boolean modifiersAreCorrect(String expectedModifier) {
+		Method[] reflectedClass = BasketballPlayer.class.getDeclaredMethods();
+		boolean isCorrectModifier = false;
+		
+	    for (Method field : reflectedClass) {
+	        int mod = field.getModifiers();
+	        if(Modifier.toString(mod).equals(expectedModifier))
+	        	isCorrectModifier = true;
+	        else {
+	        	isCorrectModifier = false;
+	        	break;
+	        }
+	    }
+	    
+	    return isCorrectModifier;
+	}
+	
+	//INJECT HERE
+	/*
+	static class BasketballPlayer {
+		private int points;
+		private int rebounds;
+		private int assists;
+		
+		public BasketballPlayer(int points, int rebounds, int assists) {
+			this.points = points;
+			this.rebounds = rebounds;
+			this.assists = assists;
+		}
+		
+		public double getPoints() {
+			// ENTER CODE BELOW
+			return points;
+		}
+		
+		public double getRebounds() {
+			// ENTER CODE BELOW
+			return rebounds;
+		}
+		
+		public double getAssists() {
+			// ENTER CODE BELOW
+			return assists;
+		}
+	}
+	*/
+}

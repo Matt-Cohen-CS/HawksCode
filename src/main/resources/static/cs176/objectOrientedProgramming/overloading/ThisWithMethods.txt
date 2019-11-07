@@ -1,0 +1,65 @@
+public class ThisWithMethods {
+
+	/*
+	Just like how you can use "this" with constructors, you can do the same
+	with methods:
+	
+	class Student {
+
+		private int credits;
+		
+		public void addCredits() {
+			this.addCredits(1);
+		}
+		
+		public void addCredits(int amount) {
+			credits += amount;
+		}
+	}
+	
+	In the second method, we are adding an argument "amount" to the Student's
+	credits. In the first method, we are calling the second method but we
+	pass in 1 credit as an argument.
+	
+	For your challenge, create two methods for BasketballPlayer both called 
+	"addPoints". One of the methods will add a single point when no arguments
+	are passed in and the other will add an argument we pass in to the player's
+	points.
+	*/
+	public static void main(String[] args) {
+		BasketballPlayer testObj = new BasketballPlayer(0);
+		testObj.addPoints(3); // TESTING YOUR CODE
+		testObj.addPoints(); // TESTING YOUR CODE
+		
+		String tests = "";
+		int score = 0;
+		if(testObj.points == 4) 
+			score++;
+		else
+			tests += "Test 1 Failed: One of your methods is not adding points to player.";
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	//INJECT HERE
+	/*
+	// DON'T CHANGE THIS CODE
+	static class BasketballPlayer {
+		
+		private int points;
+		
+		public BasketballPlayer(int points) {
+			this.points = points;
+		}
+		
+		// ENTER CODE BELOW
+		public void addPoints() {
+			this.addPoints(1);
+		}
+		
+		public void addPoints(int amount) {
+			points += amount;
+		}
+	}
+	 */
+}

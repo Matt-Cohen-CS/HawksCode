@@ -1,0 +1,74 @@
+public class ForLoopArray {
+
+	public static void main(String[] args) {
+		/*
+		Since you already know how to use "for loops", how to get an element out of an array, 
+		and how to get the length of an array, you now have a good basis for learning how to loop through an array. If you need to review "for loops", go back to the CS 175 section and look for "for loops". If you need to review the length property, go back to the CS 176 section, click on "arrays" and then "arrayBoundsAndLength". One of the most common use cases of a for loop is to loop through an array. Here is an example of how to print the contents of an array:
+		
+		String[] groceries = {"Milk", "Eggs", "Bread"};
+		for(int i = 0; i < groceries.length; i++) {
+		    System.out.println(groceries[i]); 
+		}
+		
+		OUTPUT:
+		Milk
+		Eggs
+		Bread
+		
+		As you can see, we iterate with the For loop up to groceries.length, ensuring that
+		we stay within the array's bounds. Using the length property also allows us to 
+		create more maintainable code because if we decided to add another item to our
+		array, the For loop stays the same.
+		
+		For your challenge, we have created an array called "myNums":
+		
+		double[] myNums = {...};
+		
+		For testing purposes, we have hidden the numbers from you. We have also provided
+		a method called "resetPi".
+		
+		public void resetPi(double[] myNums) {
+			// INSERT CODE BELOW
+			
+		}
+		
+		It is your task to look through the array "myNums", and set any value equal to pi to 0.
+		NOTE: You should use Math.PI for this challenge.
+		*/
+		ForLoopArray forLoopArray = new ForLoopArray();
+		
+		double[] myNums = {34.1, 19.8, 56.0, 98.994, Math.PI, 34, 68.2, 70.9163, 3.14, Math.PI, 65.21, 34.33, 67.41, 45.99086, Math.PI, 34.12};
+
+		forLoopArray.resetPi(myNums);
+	}
+	
+	//INJECT HERE
+	/*
+	public void resetPi(double[] myNums) {
+		// INSERT CODE BELOW
+		
+		for(int i = 0; i < myNums.length; i++) {
+			if(myNums[i] == Math.PI) {
+				myNums[i] = 0;
+			}
+		}
+		
+		// DON'T CHANGE THIS LINE
+		test(myNums); // TESTING YOUR CODE
+	}
+	*/
+	public void test(double[] myNums) {
+		int score = 0;
+		String tests = "";
+		
+		if(myNums[4] == 0 && myNums[9] == 0 && myNums[14] == 0)
+			score++;
+		else 
+			tests += "Test 1 Failed: Values expected to be 0 were not 0. Are you checking for Math.PI?";
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+	
+		System.out.println(result);
+		System.out.println(tests);
+	}
+
+}

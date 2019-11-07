@@ -1,0 +1,49 @@
+/* Declare an integer named a and set the value to 10. Declare an int called 
+ * counter and set it to 1. Use a while loop to increment a by counter 5 times.
+ * Increment counter by one each time you increase a by counter. Your while loop 
+ * should look similar to this while(counter<5){//BODY} */
+
+
+public class DeclareWReturn
+{
+public int whileLoop(int a) {
+	//INJECT HERE
+	
+	/*EXPECTED INPUT
+	int counter = 0;
+	
+	while(counter<5) {
+		a = a + counter;
+		counter++;
+	} return a;
+	*/
+	
+	
+}
+
+	public static void main(String[] args) 
+	{	
+		 int tests = 0;
+		 int totalTests = 1;
+		
+		DeclareWReturn myObj = new DeclareWReturn();
+		int test1 = myObj.whileLoop(10); // 20
+		if(test1 == 20) {
+			tests++;
+		}
+		System.out.println(test1);
+
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+	}
+	
+
+}

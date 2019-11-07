@@ -1,0 +1,44 @@
+/*
+	Declare three boolean variable named A and boolNot. Set A to the value of true. 
+	Using the sign ( ! ), set boolNot to the value of NOT A.
+*/
+
+public class BooleanNot
+{
+	public static void main(String[] args) 
+	{
+		//INJECT HERE
+		
+	 /* EXPECTED INPUT: 
+	   	boolean A = true; 
+		boolean boolNot = !A; 
+		System.out.println(boolNot);
+	 */
+		
+		int tests = 0;
+		int totalTests = 2;
+		
+		/* ************************ TEST ************************ */ 
+		if(A == true) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable A is not set to the value of 'true'.");
+		}
+		
+		if(boolNot == false) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable boolNot is not 'true'.");
+		}
+			
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

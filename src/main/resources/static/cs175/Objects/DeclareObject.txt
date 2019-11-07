@@ -1,0 +1,33 @@
+public class DeclareObjects {
+
+	public static void main(String[] args) 
+	{
+		//INJECT HERE
+		
+		int tests = 0;
+		int totalTests = 2;
+		/* ************************ TEST ************************ */
+		
+		if(myFirstInt == 5){
+			tests++;
+		}else{
+			System.out.println("tests case failed, myInt is not 5!");
+		}
+		if(myFirstInt instanceof Integer){
+			tests++;
+		}else{
+			System.out.println("myInt does not belong to the Integer class!");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+
+}

@@ -1,0 +1,53 @@
+public class AverageOfArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*
+		This challenge will combine some of the concepts you've learned in previous
+		lessons and help you retain what you've learned so far about arrays and loops.
+		
+		For your challenge, we have created an array called "testScores":
+		
+		int[] testScores = {...};
+		
+		There are some test scores in the array, and it is your task to write a method that
+		returns the average of the test scores. If you need a refresher on writing methods,
+		go back to the CS 175 section and look for "Methods". The method will be a public method
+		that returns an int.
+		NOTE: the method must be called "average", return an int, and be public. It will take
+		an array of ints as its only parameter.
+		*/
+		AverageOfArray averageOfArray = new AverageOfArray();
+		int[] testScores = {78, 94, 56, 67, 33, 95, 89, 64, 92};
+		int average = averageOfArray.average(testScores); // TESTING YOUR CODE
+		averageOfArray.test(average); 
+	}
+	
+	//INJECT HERE
+	/*
+	public int average(int[] testScores) {
+	
+		
+		int total = 0;
+		for(int score: testScores) {
+			total += score;
+		}
+		return total / testScores.length;
+		
+	}
+	*/
+	public void test(int average) {
+		int score = 0;
+		String tests = "";
+		
+		if(average == 74)
+			score++;
+		else 
+			tests += "Test 1 Failed: Did not get the expected value for \"average\". You should declare a variable outside of your loop and set it to 0. Then, you can add each item in the array to that variable using a loop. Finally, you're going to divide that variable by the length of the array and return that value.";
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Achieved" : "You have some bugs to fix! " + score + "/1 Achieved";
+	
+		System.out.println(result);
+		System.out.println(tests);
+	}
+
+}

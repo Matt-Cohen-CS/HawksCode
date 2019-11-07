@@ -1,0 +1,43 @@
+
+public class LogicalEqualsMethod{
+	//INJECT HERE
+	
+	public static void main(String[] args){
+		LogicalEqualsMethod equal = new LogicalEqualsMethod();
+		
+		int tests = 0;
+		int totalTests = 4;
+		/* ************************ TEST ************************ */
+		
+		if(equal.logicalEquals(5,5)){
+			tests++;
+		}else{
+			System.out.println("Test case1 of inputs 5,5 FAILED");
+		}
+		if(equal.logicalEquals(20,20)){
+			tests++;
+		}else{
+		System.out.println("Test case2 of inputs 20,20 FAILED");
+		}
+		if(equal.logicalEquals(400,400)){
+			tests++;
+		}else{
+		System.out.println("Test case3 of inputs 400,400 FAILED");
+		}
+		if(!(equal.logicalEquals(25,400))){
+			tests++;
+		}else{
+		System.out.println("Test case4 of the inverse of the inputs 25,400 FAILED");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

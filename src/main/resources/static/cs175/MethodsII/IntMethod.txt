@@ -1,0 +1,45 @@
+/*
+src/main/resources/cs175/boolean/logicalOR
+*/
+public class IntMethod{
+	//INJECT HERE
+	
+	public static void main(String[] args){
+				
+	IntMethod intMeth = new IntMethod();
+		int tests = 0;
+		int totalTests = 4;
+	/* ************************ TEST ************************ */
+	
+	if(intMeth.intMethod(20,19)==1){
+	tests++;
+	}else{
+	System.out.println("Failed test intMethod(20,19);");
+	}
+	if(intMeth.intMethod(15,-10)==5){
+	tests++;
+	}else{
+	System.out.println("Failed test intMethod(15,-10);");
+	}
+	if(intMeth.intMethod(-15,10)==-5){
+	tests++;
+	}else{
+	System.out.println("Failed test intMethod(15,-10);");
+	}
+	if(intMeth.intMethod(-20,-10)==-30){
+	tests++;
+	}else{
+	System.out.println("Failed test intMethod(-20,-10);");
+	}
+	
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

@@ -1,0 +1,77 @@
+public class Overriding {
+	/*
+	Method overriding in Java is the act of declaring the same method from
+	a superclass with some different implementation:
+	
+	class Musician {
+		protected int count;
+		
+		public void display(int count) {
+			System.out.println("Look at me! I'm a musician!");
+			this.count = count;
+		}
+	}
+	
+	class GuitarPlayer extends Musician {
+	
+		// Same method from "Musician" but different
+		public void display(int count) {
+			System.out.println("Look at me! I'm a guitar player!");
+			this.count += count;
+		}
+		
+	}
+	
+	This only works if you have a subclass that is inheriting a method from a superclass,
+	and you have the same method signatures.
+	If you remember the concept of method signatures from the "OverloadingMethods" lesson,
+	then you'll see that these two methods have the same signatures. Overriding is different from
+	overloading because we have the same signatures, which is the name of our method and the
+	type of its parameters.
+	
+	For your challenge, we have created the classes "Athlete" and "BasketballPlayer".
+	It is your task to override the method "setCount" to instead subtract by the
+	parameter "count".
+	*/
+	public static void main(String[] args) {
+		Athlete testObj = new BasketballPlayer();
+		
+		testObj.setCount(1);
+	
+		int score = 0;
+		String tests = "";
+		if(testObj.getCount() == -1)
+			score++;
+		else
+			tests += "Test 1 Failed: Did not get the expected result from getCount().";
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	
+	//INJECT HERE
+	/*
+	// DON'T CHANGE THIS CODE
+	static class Athlete {
+		protected int count;
+		
+		public void setCount(int count) {
+			this.count = count;
+		}
+		
+		public int getCount() {
+			return this.count;
+		}
+	}
+
+	static class BasketballPlayer extends Athlete {
+
+		// ENTER CODE BELOW
+		public void setCount(int count) {
+			this.count -= count;
+		}
+		
+
+	}
+	*/
+}

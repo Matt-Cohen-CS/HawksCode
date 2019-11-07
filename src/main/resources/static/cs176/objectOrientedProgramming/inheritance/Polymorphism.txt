@@ -1,0 +1,139 @@
+public class Polymorphism {
+
+	/*
+	The term polymorphism means the condition of having many forms. In Java,
+	it means the exact same thing. Our objects can have many forms. Inheritance
+	allows us to inherit instance variables and methods from other classes, and
+	polymorphism uses those methods to perform different actions:
+	
+	class Musician {
+		public void playInstrument() {
+			System.out.println("The instrument makes a sound.");
+		}
+	}
+	
+	class GuitarPlayer extends Musician {
+		public void playInstrument() {
+			System.out.println("The guitar goes: wahwahwahwah.");
+		}
+	}
+	
+	class BassPlayer extends Musician {
+		public void playInstrument() {
+			System.out.println("The bass goes: dundundundun");
+		}
+	}
+	
+	class Main {
+		public static void main(String[] args) {
+			Musician musician = new Musician(); // Create a Musician object
+			Musician guitarist = new GuitarPlayer(); // Create a GuitarPlayer object
+			Musician bassist = new BassPlayer(); // Create a BassPlayer object
+			
+			musician.playInstrument();
+			guitarist.playInstrument();
+			bassist.playInstrument();
+		}
+	}
+	
+	OUTPUT:
+	The instrument makes a sound.
+	The guitar goes: wahwahwahwah.
+	The bass goes: dundundundun.
+	
+	For your challenge, we have created 3 classes: Athlete, BasketballPlayer, and BaseballPlayer.
+	Here is what the main method looks like:
+	public static void main(String[] args) {
+	
+		Athlete athlete = new Athlete();
+		Athlete basketballPlayer = new BasketballPlayer();
+		Athlete baseballPlayer = new BaseballPlayer();
+		
+	}
+	It is your task to make getSport() return "basketball" when the Athlete is a BasketballPlayer,
+	and "baseball" when the Athlete is a BaseballPlayer.
+	
+	// DON'T CHANGE THIS CODE
+	class Athlete {
+		public String getSport() {
+			return "";
+		}
+	}
+	
+	// ENTER CODE BELOW
+	class BasketballPlayer extends Athlete {
+		
+		public String getSport() {
+			return "";
+		}
+	}
+	
+	class BaseballPlayer extends Athlete {
+		
+		public String getSport() {
+			return "";
+		}
+	}
+	*/
+	
+	public static void main(String[] args) {
+		Polymorphism polymorphism = new Polymorphism();
+		
+		Athlete athlete = new Athlete();
+		Athlete basketballPlayer = new BasketballPlayer();
+		Athlete baseballPlayer = new BaseballPlayer();
+
+		polymorphism.test(athlete, basketballPlayer, baseballPlayer);
+		
+	}
+	
+	public void test(Athlete athlete, Athlete basketballPlayer, Athlete baseballPlayer) {
+		int score = 0;
+		String tests = "";
+		
+		if(athlete.getSport().equals(""))
+			score++;
+		else
+			tests += "Test 1 Failed: Did not get the expected sport for Athlete.\n";
+			
+		if(basketballPlayer.getSport().equals("basketball"))
+			score++;
+		else
+			tests += "Test 2 Failed: Did not get the expected sport for BasketballPlayer.\n";
+		
+		if(baseballPlayer.getSport().equals("baseball"))
+			score++;
+		else
+			tests += "Test 3 Failed: Did not get the expected sport for BaseballPlayer.\n";
+		
+		String result = score == 3 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/3 Test Cases Passed" : "You have some bugs to fix! " + score + "/3 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	
+	//INJECT HERE
+	/*
+	// DON'T CHANGE THIS CODE
+	static class Athlete {
+		public String getSport() {
+			return "";
+		}
+	}
+	
+	// ENTER CODE BELOW
+	static class BasketballPlayer extends Athlete {
+		
+		public String getSport() {
+			return "basketball";
+		}
+	}
+	
+	static class BaseballPlayer extends Athlete {
+		
+		public String getSport() {
+			return "baseball";
+		}
+	}
+	*/
+
+}

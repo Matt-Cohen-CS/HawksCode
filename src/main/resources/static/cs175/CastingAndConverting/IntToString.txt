@@ -1,0 +1,36 @@
+
+public class IntToString{
+	
+	
+	public static void main(String[] args)
+	{
+		//INJECT HERE
+		int checkVar = x;
+		String checkString = xConvert;
+		
+		int tests = 0;
+		int totalTests = 2;
+		/* ************************ TEST ************************ */
+		
+		if(x==10) {
+			tests++;
+		}else {
+			System.out.println("The variable x was not initialized to 10");
+		}
+		if(checkString.equals("10")) {
+			tests++;
+		}else {
+			System.out.println("The variable xConvert was not casted correctly to the Integer variable x");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

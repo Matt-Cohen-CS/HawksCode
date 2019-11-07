@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+   <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>MU HawksCode</title>
+		<link rel="icon" type="image/ico" th:href="@{/img/MUScienceLogo.png}" />
+ 		
+ 		<!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" th:href="@{/css/main.css}">
+
+		<!-- Our Custom CSS -->
+		<link rel="stylesheet" th:href="@{/css/helpPage.css}">
+		<link rel="stylesheet" th:href="@{/css/main.css}">
+		<link rel="stylesheet" th:href="@{/css/indexPage.css}">
+		
+		<link rel="stylesheet" th:href="@{/css/coursePage.css}">
+		<link rel="stylesheet" th:href="@{/css/codeEditor.css}">
+		<link rel="stylesheet" th:href="@{/css/challenge_pages.css}">
+		
+		<link rel="stylesheet" th:href="@{/css/profile.css}">
+		<link rel="stylesheet" th:href="@{/css/main.css}">
+				
+		<!-- Font Awesome -->
+		<link rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+			integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+			crossorigin="anonymous">
+		<!-- Font for textarea -->
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet"> 
+	</head>
+
+	<body>
+        <div class="wrapper">
+
+            <!-- Sidebar Holder -->
+           <nav id="sidebar">
+			<div class="sidebar-header">
+				<h3><a th:href="@{/home}">MU Hawks Code</a></h3>
+				<strong><a th:href="@{/home}">MU</a></strong>
+			</div>
+
+			<ul class="list-unstyled components">
+				<li class="active">
+					<a th:href="@{/home}"><i class="fas fa-home"></i>Home</a>
+				</li>
+				<li>
+					<a href="#courseSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-chalkboard"></i>Courses</a>
+					<ul class="collapse list-unstyled" id="courseSubmenu">
+						<li><a th:href="@{/home/cs175}">CS-175</a></li>
+						<li><a th:href="@{/home/cs176}">CS-176</a></li>
+						<li><a th:href="@{/home/cs205}">CS-205</a></li>
+						<li><a th:href="@{/home/testEnvironment}">TEST-Environment</a></li>
+					</ul>
+				</li>
+				<li>
+					<a th:href="@{/home/help}"><i class="fas fa-question"></i>Help</a>
+				</li>
+				<li>
+					<a th:href="@{/home/profile}"><i class="fas fa-user"></i>Profile</a>
+				</li>
+			</ul>
+		</nav>
+			
+	
+            <!-- Page Content Holder -->
+            <div id="content">
+	            <!-- Secondary Nav -->
+	            <nav class="navbar navbar-default">
+	                <div class="container-fluid">
+	                    <i id="sidebarCollapse" class="fa fa-bars" aria-hidden="true"></i>
+	                    
+	                    <div class="profile-dropdown">
+	                    	<button onclick="myFunction()" class="profile-dropbtn"><p th:text="${userID}">Student</p></button>
+	                    	<div id="myDropdown" class="profile-dropdown-content">
+							    <a th:href="@{/home/profile}">Profile</a>
+							    <a href="/?forcepostlogouturl">Logout</a>
+							</div>
+						</div> <!--  end drop down -->
+	                </div>
+	            </nav>
+				<!-- beginning of HawksCode help page -->
+				
+				<div id="helpPage">
+					<h1 style="text-align:center;"> Welcome to the HawksCode Help Page</h1>
+					<br>
+					<!--  <a th:href="@{/cas/test}">test</a> -->
+					<!-- Three courses 175, 176, 205 links -->
+									
+					<br>
+					<h2 style="text-align:center;">Helpful links</h2>
+						<br>
+					<div id="helpTopics">	
+				
+						<!--Row 1 -->	
+						<div class="classTopic" style="float: left; font-size:1.1em; width: 25%;">
+								<div id="section">
+									<section>
+											<ul class = "topic-link" style="list-style-type:none; padding-bottom:10%;">
+											<li><b>Basic Operators</b></li>
+											<li><a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html">Operator Summation</a></li>
+											<li><a target="_blank" href="https://www.geeksforgeeks.org/basic-operators-java/">Basic Operators</a></li>	
+											</ul>
+										</section>	
+									<section>	
+											<ul class = "topic-link" style="list-style-type:none; padding-bottom:10%;">
+											<li><b>Primitive Data Types</b></li>
+											<li><a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">Datatypes</a></li>
+											<li><a target="_blank" href="https://www.geeksforgeeks.org/data-types-in-java/">What Are DataTypes</a></li>
+											</ul>
+									</section>
+									<section>		
+											<ul class = "topic-link" style="list-style-type:none; padding-bottom:10%;">
+												<li><b>Casting and Converting</b></li>
+												 <li><a target="_blank" href="https://www.geeksforgeeks.org/type-conversion-java-examples/">Type Conversion</a></li>
+												 <li><a target="_blank" href="http://www.informit.com/articles/article.aspx?p=30871&seqNum=5">Casting</a></li>
+											</ul>
+									</section>
+									<section>
+											<ul class = "topic-link" style="list-style-type:none;">
+												<li><b>Classes</b></li>
+												<li><a target="_blank" href="https://docs.oracle.com/javase/7/docs/api/java/lang/StringBuffer.html">Creation</a></li>
+												<li><a target="_blank" href="https://www.geeksforgeeks.org/abstract-classes-in-java/">Abstract</a></li>
+												<li><a target="_blank" href="https://www.geeksforgeeks.org/interfaces-in-java/">Interface</a></li>
+												<li><a target="_blank" href="https://www.geeksforgeeks.org/enum-in-java/">Enum</a></li>
+												<li><a target="_blank" href="https://www.geeksforgeeks.org/generics-in-java/">Generics</a></li>
+											</ul>
+									<section>
+								</div> <!-- section!! --> 
+									<br>
+						</div> <!-- class topic ROW 1 --> 		
+						
+						<!--  Row 2 -->
+						<div class="classTopic" style="float: left; font-size:1.1em; width: 25%; padding-bottom:10%;">
+							<div id="section">
+								<section>
+	  								<ul class = "topic-link" style="list-style-type:none; padding-bottom:10%;">
+	    								<li><b>Control Flow</b></li>
+	    								<li><a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html">If/Else</a></li>
+	    								<li><a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html">While and Do-While Loop</a></li>
+	    								<li><a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html">For Loop</a></li>
+	    								<li><a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html">Switch Statements</a></li>
+	    							</ul>
+								</section>		
+								
+								<section>
+										<ul class = "topic-link" style="list-style-type:none; padding-bottom:10%;">
+											<li><b>File</b></li>
+											<li><a target="_blank" href="https://docs.oracle.com/javase/7/docs/api/java/io/File.html">Files</a></li>
+											<li><a target="_blank" href="https://beginnersbook.com/2014/01/how-to-create-a-file-in-java/">File Creation</a></li>
+										</ul>
+								</section>
+								
+								<section>
+										<ul class = "topic-link" style="list-style-type:none; padding-bottom:10%;">
+											<li><b>Methods</b></li>
+											<li><a target="_blank" href="https://www.geeksforgeeks.org/methods-in-java/">Method Creation</a></li>
+											<li><a target="_blank" href="https://www.tutorialspoint.com/java/java_methods">Methods- Object Oriented Programming</a></li>
+										</ul>
+								</section>	
+								
+								<section>	
+										<ul class = "topic-link" style="list-style-type:none;">	
+											<li><b>Objects</b></li>
+											<li><a target="_blank" href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html">Creating Objects</a></li>
+											<li><a target="_blank" href="https://www.geeksforgeeks.org/classes-objects-java/">Objects- Object Oriented Programming </a></li>
+										</ul>
+								</section>
+							</div>  <!-- section!! --> 
+						</div> <!-- class topic ROW 2 --> 
+							
+						<!--Row 3 -->	
+						<div class="classTopic" style="float: left; font-size:1.1em; width: 25%;">
+								<div id="section">
+									<section>
+											<ul style="list-style-type:none; padding-bottom:10%;">
+												<li><b>String</b></li>
+												<li><a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/data/strings.html">String Class</a></li>
+												<li><a target="_blank" href="https://www.geeksforgeeks.org/strings-in-java/">Using Strings</a></li>
+											</ul>	
+									</section>
+									<section>
+											<ul style="list-style-type:none; padding-bottom:10%;">
+												<li><b>Arrays</b></li>
+												<li><a target="_blank" href="https://docs.oracle.com/javase/7/docs/api/java/util/Arrays.html">Using Arrays</a></li>
+												<li><a target="_blank" href="https://www.geeksforgeeks.org/arrays-in-java/">Java Arrays</a></li>
+											</ul>
+									</section>
+									
+									<section>
+											 <ul style="list-style-type:none; padding-bottom:10%;">
+												<li><b>Recursion</b></li>
+												<li><a target="_blank" href="https://www.geeksforgeeks.org/recursion/">Recusive Algorithms</a></li>
+												<li><a target="_blank" href="https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/">Using Recursion</a></li>
+											</ul>		
+									</section>
+									
+									<section>
+											<ul style="list-style-type:none;">
+												<li><b>Testing/Debugging</b></li>
+												<li><a target="_blank" href="https://docs.oracle.com/javase/tutorial/essential/exceptions/finally.html">Finally</a></li>
+												<li><a target="_blank" href="https://docs.oracle.com/javase/tutorial/essential/exceptions/throwing.html">Throw and Throws</a></li>
+												<li><a target="_blank" href="https://www.geeksforgeeks.org/throw-throws-java/">Throw and Throws Continued</a></li>
+												<li><a target="_blank" href="https://www.geeksforgeeks.org/exceptions-in-java/">Exceptions</a></li>
+												<li><a target="_blank" href="https://www.geeksforgeeks.org/assertions-in-java/">Assertions</a></li>
+											</ul>	
+									</section>
+								</div> <!-- section!! --> 
+									<br>
+						</div> <!-- class topic ROW 3 --> 		
+						
+						<!--  Row 4 -->
+						<div class="classTopic" style="float: left; font-size:1.1em; width: 25%;">
+							<div id="section">
+								<section>
+									<ul style="list-style-type:none; padding-bottom:10%;">
+										<li><b>Big O Notation</b></li>
+										<li><a target="_blank" href="https://www.baeldung.com/java-algorithm-complexity">Algorithm Complexity</a></li>
+										<li><a target="_blank" href="https://www.quora.com/Whats-the-best-cheat-sheet-data-structure-for-an-Algorithm-and-Data-Structure-class-final-exam">Algorithms and Data Structures</a></li>
+										<li><a target="_blank" href="https://www.geeksforgeeks.org/quick-sort/">Quick Sort</a></li>
+										<li><a target="_blank" href="https://www.geeksforgeeks.org/bubble-sort/">Bubble Sort</a></li>
+										<li><a target="_blank" href="https://www.geeksforgeeks.org/insertion-sort/">Insertion Sort</a></li>
+										<li><a target="_blank" href="https://www.geeksforgeeks.org/selection-sort/">Selection Sort</a></li>
+									</ul>	
+								</section>
+								<section>
+									<ul style="list-style-type:none; padding-bottom:10%;">
+										<li><b>Binary Search Tree</b></li>
+										<li><a target="_blank" href="https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/">Search and Insertion</a></li>
+										<li><a target="_blank" href="https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/">Binary Search</a></li>
+									</ul>	
+								</section>
+										
+								<section>
+									<ul style="list-style-type:none; padding-bottom:10%;">
+										<li><b>Map</b></li>
+										<li><a target="_blank" href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html">Using Maps</a></li>
+										<li><a target="_blank" href="https://www.geeksforgeeks.org/map-interface-java-examples/">Map Interface</a></li>
+									</ul>
+								</section>
+										
+								<section>
+									<ul style="list-style-type:none;">
+										<li><b>Linked List</b></li>
+										<li><a target="_blank" href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html">Using Linked Lists</a></li>
+										<li><a target="_blank" href="https://beginnersbook.com/2013/12/linkedlist-in-java-with-example/">Linked Lists</a></li>
+									</ul>
+								</section>
+							</div>  <!-- section!! --> 
+						</div> <!-- class topic ROW 4 --> 				
+					</div> <!-- help topic --> 
+				</div> <!-- help page --> 		
+			</div> <!-- content --> 	
+		</div> <!-- main wrapper -->
+        
+		<!-- script to show editor 
+        <script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/basic.js"></script>
+        -->
+        		
+        <!-- jQuery CDN -->
+        <script th:src="@{/js/jquery-1.12.0.min.js}"></script>
+        <!-- Bootstrap Js CDN -->
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+        <!-- Custom JS-->
+        <script th:src="@{/js/main.js}"></script>
+        <!-- script to show editor 
+        <script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
+        -->
+        
+        <!--  COURSE-BUTTON: onClick underline-->
+        <script>
+        var buttons = document.getElementsByTagName("btn-link-collapsed");
+
+        function setActive(moo) 
+        {
+          for (var i = 0; i < buttons.length; i++) 
+          {
+              if (buttons[i] == moo) {
+                moo.classList.toggle("active");
+              } else {
+                buttons[i].classList.remove('active');
+              }
+            }
+        }
+
+        for (var i = 0; i < buttons.length; i++) 
+        {
+          buttons[i].addEventListener("click", function() { 
+        	  setActive(this);
+          });
+        }
+		</script>
+		
+		<!-- PROFILE DROPDOWN -->
+		<script>
+			/* When the user clicks on the button, 
+			toggle between hiding and showing the dropdown content */
+			function myFunction() {
+			  document.getElementById("myDropdown").classList.toggle("show");
+			}
+			
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+			  if (!event.target.matches('.profile-dropbtn')) {
+			    var dropdowns = document.getElementsByClassName("profile-dropdown-content");
+			    var i;
+			    for (i = 0; i < dropdowns.length; i++) {
+			      var openDropdown = dropdowns[i];
+			      if (openDropdown.classList.contains('show')) {
+			        openDropdown.classList.remove('show');
+			      }
+			    }
+			  }
+			}
+		</script>
+    </body>
+</html>

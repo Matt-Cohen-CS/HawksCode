@@ -1,0 +1,104 @@
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+
+public class ShopPart1 {
+
+	/*
+	For your challenge, create the Item class yourself. Here is the
+	layout of the Item class again:
+	-------------------------------
+	|            Item             |
+	-------------------------------
+	|-description:String          |
+	|-itemNumber:int              |
+	|-cost:double                 |
+	|-----------------------------|
+	|+setCost(cost: double):void  |
+	|+getCost():double            |
+	|+Item(description:String,    |
+	|itemNumber:int, cost:double) |
+	-------------------------------
+	*/
+	public static void main(String[] args) {
+		Item testItem = new Item("", 0, 0); // TESTING YOUR CODE
+		testItem.setCost(0); // TESTING YOUR CODE
+		testItem.getCost(); // TESTING YOUR CODE
+		ShopPart1 shopPart1 = new ShopPart1();
+		
+		int score = 0;
+		String tests = "";
+		if(shopPart1.fieldModifiersAreCorrect("private"))
+			score++;
+		else
+			tests += "Test 1 Failed: One or more instance variables were expected to have the default access modifier but did not.";
+		if(shopPart1.methodModifiersAreCorrect("public"))
+			score++;
+		else
+			tests += "Test 2 Failed: One or more methods were expected to be public but were not.\n";
+		
+		String result = score == 2 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/2 Test Cases Passed" : "You have some bugs to fix! " + score + "/2 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	// DON'T CHANGE THIS CODE
+	//INJECT HERE
+	/*
+	static class Item {
+		// ENTER CODE BELOW
+		private String description;
+		private int itemNumber;
+		private double cost;
+		
+		public Item(String description, int itemNumber, double cost) {
+			this.description = description;
+			this.itemNumber = itemNumber;
+			this.cost = cost;
+		}
+		
+		public void setCost(double cost) {
+			this.cost = cost;
+		}
+		
+		public double getCost() {
+			return cost;
+		}
+	}
+	*/
+	
+	// Tests if the instance variables of a class are private, public, protected, etc.
+	private boolean fieldModifiersAreCorrect(String expectedModifier) {
+		Field[] reflectedClass = Item.class.getDeclaredFields(); // CHANGE THIS CLASS
+		boolean isCorrectModifier = false;
+		
+	    for (Field field : reflectedClass) {
+	        int mod = field.getModifiers();
+	        if(Modifier.toString(mod).equals(expectedModifier))
+	        	isCorrectModifier = true;
+	        else {
+	        	isCorrectModifier = false;
+	        	break;
+	        }
+	    }
+	    
+	    return isCorrectModifier;
+	}
+	private boolean methodModifiersAreCorrect(String expectedModifier) {
+		Method[] reflectedClass = Item.class.getDeclaredMethods();
+		boolean isCorrectModifier = false;
+		
+	    for (Method field : reflectedClass) {
+	        int mod = field.getModifiers();
+	        if(Modifier.toString(mod).equals(expectedModifier))
+	        	isCorrectModifier = true;
+	        else {
+	        	isCorrectModifier = false;
+	        	break;
+	        }
+	    }
+	    
+	    return isCorrectModifier;
+	}
+}
+
+

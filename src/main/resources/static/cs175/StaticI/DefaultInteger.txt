@@ -1,0 +1,43 @@
+/*
+	QUESTION: 
+	Declare a static Integer called myInt and DO NOT set its value.
+	To do this you would have to declare 'Integer’, NOT the 'int’. 
+	The reason for this will be explained in a later chapter. 
+*/
+
+public class DefaultInteger 
+{
+	//INJECT HERE
+	
+/* EXPECTED INPUT: 
+   static Integer myInt; 
+*/
+	
+	public static void main(String[] args) 
+	{	
+		int tests = 0;
+		int totalTests = 1;
+			
+		if(DefaultInteger.myInt == null) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable Integer is not static.");
+		}
+		
+		if(myInt == null) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myInt is not set to null.");
+		}
+					
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

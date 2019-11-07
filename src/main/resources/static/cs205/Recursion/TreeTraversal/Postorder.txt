@@ -1,0 +1,94 @@
+/*
+	<div> 
+		<h4>Challenge:</h4>
+		Using Postorder Traversal, what is the order of the tree? Write your answer below separated by commas. 
+		<br>** For this challenge you have 3 attempts.
+		<pre> 
+											+----+
+											| 59 |
+											+----+
+										   /      \
+										+----+  +----+
+										| 72 |  | 65 |
+										+----+  +----+
+									   /      \       \
+									 +----+  +----+  +----+
+									 |120 |  | 25 |  | 07 |
+									 +----+  +----+  +----+
+									/ 	   \       \       \
+								 +----+	  +----+  +----+  +----+
+								 | 28 |   | 52 |  | 10 |  | 21 |
+								 +----+	  +----+  +----+  +----+
+		</pre>
+	</div>
+ 
+ */
+
+import java.util.Scanner;
+
+public class Postorder 
+{
+	public static void main(String [] args)
+	{			
+		String expectedInputA = "28,52,120,10,25,72,21,07,65,59"; 
+		/* ************************ TEST ************************ */		
+		int invalid = 0; 
+		int attempts = 2; 
+		
+		int remainder = attempts - invalid; 
+		
+		String hint = "[ left to right to root ]";
+		
+		int tests = 0;
+		int totalTests = 1;
+		
+		boolean off = false; 
+		
+		while (!off)
+		{			
+			Scanner userInput = new Scanner(System.in);  // Create a Scanner object
+			System.out.println("\nWRITE ANSWER HERE: ");
+			String recursionAnswer = userInput.nextLine();  // Read user input
+			//INJECT HERE
+			
+			/* EXPECTED INPUT
+			 * 28,52,120,10,25,72,21,07,65,59
+			 */
+			
+			if (recursionAnswer.equals(expectedInputA))
+			{
+				tests++; 
+				break;
+			}else {
+				System.out.println("\nInvalid Answer, Try again. | Remaining Attempts: " + remainder);
+				invalid++; 
+				remainder--; 
+				
+				if (invalid == attempts)
+				{
+					if (hint.contentEquals(""))
+					{
+						System.out.println(" "); 
+					}else 
+					{
+						System.out.println("HINT: " + hint); 
+					}
+				}
+				if (invalid > attempts)
+				{
+					break;
+				}
+			}	
+		}
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+
+}

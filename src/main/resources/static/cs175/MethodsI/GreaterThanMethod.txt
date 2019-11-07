@@ -1,0 +1,80 @@
+/*
+src/main/resources/cs175/boolean/logicalGreater
+*/
+public class GreaterThanMethod{
+	//INJECT HERE
+	
+	public static void main(String[] args)
+	{
+		GreaterThanMethod tester = new GreaterThanMethod();
+		int test1 = tester.logicalGreater(25, 40);
+		int test2 = tester.logicalGreater(46, 6);
+		int test3 = tester.logicalGreater(-1, 11);
+		int test4 = tester.logicalGreater(0, 11);
+		int test5 = tester.logicalGreater(0, -25);
+		int test6 = tester.logicalGreater(11, 11);
+		int test7 = tester.logicalGreater(11, -1);
+		int test8 = tester.logicalGreater(16,0);
+		int test9 = tester.logicalGreater(-25, 0);
+		
+		int tests = 0;
+		int totalTests = 9;
+		/* ************************ TEST ************************ */
+		
+		if(test1 == 40){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalGreater(25, 40);");
+		}
+		if(test2 == 46){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalGreater(25, 40);");
+		}
+		if(test3 == 11){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalGreater(1, 11);");
+		}
+		if(test4 == 11){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalGreater(0, 11);");
+		}
+		if(test5 == 0){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalGreater(0, -25);");
+		}
+		if(test6 == 11){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalGreater(11, 11);");
+		}
+		if(test7 == 11){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalGreater(11, -1);");
+		}
+		if(test8 == 16){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalGreater(16,0);");
+		}
+		if(test9 == 0){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalGreater(-25, 0);");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

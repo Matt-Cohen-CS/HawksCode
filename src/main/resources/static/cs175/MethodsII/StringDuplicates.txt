@@ -1,0 +1,63 @@
+/*
+src/main/resources/cs175/boolean/logicalOR
+*/
+public class StringDuplicates {
+	// Declare a method called stringMorpher that accepts one String as a parameter. 
+	// Remove all duplicate letters/numbers/symbols in the String
+	// Return the String without any duplicates. Capitalization does not matter. Example, str = "aAb )" return "b )".
+	
+	//INJECT HERE
+	
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		StringDuplicates test1 = new StringDuplicates();
+		
+		int tests = 0;
+		int totalTests = 5;
+		/* ************************ TEST ************************ */
+		
+		if(test1.stringMorpher("").equals("")){
+			points++;
+		}
+		else{
+			System.out.println("Test case 1 of \"\" failed");
+		} //equals ""
+		if(test1.stringMorpher("aAabBca").equals("c")){
+			points++;
+		}
+		else{
+			System.out.println("Test case 2 of aAbBc failed");
+		} //c
+		if(test1.stringMorpher("1123").equals("23")){
+			points++;
+		}
+		else{
+			System.out.println("Test case 3 of 1123 failed");
+		} //23
+		if(test1.stringMorpher(null)==null) {
+			points++;
+		}
+		else{
+			System.out.println("Test case 4 of null failed");
+		} // null
+		if(test1.stringMorpher("HelLo World").equals("He Wrd")) {
+			points++;
+		}
+		else{
+			System.out.println("Test case 5 of HelLo World failed");
+		} //He Wrd
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+		
+	}
+
+}

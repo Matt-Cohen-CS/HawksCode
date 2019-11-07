@@ -1,0 +1,52 @@
+/*
+
+*/
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+class Abstract{
+
+	public static void main(String [] args) throws NoSuchMethodException, SecurityException{	
+		MyDogs method = new MyDogs();
+		Class ma = method.getClass();
+		int tests = 0;
+		int totalTests = 4;
+		 Method[] methodArray = ma.getDeclaredMethods(); 
+		 
+		/* ************************ TEST CASES ************************ */ 
+		if(methodArray[1].toString().contains("condiments()")||methodArray[0].toString().contains("condiments()")) {
+			 tests++;
+		 }else{
+		 	System.out.println("Method condiments is not defined in MyDogs");
+		 }
+		 if(methodArray[1].toString().contains("numberOfDogs")||methodArray[0].toString().contains("numberOfDogs")) {
+			 tests++;
+		 }else{
+		 	System.out.println("Method numberOfDogs is not defined in MyDogs");
+		 }
+		 if(methodArray[0].getReturnType().toString().contains("ArrayList")||methodArray[1].getReturnType().toString().contains("ArrayList")) {
+			 tests++;
+		 }else{
+		 	System.out.println("Method condiments does not return ArrayList");
+		 }
+		 if(methodArray[1].getReturnType().toString().contains("int")||methodArray[0].getReturnType().toString().contains("int")) {
+			 tests++;
+		 }else{
+		 	System.out.println("Method numberOfDogs does not return Integer");
+		 }
+		/* ************************ TEST ************************ */
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\nYou have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+}
+}
+abstract class HotDogs {
+	public abstract ArrayList<String> condiments();
+	public abstract int numberOfDogs(ArrayList<Integer> a);
+}
+//INJECT HERE

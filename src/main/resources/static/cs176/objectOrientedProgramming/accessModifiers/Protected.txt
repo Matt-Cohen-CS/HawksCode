@@ -1,0 +1,77 @@
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+
+public class Protected {
+
+	/*
+	The next access modifier we will be covering in this section is "protected".
+	Also, we need to have a brief word on "packaging" in Java in order
+	to fully understand access modifiers.  
+	Packages in Java are basically responsible for grouping related classes. 
+	You can think of it like a folder in a file directory. These are useful
+	for organizing larger programs with many classes.
+	In previous challenges, we learned how the private access modifier
+	can encapsulate data and public makes our code accessible from everywhere.
+	When using the private access modifier, our variables and methods are not
+	only hidden from other classes but also from any package. Public makes 
+	variables and methods available to all classes and all packages.
+	Protected makes variables and methods accessible within the same package
+	or subclasses in any package. This can be confusing, I know, but don't worry
+	because you will get plenty of practice with this later in your Java career.
+	We haven't covered subclasses yet but that's coming up in the "inheritance"
+	section. 
+	For your challenge, create a protected instance variable for the Student
+	class called "name".
+	*/
+	
+	public static void main(String[] args) {
+		Protected protectedAccessModifier = new Protected();
+		
+		CollegeStudent testObj = new CollegeStudent("");
+		
+		int score = 0;
+		String tests = "";
+		if(protectedAccessModifier.modifiersAreCorrect("protected"))
+			score++;
+		else
+			tests += "Test 1 Failed: One or more instance variables were expected to be \"protected\" but were not.";
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	//INJECT HERE
+	/*
+	static class Student {
+		
+		// ENTER CODE BELOW
+		protected String name;
+		
+	}
+	*/
+	static class CollegeStudent extends Student {
+		
+		public CollegeStudent(String name) {
+			this.name = name; // TESTING YOUR CODE
+		}
+	
+	}
+	// Tests if the instance variables of a class are private, public, protected, etc.
+	private boolean modifiersAreCorrect(String expectedModifier) {
+		Field[] reflectedClass = Student.class.getDeclaredFields();
+		boolean isCorrectModifier = false;
+		
+	    for (Field field : reflectedClass) {
+	        int mod = field.getModifiers();
+	        if(Modifier.toString(mod).equals(expectedModifier))
+	        	isCorrectModifier = true;
+	        else {
+	        	isCorrectModifier = false;
+	        	break;
+	        }
+	    }
+	    
+	    return isCorrectModifier;
+	}
+
+}
+

@@ -1,0 +1,59 @@
+/*		<div>
+			<h4>Challenge:</h4> 
+			Declare two int variables called numOne and numTwo. Declare a boolean variable called greaterThan. <br>
+			Set the value of numOne to 3, set the value of numTwo to 8 and set the value of greaterThan to numOne <br> 
+			greater than numTwo. Print the variable greaterThan.
+		</div>/*
+	Declare two int variables called numOne and numTwo. 
+	Declare a boolean variable called lessThan. 
+	Set the value of numOne to 3, set the value of numTwo to 8 
+	and set the value of greaterThan to numOne less than numTwo. 
+	Print the variable greaterThan.
+*/
+
+public class LessThan 
+{
+	public static void main(String[] args)
+	{
+		//INJECT HERE
+		
+	/* EXPECTED INPUT: 
+		int numOne = 3; 
+		int numTwo = 8; 
+		boolean lessThan = numOne < numTwo; 
+		System.out.println(lessThan); 
+	*/
+		
+		int tests = 0;
+		int totalTests = 3;
+			
+		/* ************************ TEST ************************ */ 
+		if(numOne == 3) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable numOne is not set to the value of 3.");
+		}
+		
+		if(numTwo == 8) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable numTwo is not set to the value of 8.");
+		}
+		
+		if(lessThan == numOne < numTwo) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable greaterThan is not set to numOne greater than numTwo.");
+		}
+
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

@@ -1,0 +1,56 @@
+/*
+	Description:
+	The .subString() method within Java is a method within the String 
+	class which can be used to break up Strings by each letter. 
+	
+	EXAMPLE: 
+	String str = “Hello”; 
+	str.subString(1);
+	
+	OUTPUT: ello
+	
+	Challenge: 
+	Declare a two String variables named str1 and str2. 
+	Set str1 to the value of ‘Hello World'. Using the .subSting(); method, 
+	set the value of str2 to 'World' from str1. Print the value of the variable str2.
+*/
+
+
+public class StringSubString 
+{
+	public static void main(String[] args) 
+	{	
+		//INJECT HERE
+
+	/* EXPECTED INPUT: 
+		String str1 = "Hello World";
+		String str2 = str1.substring(6);
+		System.out.println(str2); 
+	*/
+		
+		int tests = 0;
+		int totalTests = 2;
+		
+		if(str1.equals("Hello World")) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable str1 is not the value of 'Hello World'.");
+		}
+		
+		if(str2 == str2.substring(6)) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable str2 is not the value of 'World' using str1 and the subString(); method.");
+		}
+				
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

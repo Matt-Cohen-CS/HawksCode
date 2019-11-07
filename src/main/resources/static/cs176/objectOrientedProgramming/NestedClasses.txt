@@ -1,0 +1,83 @@
+public class NestedClasses {
+	
+	/*
+	In Java, we can create classes within other classes, known as "Nested Classes".
+	The reasoning behind doing so is that it allows you to group classes together if they're not being
+	used anywhere else. This increases the use of encapsulation and makes your code easier to read and
+	maintain:
+	
+	class OuterClass {
+		private String message = "Hello!";
+		
+		class InnerClass {
+			public void display() {
+				System.out.println(message);
+			}
+		}
+	}
+	
+	class Main {
+		public static void main(String[] args) {
+			OuterClass outerObj = new OuterClass();
+			OuterClass.InnerClass innerObj = outerObj.new InnerClass();
+			
+			innerObj.display();
+		}
+	}
+	
+	OUTPUT:
+	Hello!
+	
+	Static nested classes work similarly except we don't have to instantiate the outer class first. If
+	InnerClass was static, we would instantiate it like this:
+	
+	OuterClass.InnerClass innerObj = new OuterClass.InnerClass();
+	
+	When working with nested classes, we refer to static nested classes as just "static nested classes",
+	and non-static nested classes as "inner classes".
+	
+	For your challenge, we have created a class "Player". It is your task to create an inner
+	class called "Status" with these fields: health, gold, and experience. Then 
+	create a Status constructor to initialize these fields.
+	NOTE: All fields in Statistics will be of the type int. Also, do not make the inner class static.
+	*/
+	
+	public static void main(String[] args) {
+		Player testObj = new Player();
+		Player.Status testObjInner = testObj.new Status(0, 0, 0); // TESTING YOUR CODE
+		
+		int score = 1;
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+	}
+	//INJECT HERE
+	/*
+	static class Player {
+		// DON'T CHANGE THIS CODE
+		private Inventory inventory;
+		private Equipment equipment;
+		
+		// ENTER CODE BELOW
+		class Status {
+			private int health;
+			private int gold;
+			private int experience;
+			
+			public Status(int health, int gold, int experience) {
+				this.health = health;
+				this.gold = gold;
+				this.experience = experience;
+			}
+		}
+	}
+	*/
+
+	static class Inventory {
+		
+	}
+
+	static class Equipment {
+		
+	}
+	
+}

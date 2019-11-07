@@ -1,0 +1,35 @@
+/*
+	QUESTION: 
+	Declare a static String called str and DO NOT set its value. 
+*/
+
+public class DefaultString 
+{
+	//INJECT HERE 
+	
+/* EXPECTED INPUT: 
+   static String str;    
+*/
+	
+	public static void main(String[] args) 
+	{	
+		int tests = 0;
+		int totalTests = 1;
+		
+		if(str.equals(null)) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable str is not set to the value of 'Hello World'.");
+		}
+				
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

@@ -1,0 +1,53 @@
+
+public class ArrayLiterals {
+	public static void main(String[] args){
+		ArrayLiterals arrayLiterals = new ArrayLiterals();
+		
+		/* 
+		There is another way of creating arrays that immediately set the values. These are called "Array Literals". Array literals look like this:
+		
+		int[] ourArray = {1, 2, 3, 4};
+
+		Create an array literal of 5 of your favorite things. Call this array "myFaves". The array will be of type String.
+		*/
+
+		//INJECT HERE
+		// String[] myFaves = {"a", "b", "c", "d", "e"};
+		
+		arrayLiterals.test(myFaves); // TESTING YOUR CODE
+
+	}
+	
+	public void test(String[] myFaves) {
+		int score = 0;
+		String tests = "";
+		if(myFaves[0] != "") // TESTING YOUR CODE
+			score++;
+		else
+			tests += "Test 1 Failed: myFaves[0] should not be empty.\n";
+		
+		if(myFaves[1] != "") // TESTING YOUR CODE
+			score++;
+		else
+			tests += "Test 2 Failed: myFaves[1] should not be empty.\n";		
+		
+		if(myFaves[2] != "") // TESTING YOUR CODE
+			score++;
+		else
+			tests += "Test 3 Failed: myFaves[2] should not be empty.\n";
+		
+		if(myFaves[3] != "") // TESTING YOUR CODE
+			score++;
+		else
+			tests += "Test 4 Failed: myFaves[3] should not be empty.\n";
+		
+		if(myFaves[4] != "") // TESTING YOUR CODE
+			score++;
+		else
+			tests += "Test 5 Failed: myFaves[4] should not be empty.\n";
+		
+		String result = score == 5 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/5 Test Cases Passed" : "You have some bugs to fix! " + score + "/5 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+}

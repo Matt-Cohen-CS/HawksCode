@@ -1,0 +1,35 @@
+public class Generic 
+{
+	 
+public static void main(String [] args){	
+	//INJECT HERE
+	int tests = 0;
+	int totalTests = 2;
+	myList.add("Hello World");
+	if(myList.get(0).equals("Hello World")){
+		test ++;
+	}else{
+		System.out.println("Failed test case 1, myList does not accept Strings");
+	}
+	myList2.add("Hello World");
+	if(myList2.get(0).equals("Hello World")){
+		test ++;
+	}else{
+		System.out.println("Failed test case 2, myList2 does not accept Objects");
+	}
+	
+	
+		/* ************************ TEST ************************ */
+
+
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\nYou have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+}
+}

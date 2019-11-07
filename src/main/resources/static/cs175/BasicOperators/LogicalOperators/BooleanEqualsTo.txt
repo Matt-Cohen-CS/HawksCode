@@ -1,0 +1,51 @@
+/*
+	Declare three boolean variable named A, B and boolEquals. Set A to the value of true. 
+	Set B to the value of false. Using the sign ( == ), set boolEquals to the value of A EQUALS TO B .
+*/
+
+public class BooleanEqualsTo 
+{
+	public static void main(String[] args) 
+	{
+		//INJECT HERE
+		
+	 /* EXPECTED INPUT: 
+	   	boolean A = true; 
+		boolean B = false; 
+		boolean boolEquals = A == B; 
+		System.out.println(boolEquals);
+	 */
+		
+		int tests = 0;
+		int totalTests = 3;
+		
+		/* ************************ TEST ************************ */ 
+		if(A == true) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable A is not set to the value of 'true'.");
+		}
+		
+		if(B == false) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable B is not set to the value of 'false'.");
+		}
+		
+		if(boolEquals == false) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable boolEquals is not 'false'.");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

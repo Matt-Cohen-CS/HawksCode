@@ -1,0 +1,61 @@
+/*
+	Challenge:
+	Declare three String variables named str1, str2, and str3. 
+	Set the value of str1 to â€œHelloâ€�. Set the value of str2 to 
+	â€œWorldâ€�. Set the value of str3 to str1 + â€˜ â€™ + str2. 
+	
+	Print the value of str3.
+*/
+
+public class StringConcatenate 
+{
+	public static void main(String[] args) 
+	{
+		//INJECT HERE
+
+	/* EXPECTED INPUT: 
+	   	String str1 = "Hello";
+		String str2 = "World"; 
+		String str3 = str1 + ' ' + str2; 
+		System.out.println(str3);
+	*/
+		
+		int tests = 0;
+		int totalTests = 4;
+		
+		if(str1.equals("Hello")) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable str1 is not set to the value of 'Hello'.");
+		}
+		
+		if(str2.equals("World")) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable str2 is not set to the value of 'World'.");
+		}
+		
+		if(str3.equals(str1 + " " + str2)) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable str3 is not set to the value of str1 + ' ' + str2.");
+		}
+		
+		if (str4.equals(str1.concat(str3))){
+		    tests++;
+		}else{
+			System.out.println("\nThe variable str3 is not set to the value described in the challenge.");
+		}		
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+
+}

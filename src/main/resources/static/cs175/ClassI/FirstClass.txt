@@ -1,0 +1,23 @@
+//INJECT HERE
+	
+	public static void main(String[] args)
+	{
+		int tests = 0;
+		int totalTests = 1;
+		
+		/* ************************ TEST ************************ */ 
+		FirstClass myObj = new FirstClass();
+		tests++;
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	
+	}
+}

@@ -1,0 +1,54 @@
+import java.util.LinkedList;
+
+public class SinglyLinkedListV2 
+{
+	public static void printListForward(LinkedList<String> list) 
+    { 
+        System.out.print("Forward Traverse LinkedList: " + list);     
+    }
+	
+	public static void main(String[] args) 
+	{
+		LinkedList<String> list = new LinkedList<String>(); 
+		//INJECT HERE
+		
+		/*EXPECTED OUTPUT 
+		list.addFirst("TOP: Bum");
+		
+		list.add(1, "cheese"); 
+		list.add(2, "beef"); 
+		list.add(3, "lettus"); 
+		list.add(4, "sause"); 
+		
+		list.add(3, "butter"); 
+		
+		list.addLast("BOTTOM: Bum"); 
+		 */
+		
+		//SinglyLinkedListV2.printListForward(list); 
+		
+		/* ************************ TEST ************************ */
+		int tests = 0;
+		int totalTests = 5;	
+	
+		/* TESTING Variables */ 
+		/*
+		if (list.containsAll(c)))
+		{
+			tests++; 
+		}else {
+			System.out.println("\nThe value for head(first Node) is not set to 11.");
+		}
+		*/ 
+			
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

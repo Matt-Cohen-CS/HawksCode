@@ -1,0 +1,59 @@
+#editor
+{
+	width:100%;
+	max-width: 800px;
+	min-width: 300px;
+}
+
+textarea {
+	font-family: 'Inconsolata', monospace;
+}
+
+/*NEW CODE for Challenges page*/
+
+#challenge_page #right-side_info{
+	margin-left:1%;
+	padding-right: 1%;
+	width: 43%;
+	float:right;
+}
+
+#challenge_page .output{
+	border: 1px solid black;
+	padding: 2px;
+}
+
+#challenge_page .errors{
+	border: 1px solid black;
+	padding: 2px;
+}
+
+#challenge_page #score{
+	font-size: 30px;
+}
+
+#challenge_page form{
+
+}
+
+#challenge_page textarea{
+	width:55%;
+	float:left;
+	height: 250px;
+	padding: 2px;
+}
+
+#challenge_page p{
+	clear: both;
+}
+
+.right-side_info h5{
+	float: right;
+	clear: both;
+}
+
+.backButton{
+	float: right;
+	padding-right: 1em;
+}
+

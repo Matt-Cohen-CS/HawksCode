@@ -1,0 +1,52 @@
+public class ArrayBoundsAndLength {
+
+	static String[] sports = {"Baseball", "Basketball", "Football", "Soccer", "Swimming", "Cricket", "Nice try"};
+	public static void main(String[] args) {
+		/*
+		It is important to note that arrays in Java have a set size. If you try to set or get a value from an array that is "out of bounds", you will get an error:
+		
+		int[] ourArray = {5, 10, 15, 20, 25};
+		ourArray[99] = 5; // ERROR
+		
+		For your challenge, we have created an array called "sports":
+		
+		String[] sports = {"Baseball", "Basketball", "Football", "...", "..."};
+		
+		We have hidden some of the items from you for testing purposes.
+		Trying to get an index like -1 will result in Java throwing "ArrayIndexOutOfBoundsException" class. This is a common error when working with arrays.
+		
+		It is your task to get the last element of the sports array and store it in a variable called "last". There is a shortcut to do this using the "length" property:
+		
+		int[] ourArray = {1, 2, 3};
+		int lastElement = ourArray.length - 1;
+		System.out.println(lastElement); // 3
+
+		".length" returns the size of the array and because arrays start at 0, you subtract by 1 to get the index.
+		*/
+
+		ArrayBoundsAndLength arrayBoundsAndLength = new ArrayBoundsAndLength();
+		
+		
+		
+		//INJECT HERE
+		/*
+		int length = sports.length - 1;
+		String last = sports[length];
+		*/
+		
+		arrayBoundsAndLength.test(last); // TESTING YOUR CODE
+	}
+	
+	public void test(String last) {
+		int score = 0;
+		String tests = "";
+		if(last == sports[sports.length - 1])
+			score++;
+		else
+			tests += "Test 1 Failed: Did not get the expected value from \"last\".";
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+
+}

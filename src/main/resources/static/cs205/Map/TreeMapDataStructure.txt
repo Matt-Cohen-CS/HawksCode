@@ -1,0 +1,51 @@
+import java.util.TreeMap;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+
+public class TreeMapDataStructure{
+	public static void main (String [] args){
+		//INJECT HERE
+		int tests = 0;
+		if(myTree.size()==50){
+			tests++;
+		}else{
+			System.out.println("The Tree does not have 50 mappings");
+		}
+		if(myTree.firstKey()==1){
+			tests++;
+		}else{
+			System.out.println("The First Key is not one");
+		}
+		if(myTree.lastKey()==50){
+			tests++;
+		}else{
+			System.out.println("The Last Key is not fifty");
+		}
+		if(myTree.get(50)==100){
+			tests++;
+		}else{
+			System.out.println("The Last Key (50) does not have the value of 100");
+		}
+		if(myList.size() == 50){
+			tests++;
+		}else{
+			System.out.println("The list does not contain 50 values.");
+		}
+		
+		
+		int totalTests = 5;
+		/* ************************ TEST ************************ */
+
+
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\nYou have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

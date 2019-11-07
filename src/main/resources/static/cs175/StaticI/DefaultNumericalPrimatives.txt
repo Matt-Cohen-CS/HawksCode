@@ -1,0 +1,70 @@
+/*
+	QUESTION: 
+	Declare a static Byte called myByte, Short called myShort, a static Long called myLong, 
+	a static Float called myFloat and a static Double called myDou. 
+	DO NOT set their value.
+	
+	To do this you would have to declare the uppercase forms of these
+	primitive data types. Such as ‘Byte’ not ‘byte’, ‘Short’ not ‘short’, ‘Long’ not ‘long, 
+	‘Float’ not ‘float, and ‘Double’ not ‘double’. The reason for this 
+	will be explained in a later chapter.
+*/
+
+public class DefaultNumericDataTypes 
+{
+	//INJECT HERE
+	
+/* EXPECTED INPUT: 
+	static Byte myByte; 
+	static Short myShort;
+	static Long myLong;
+	static Float myFloat;
+	static Double myDou;
+*/
+	
+	public static void main(String[] args) 
+	{	
+		int tests = 0;
+		int totalTests = 5; 
+		
+		if(myByte == null) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myByte is not null.");
+		}
+		
+		if(myShort == null) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myShort is not null.");
+		}
+		
+		if(myLong == null) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myLong is not null.");
+		}
+		
+		if(myFloat == null) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myFloat is not null.");
+		}
+		
+		if(myDou == null) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myDou is not null.");
+		}
+			
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

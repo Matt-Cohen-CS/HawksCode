@@ -1,0 +1,49 @@
+public class MultidimensionalArrays {
+	
+	public static void main(String[] args){
+		MultidimensionalArrays multidimensionalArrays = new MultidimensionalArrays();
+		
+		/*
+		We have only been working with one-dimensional arrays so far, but there are also "Multidimensional Arrays" which are basically arrays of arrays:
+	
+		int[][] ourMatrix = new int[2][4]; // a 2D array or matrix
+		int[][][] our3DArray = new int[5][6][4]; // a 3D array
+
+		When the size of the rows and columns are different, it is known as a "Jagged Array". When getting values from 2D arrays, the first set of brackets refers to the outermost array, and each additional pair refers to the next level of entries inside.
+		
+		int[][] ourMatrix = {
+		       {1, 2, 3, 4},
+		       {5, 6, 7, 8},
+		}
+		int oneToFour = ourMatrix[0]; // equals [1, 2, 3, 4]
+		int three = ourMatrix[0][2]; // equals 3
+
+		For your challenge, create a 2D array called "myMatrix" with 3 rows and 6 columns.
+		*/
+		
+		//INJECT HERE
+//		int[][] myMatrix = new int[3][6];
+	
+		multidimensionalArrays.test(myMatrix); // TESTING YOUR CODE
+	}
+	
+	public void test(int[][] userArray) {
+		int score = 0;
+		String tests = "";
+		if(userArray.length == 3)
+			score++;
+		else
+			tests += "Test 1 Failed: \"myMatrix\" does not have 3 rows.\n";
+		
+		if(userArray[0].length == 6)
+			score++;
+		else
+			tests += "Test 2 Failed: \"myMatrix\" does not have 6 columns.\n";
+		
+		String result = score == 2 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/2 Test Cases Passed" : "You have some bugs to fix! " + score + "/2 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	
+}
+

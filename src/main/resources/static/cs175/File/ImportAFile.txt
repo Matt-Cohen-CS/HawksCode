@@ -1,0 +1,40 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+public class ImportAFile {
+
+
+	
+	public static void main(String[] args) 
+	{
+	//INJECT HERE
+		
+		int tests = 0;
+		int totalTests = 2;
+		/* ************************ TEST ************************ */
+		
+		if(toRead.exists()){
+			tests++;
+		}else{
+			System.out.println("The File toRead does not exist");
+		}
+		if(toRead.toString().equals("work.txt")){
+			tests++;
+		}else{
+			System.out.println("The File toRead is not set to work.txt");
+		}
+	
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+	}
+		
+	}
+}

@@ -1,0 +1,58 @@
+public class BasketballPlayerPart2 {
+
+	public static void main(String[] args) {
+		/*
+		Using the BasketballPlayer class that you implemented during the last
+		challenge, create a BasketballPlayer object called "jr" and set the 
+		name to be "JR" and team to be "Hawks". You may use the constructor or the 
+		setter methods to do this.  
+		*/
+		//INJECT HERE
+//		BasketballPlayer jr = new BasketballPlayer("JR", "Hawks");
+		int score = 0;
+		String tests = "";
+		if(jr.getName().equals("JR")) // TESTING YOUR CODE
+			score++;
+		else
+			tests+="Test 1 Failed: Did not receive \"JR\" for object name.\n";
+		
+		if(jr.getTeam().equals("Hawks")) // TESTING YOUR CODE
+			score++;
+		else
+			tests+="Test 2 Failed: Did not receive \"Hawks\" for object team.\n";
+		
+		String result = score == 2 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/2 Test Cases Passed" : "You have some bugs to fix! " + score + "/2 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+		
+	}
+	static class BasketballPlayer {
+		// ENTER CODE BELOW
+		private String name;
+		private String team;
+		
+		public BasketballPlayer(String name, String team) {
+			this.name = name;
+			this.team = team;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public String getTeam() {
+			return team;
+		}
+
+		public void setTeam(String team) {
+			this.team = team;
+		}
+		
+	}
+
+}
+

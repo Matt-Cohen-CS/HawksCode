@@ -1,0 +1,78 @@
+import java.util.LinkedList;
+import java.util.List;
+
+public class StaticBlocks {
+
+	public static void main(String[] args) {
+		/*
+		The last use of the static keyword we will look at are
+		static blocks, and they look something like this:
+		class A {
+			static int a;
+			
+			static {
+				a = 10;
+				System.out.println("Inside static block");
+			}
+		}
+		
+		A static block is executed when a class is first loaded:
+		
+		class B {
+			public static void main(String[] args) {
+				System.out.println(A.a);
+			}
+		}
+		
+		OUTPUT:
+		Inside static block
+		10
+		
+		A time when we might use static blocks are when we need to
+		initialize static variables for a class before making an 
+		object.
+		
+		For your challenge, we have created a class called "StaticBlock".
+		There is one field called "numbers" that is a List. We haven't 
+		covered Lists in Java yet because they are covered in CS205,
+		but for now all you need to know is that you can call the ".add()"
+		method to add items to it. Using a static block, add the numbers
+		10, 20, and 30 in that order to the List called "numbers".
+		*/
+		int score = 0;
+		String tests = "";
+		if(StaticBlock.numbers.get(0) == 10) 
+			score++;
+		else
+			tests += "Test 1 Failed: First list item is not 10.";
+		
+		if(StaticBlock.numbers.get(1) == 20)
+			score++;
+		else
+			tests += "Test 2 Failed: Second list item is not 20.";
+		
+		if(StaticBlock.numbers.get(2) == 30)
+			score++;
+		else
+			tests += "Test 3 Failed: Third list item is not 30.";
+		
+		String result = score == 3 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/3 Test Cases Passed" : "You have some bugs to fix! " + score + "/3 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+
+	//INJECT HERE
+	/*
+	static class StaticBlock {
+		public static List<Integer> numbers = new LinkedList<>();
+		
+		// INSERT CODE BELOW
+		static {
+			numbers.add(10);
+			numbers.add(20);
+			numbers.add(30);
+		}
+	}
+	*/
+}
+

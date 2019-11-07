@@ -1,0 +1,41 @@
+/*index page*/
+
+#homepage .course-container{
+  display: inline-block;
+  width: 100%;
+  height:100%;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.course{
+  width: 31.33%;
+  height: 250px;
+  background: #002856;
+  border: 1px solid;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  float: left;
+  text-align: center;
+  }
+  
+ .course .courseName{
+  width: 20%;
+  position: absolute;
+  padding-top: 3em;
+  color: #FFFFFF;
+  margin: 0 auto;
+  word-wrap: break-word;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: none;
+  font-size: 1.8em;
+  }
+
+.course:hover{
+	background: #014089;
+    color: #ffffff;
+}
+

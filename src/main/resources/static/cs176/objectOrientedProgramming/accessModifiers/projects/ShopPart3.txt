@@ -1,0 +1,91 @@
+public class ShopPart3 {
+
+	/*
+	Now that the Item and CashRegister classes are completed,
+	you must test your classes.
+	
+	For your challenge, create an Item object using whatever
+	description, item number, and variable name you'd like, 
+	but set it's cost to 10. Next, create a CashRegister object 
+	with the name "myCashRegister" and set it's constructor 
+	arguments to be the Item object you created and 5 as it's quantity. 
+	Then print the subtotal and total of myCashRegister.
+	*/
+	public static void main(String[] args) {
+		//INJECT HERE
+		/*
+		Item myItem = new Item("", 0, 10);
+		CashRegister myCashRegister = new CashRegister(myItem, 5);
+		*/
+		double subtotal = myCashRegister.getSubtotal(); // TESTING YOUR CODE
+		double total = myCashRegister.getTotal(); // TESTING YOUR CODE
+		double tax = myCashRegister.getTax(); // TESTING YOUR CODE
+		
+		int score = 0;
+		String tests = "";
+		if(subtotal == 50)
+			score++;
+		else
+			tests += "Test 1 Failed: Did not get the expected value from getSubtotal.\n";
+		if(total == 53.3125) 
+			score++;
+		else
+			tests += "Test 2 Failed: Did not get the expected value from getTotal.\n";
+		if(tax == 3.3125)
+			score++;
+		else
+			tests += "Test 3 Failed: Did not get the expected value from getTax.\n";
+		String result = score == 3 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/3 Test Cases Passed" : "You have some bugs to fix! " + score + "/3 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	
+	static class CashRegister {
+		private Item item;
+		private int quantity;
+		private final double SALES_TAX = 0.06625;
+		private double subTotal;
+
+		public CashRegister() {
+			quantity = 0;
+			subTotal = 0;
+		}
+		
+		public CashRegister(Item item, int quantity) {
+			this.item = item;
+			this.quantity = quantity;
+		}
+	
+		public double getTax() {
+			return SALES_TAX * getSubtotal();
+		}
+
+		public double getSubtotal() {
+			return quantity * item.getCost();
+		}
+		
+		public double getTotal() {
+			return getSubtotal() + getTax();
+		}
+	}
+	
+	static class Item {
+		private String description;
+		private int itemNumber;
+		private double cost;
+		
+		public Item(String description, int itemNumber, double cost) {
+			this.description = description;
+			this.itemNumber = itemNumber;
+			this.cost = cost;
+		}
+		
+		public void setCost(double cost) {
+			this.cost = cost;
+		}
+		
+		public double getCost() {
+			return cost;
+		}
+	}
+}

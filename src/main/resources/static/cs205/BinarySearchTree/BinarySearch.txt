@@ -1,0 +1,38 @@
+public class BinarySearch{
+	public static void main (String [] args){
+	//INJECT HERE
+	int tests = 0;
+	int totalTests = 4;
+	tests++; //Indicates no errors!
+	String testForIt = myIt.getClass().toString();
+	if(testForIt.contains("Iterator")){
+		tests++;
+	}else {
+		System.out.println("Failed test case 1, myIt was not assigned to the Iterator class");
+	}
+	if(myTreeSet.contains("Hello")){
+		tests++;
+	}else {
+		System.out.println("Failed test case 2, myTreeSet does not contain the element \"Hello\"");
+	}
+	if(myStr.equals("Hello")){
+		tests++;
+	}else {
+		System.out.println("Failed test case 3, myStr is not assigned \"Hello\"");
+	}
+	
+			
+			/* ************************ TEST ************************ */
+	
+	
+			/* ************************ TEST CASES ************************ */ 
+			if(tests == totalTests)
+			{
+				System.out.println("\nCongratulations!!! You passed the challenge!!!");
+			}else
+			{
+				System.out.println("\nYou have some bugs to fix!");
+				System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+			}
+	}
+}

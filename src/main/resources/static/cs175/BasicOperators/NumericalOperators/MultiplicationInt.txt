@@ -1,0 +1,52 @@
+/*
+	Declare the int variables called numOne, numTwo and multiply. 
+	Set the value of numOne to 7, set the value of numTwo to 3 
+	and set the value of multiply to numOne multiplied by numTwo. 
+*/
+
+public class MultiplicationInt 
+{
+	public static void main(String[] args) 
+	{
+		//INJECT HERE
+		
+	/* EXPECTED INPUT: 
+		int numOne = 7; 
+		int numTwo  = 3; 
+		int multiply = numOne * numTwo; 
+	*/
+
+		int tests = 0;
+		int totalTests = 3;
+			
+		/* ************************ TEST ************************ */ 
+		if(numOne == 7) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable numOne is not set to the value of 7.");
+		}
+		
+		if(numTwo == 3) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable numTwo is not set to the value of 3.");
+		}
+		
+		if(multiply == numOne * numTwo) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable multiply is not set to numOne multiplied numTwo.");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+
+}

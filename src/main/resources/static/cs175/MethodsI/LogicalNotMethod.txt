@@ -1,0 +1,33 @@
+
+public class LogicalNotMethod{
+	//INJECT HERE
+	
+	public static void main(String[] args){
+		LogicalNotMethod equal = new LogicalNotMethod();
+		
+		int tests = 0;
+		int totalTests = 2;
+		/* ************************ TEST ************************ */
+		
+		if(!(equal.logicalNot(true))){
+			tests++;
+		}else{
+			System.out.println("Test case1 of inputs true FAILED");
+		}
+		if(equal.logicalNot(false)){
+			tests++;
+		}else{
+		System.out.println("Test case2 of inputs false FAILED");
+		}
+
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

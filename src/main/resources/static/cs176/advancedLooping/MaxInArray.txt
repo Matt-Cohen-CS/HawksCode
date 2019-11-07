@@ -1,0 +1,54 @@
+public class MaxInArray {
+
+	public static void main(String[] args) {
+		/*
+		It is a common exercise to find the max value in an array when
+		you are first starting to learn how to loop through arrays.
+		To find the max value in an array, you must first create a variable
+		outside of the loop that will hold the max value. This will usually 
+		start at 0 or at the first value in the array. Next, for each iteration 
+		of the loop, you are checking if the value of the array at that iteration
+		is greater than max. If so, assign that value to max. 
+		No code example this time, see if you can use the explanation we just
+		gave you and convert it into code.
+		
+		For your challenge, we have created an array called "myNums":
+		
+		double[] myNums = {...};
+		
+		For testing purposes, we have hidden the numbers from you. It is
+		your task to find the max value in this array using a loop.
+		NOTE: The name of your max variable must be called "max" and it must be a double.
+		*/
+		MaxInArray maxInArray = new MaxInArray();
+		
+		double[] myNums = {34.1, 19.8, 56.0, 98.994, Math.PI, 34, 68.2, 70.9163, 3.14, Math.PI, 65.21, 34.33, 67.41, 45.99086, Math.PI, 34.12};
+
+		//INJECT HERE
+		/*
+		double max = myNums[0];
+		for(int i = 0; i < myNums.length; i++) {
+			if(myNums[i] > max) {
+				max = myNums[i];
+			}
+		}
+		*/
+		
+		maxInArray.test(max);
+	}
+	
+	public void test(double max) {
+		int score = 0;
+		String tests = "";
+		if(max == 98.994)
+			score++;
+		else
+			tests += "Test 1 Failed: Max value was not the max value in the array. Here's a hint: your checking if (myNums[i] > max) for each iteration, then you must set the new max value.";
+		
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		
+		System.out.println(result);
+		System.out.println(tests);
+	}
+
+}

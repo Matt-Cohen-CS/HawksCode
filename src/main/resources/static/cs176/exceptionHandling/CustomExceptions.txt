@@ -1,0 +1,56 @@
+public class CustomExceptions {
+
+	/*
+	In Java, there are two types of exceptions you should know about: checked and unchecked.
+	Checked exceptions are checked at compile time and represent a problem
+	that the user knows can happen. Checked exceptions must be checked
+	either with a try, catch block or a throws clause which we will talk
+	about in the next lesson. Checked exceptions extend the Exception class.
+	Unchecked exceptions are not checked by the compiler and represent
+	unexpected problems at runtime. Unchecked exceptions do not force the user to
+	check for them and are usually caused by bad code. We saw last
+	lesson how we can catch the IndexOutOfBoundsException object but it is usually
+	better to fix the code that is causing the exception. Unchecked exceptions 
+	extend the RuntimeException class.
+	
+	Since Exception and RuntimeException are Java classes, it is easy to create our
+	own custom exceptions that are meaningful.
+	To create a checked exception, we extend the Exception class and override
+	the desired constructors. All of Exception's constructors are listed in Java
+	documentation.
+	
+	class MyException extends Exception {
+		public MyException(String message) {
+			super(message);
+		}
+	}
+	
+	We can then throw the exception where we expect it may occur.
+	For your challenge, create the custom checked exception "ListItemNotFoundException"
+	with the constructor that takes in a String for the exception message.
+	*/
+	public static void main(String[] args) {
+		
+		try {
+			throw new ListItemNotFoundException("Testing your code.");
+		} catch(ListItemNotFoundException e) {
+			int score = 1;
+			
+			String result = score == 1 ? "Congratulations!!! You got a perfect score!!! " + score + "/1 Achieved" : "You have some bugs to fix! " + score + "/1 Achieved";
+			System.out.println(result);
+		}
+	}
+	
+	//INJECT HERE
+	/*
+	static class ListItemNotFoundException extends Exception {
+		
+		public ListItemNotFoundException(String message) {
+			super(message);
+		}
+		
+	}
+	*/
+
+}
+

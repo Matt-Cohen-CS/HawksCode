@@ -1,0 +1,48 @@
+/*
+src/main/resources/cs175/boolean/logicalAnd
+*/
+public class LessThanMethod{
+	//INJECT HERE
+	public static void main(String[] args){
+		LessThanMethod equal = new LessThanMethod();
+		int test1 = equal.logicalLess(25, 40);
+		int test2 = equal.logicalLess(46, 6);
+		int test3 = equal.logicalLess(1, 11);
+		int test4 = equal.logicalLess(2, 25);
+		
+		int tests = 4;
+		int totalTests = 3;
+		/* ************************ TEST ************************ */		
+		
+		if(test1 == 25){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalLess(25, 40);");
+		}
+		if(test2 == 6){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalLess(25, 40);");
+		}
+		if(test3 == 1){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalLess(1, 11);");
+		}
+		if(test4 == 2){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalLess(2, 25);");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

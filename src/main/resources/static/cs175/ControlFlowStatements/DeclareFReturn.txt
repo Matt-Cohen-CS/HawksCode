@@ -1,0 +1,61 @@
+
+/* Create a method called forLoop that takes in an integer and will return an integer. 
+Inside the method declare an integer called myVar and set it to 5. Next, create a for 
+loop that will add myVar to the passed in integer (The integer the method is given as a parameter, 
+name it myVar1). Add myVar to myVar1 10 times. Return myVar1. 
+*/
+
+public class DeclareFReturn {
+/* EXPECTED INPUT:
+	
+	public int forLoop(int myVar1) 
+	{
+	
+		/*int myVar = 5;
+		for (int i=0; i<10; i++) 
+		{
+			myVar1 = myVar1 + myVar;
+			
+		}
+	System.out.println(myVar1);
+	return (myVar1); 
+	
+	}*/
+	//INJECT HERE
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		DeclareFReturn m = new DeclareFReturn();
+		
+		 int tests = 0;
+		 int totalTests = 2;
+		 
+		 int myVar = 0;
+		 myVar = m.forLoop(5);
+			if(myVar == 55){ //total sum of myVar1 should be 55 when initialized to 5.
+				tests++;
+			}else {
+				System.out.println("\nThe variable counter is not set to the value of 10.");
+			}
+			 myVar = m.forLoop(0);
+			if(myVar == 50){ //total sum of myVar1 should be 50 when initialized to 0.
+				tests++;
+			}else {
+				System.out.println("\nThe variable in the for loop is not set to the value of 10.");
+			}
+
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+	}
+	
+}	
+
+	
+

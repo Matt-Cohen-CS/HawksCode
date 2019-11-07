@@ -1,0 +1,67 @@
+public class OverloadingMethods {
+	/*
+	Method overloading is a handy technique for when you want different versions of the same method:
+	
+	class A {
+		public void sayHello() {
+			System.out.println("Hello Anonymous.");
+		}
+		
+		public void sayHello(String name) {
+			System.out.println("Hello " + name + ".");
+		}
+		
+		public void sayHello(String name, String timeOfDay) {
+			System.out.println("Hello " + name + ", how are you this " + timeOfDay + "?");
+		}
+	}
+	
+	class B {
+		public static void main() {
+			A a = new A();
+			a.sayHello();
+			a.sayHello("Joe");
+			a.sayHello("Joe", "evening");
+		}
+	}
+	
+	OUTPUT:
+	Hello Anonymous.
+	Hello Joe.
+	Hello Joe, how are you this evening?
+	
+	So how does this work? In Java and other programming languages, there is something called
+	method signatures that are part of method declarations. The method signature includes
+	the name of the method and the type of its parameters. The method signatures of the example
+	above are: sayHello(), sayHello(String), and sayHello(String, String). The compiler sees this
+	and is able to decide which method to run based on how many arguments we passed to the method.
+	For your challenge, you will be creating 2 overloaded methods for the class below. The method
+	must either set counter to 0 when the parameter is empty or set counter to an argument that is 
+	passed in. The methods must be called "setCounter".
+
+	*/
+	public static void main(String[] args) {
+		OverloadingMethod obj = new OverloadingMethod();
+		obj.setCounter(); // TESTING YOUR CODE
+		obj.setCounter(1); // TESTING YOUR CODE
+		
+		int score = 1;
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+	}
+	//INJECT HERE
+	/*
+	static class OverloadingMethod {
+		private int counter;
+		
+		// INSERT CODE BELOW
+		public void setCounter() {
+			counter = 0;
+		}
+		
+		public void setCounter(int counter) {
+			this.counter = counter;
+		}
+	}
+	*/
+}

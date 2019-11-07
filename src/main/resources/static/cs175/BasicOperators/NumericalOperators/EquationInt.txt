@@ -1,0 +1,59 @@
+/*
+	Declare four int variables called numOne, numTwo, numThree and equation. 
+	Set the value of numOne to 5, set the value of numTwo to 
+	4, set the value of numThree to 1 and set the value of equation 
+	to numOne multiplied numTwo plus numThree.
+*/
+
+public class EquationInt 
+{
+	public static void main(String[] args) 
+	{
+		//INJECT HERE
+		
+	/* EXPECTED INPUT: 
+		int numOne = 5; 
+		int numTwo = 4; 
+		int numThree = 1; 
+		int equation = (numOne * numTwo) + numThree; 
+		//int equation = numOne * numTwo + numThree; 
+	*/
+		
+		int tests = 0;
+		int totalTests = 4;
+			
+		/* ************************ TEST ************************ */ 
+		if(numOne == 5) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable numOne is not set to the value of 5.");
+		}
+		
+		if(numTwo == 4) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable numTwo is not set to the value of 4.");
+		}
+		
+		if(numThree == 1) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable numThree is not set to the value of 1.");
+		}
+		
+		if(equation == (numOne * numTwo) + numThree || equation == numOne * numTwo + numThree) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable equation is not set to numOne multiplied numTwo plus numThree.");
+		}
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

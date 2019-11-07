@@ -1,0 +1,106 @@
+public class SinglyLinkedListV1 
+{
+	Node head; 
+	
+	static class Node
+	{
+		int data; 
+		Node next; 
+		Node (int d) 
+		{
+			data = d; next = null; 
+		}
+	}
+	
+	public static void printListForward(SinglyLinkedListV1 list) 
+    { 
+        Node start = list.head; 
+   
+        System.out.print("Forward Traverse LinkedList: "); 
+   
+        // Forward Traverse through the LinkedList 
+        while (start != null) 
+        { 
+            // Print the data at current node 
+            System.out.print(start.data + " "); 
+   
+            // Go to next node 
+            start = start.next; 
+        }     
+    }
+		
+	public static void main(String [] args)
+	{	
+		SinglyLinkedListV1 mylist = new SinglyLinkedListV1();
+		
+		//INJECT HERE
+		
+		/* EXPECTED OUTPUT
+		mylist.head = new Node(1); 
+		Node second = new Node(2); 
+		Node third = new Node(3); 
+		
+		mylist.head.data = 11; 
+		second.data = 12; 
+		third.data = 13; 
+		
+		mylist.head.next = second; 
+		second.next = third;
+		*/
+		
+		//SinglyLinkedListV1.printListForward(mylist); 
+		
+		/* ************************ TEST ************************ */
+		int tests = 0;
+		int totalTests = 5;	
+	
+		/* TESTING Variables */ 
+		
+		if (mylist.head.data == 11)
+		{
+			tests++; 
+		}else {
+			System.out.println("\nThe value for head(first Node) is not set to 11.");
+		}
+		
+		if (second.data == 12)
+		{
+			tests++; 
+		}else {
+			System.out.println("\nThe value for second is not set to 12.");
+		}
+		
+		if (third.data == 13)
+		{
+			tests++; 
+		}else {
+			System.out.println("\nThe value for third is not set to 13.");
+		}
+		
+		/* TESTING Node Next */ 
+		
+		if (mylist.head.next == second)
+		{
+			tests++; 
+		}else {
+			System.out.println("\nThe next value for head(first Node) was not set to the correct value.");
+		}
+		
+		if (second.next == third)
+		{
+			tests++; 
+		}else {
+			System.out.println("\nThe next value for second was not set to the correct value.");
+		}
+			
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

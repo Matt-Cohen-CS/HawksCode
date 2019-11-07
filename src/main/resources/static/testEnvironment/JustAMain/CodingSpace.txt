@@ -1,0 +1,8 @@
+public class CodingSpace{
+	
+	
+	public static void main(String[] args){
+	//INJECT HERE
+	
+	}
+}

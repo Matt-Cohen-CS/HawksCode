@@ -1,0 +1,79 @@
+public class ShopPart5 {
+
+	/*
+	Now, you must test your program. Create an array with three Item objects, 
+	and then create a CashRegister object called "myCashRegister" with its constructor
+	argument set to the array of Item objects.
+	NOTE: You may leave the constructor arguments for your Item objects empty.
+	*/
+	public static void main(String[] args) {
+		
+		//INJECT HERE
+		/*
+		Item[] items = {new Item(), new Item(), new Item()};
+		CashRegister myCashRegister = new CashRegister(items);
+		 */
+		 
+		int itemLength = myCashRegister.getItems().length; // TESTING YOUR CODE
+		int score = 0;
+		String tests = "";
+		if(itemLength == 3) {
+			score++;
+		} else {
+			tests += "Test 1 Failed: Did not get the expected number of items.\n";
+		}
+		
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	static class CashRegister {
+		private Item[] items;
+		private final double SALES_TAX = 0.06625;
+		private double subTotal;
+
+		public CashRegister() {
+			subTotal = 0;
+		}
+		
+		public CashRegister(Item[] items) {
+			this.items = items;
+		}
+
+		public Item[] getItems() {
+			return items;
+		}
+		public double getTax() {
+			return SALES_TAX * subTotal;
+		}
+
+		public double getTotal() {
+			return subTotal + getTax();
+		}
+	}
+	
+	static class Item {
+		private String description;
+		private int itemNumber;
+		private double cost;
+		private int quantity;
+
+		public Item() {
+			
+		}
+		public Item(String description, int itemNumber, double cost, int quantity) {
+			this.description = description;
+			this.itemNumber = itemNumber;
+			this.cost = cost;
+			this.quantity = quantity;
+		}
+		
+		public void setCost(double cost) {
+			this.cost = cost;
+		}
+		
+		public double getCost() {
+			return cost;
+		}
+	}
+}

@@ -1,0 +1,94 @@
+public class ShopPart7 {
+
+	/*
+	As you might have expected, you must now test your program.
+	Create an array of Item objects, the number of items can be
+	anything you like. Each Item must have a description, item number, cost,
+	and quantity. Then, create a CashRegister object called "myCashRegister" 
+	with the array of Item objects as it's constructor argument. Then, print the
+	subtotal and total in any format that you like.
+	*/
+	public static void main(String[] args) {
+		//INJECT HERE
+		/*
+		Item[] items = {new Item("", 0, 1, 1), new Item("", 1, 0, 1), new Item("", 2, 0, 1)};
+		CashRegister myCashRegister = new CashRegister(items);
+		System.out.println("Subtotal: " + myCashRegister.getSubtotal());
+		System.out.println("Total: " + myCashRegister.getTotal());
+		*/
+		
+		double subtotal = myCashRegister.getSubtotal();	// TESTING YOUR CODE
+		int score = 0;
+		String tests = "";
+		if(subtotal > 0) {
+			score++;
+		} else {
+			tests += "Test 1 Failed: Subtotal should be greater than 0.\n";
+		}
+		
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	static class CashRegister {
+		private Item[] items;
+		private final double SALES_TAX = 0.06625;
+		private double subTotal;
+
+		public CashRegister() {
+			subTotal = 0;
+		}
+		
+		public CashRegister(Item[] items) {
+			this.items = items;
+		}
+
+		public Item[] getItems() {
+			return items;
+		}
+		// ENTER CODE BELOW
+		public double getSubtotal() {
+			double total = 0;
+			for(Item item: items) {
+				total += item.getCost() * item.getQuantity();
+			}
+			return total;
+		}
+		
+		public double getTax() {
+			return SALES_TAX * getSubtotal();
+		}
+
+		public double getTotal() {
+			return getSubtotal() + getTax();
+		}
+	}
+	
+	static class Item {
+		private String description;
+		private int itemNumber;
+		private double cost;
+		private int quantity;
+
+		public Item() {
+			
+		}
+		public Item(String description, int itemNumber, double cost, int quantity) {
+			this.description = description;
+			this.itemNumber = itemNumber;
+			this.cost = cost;
+			this.quantity = quantity;
+		}
+		
+		public void setCost(double cost) {
+			this.cost = cost;
+		}
+		
+		public double getCost() {
+			return cost;
+		}
+		public int getQuantity() {
+			return quantity;
+		}
+	}
+}

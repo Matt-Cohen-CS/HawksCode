@@ -1,0 +1,65 @@
+public class WhileLoopArray {
+
+	public static void main(String[] args) {
+		
+		/*
+		You can also implement the same logic from last challenge's example with while loops:
+		
+		String[] groceries = {"Milk", "Eggs", "Bread"};
+		
+		int i = 0;
+		while(i < groceries.length) {
+			System.out.println(groceries[i]);
+			i++;
+		}
+		
+		OUTPUT:
+		Milk
+		Eggs
+		Bread
+		
+		As you can see, there is a bit more work required than if we used a For Loop. 
+		This type of while loop is quite common which is why we use for loops to write shorter and more readable code.
+		The only time we might use a while loop with an array is when we need to get user input, as we will explore in later challenges.
+		For your challenge, you will implement the same code from last challenge but
+		this time using a While loop. we have created an array called "myNums":
+
+		double[] myNums = {...};
+		
+		For testing purposes, we have hidden the numbers from you. It is your task to look through the array "myNums", and set 
+		any value equal to pi to 0.
+		NOTE: You should use Math.PI for this challenge.
+		*/
+
+		WhileLoopArray whileLoopArray = new WhileLoopArray();
+		
+		double[] myNums = {34.1, 19.8, 56.0, 98.994, Math.PI, 34, 68.2, 70.9163, 3.14, Math.PI, 65.21, 34.33, 67.41, 45.99086, Math.PI, 34.12};
+		//INJECT HERE
+		/*
+		int i = 0;
+		while(i < myNums.length) {
+			if(myNums[i] == Math.PI) 
+				myNums[i] = 0;
+			i++;
+		}
+		*/
+		whileLoopArray.test(myNums);
+	}
+
+	
+	public void test(double[] myNums) {
+		int score = 0;
+		String tests = "";
+		
+		if(myNums[4] == 0 && myNums[9] == 0 && myNums[14] == 0)
+			score++;
+		else 
+			tests += "Test 1 Failed: Values expected to be 0 were not 0. Are you checking for Math.PI?";
+	
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+	
+		System.out.println(result);
+		System.out.println(tests);
+	}
+
+}

@@ -1,0 +1,48 @@
+
+/* Declare an integer called Score. Using an If-Else statement, 
+ * check if Score is greater than 75. If Score greater than 75 output
+ *  �Congrats! You passed.� If Score less that 75, output �Sorry! Try again.�
+*/
+
+
+public class DeclareIfElse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//INJECT HERE
+		
+		
+		 
+		 /* EXPECTED INPUT:
+		int score = 74;
+		if(score >= 75)
+		{
+			System.out.print("Congrats! You passed.");
+		} else {
+			System.out.print("Sorry! Try again.");
+		}
+		  */
+		
+		
+		int tests = 0;
+		int totalTests = 1;
+				
+			if(score == 74){
+				tests++;
+			}else {
+				System.out.println("\nThe variable Score is not set to the value of 74.");
+			}
+			
+						
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

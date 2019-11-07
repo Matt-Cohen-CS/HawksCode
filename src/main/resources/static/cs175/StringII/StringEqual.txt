@@ -1,0 +1,63 @@
+/*
+	DESCRIPTION: 
+	The .equals() method within Java is a method within 
+	the String class that returns true if two String 
+	objects are equivalent, meaning that they have the 
+	same sequence of characters. 
+	
+	CHALLENGE:
+	Declare two String variables called str1 and str2. 
+	Set the value for str1 to â€œThis is some textâ€� 
+	and the value for str2 to â€œThis is some other textâ€�. 
+	Using the .equals() within a print statement, check 
+	if str1 is equal to str2. The result should be false. 
+*/
+
+public class StringEqual 
+{
+	public static void main(String[] args) 
+	{	
+		//INJECT HERE
+		
+	/* EXPECTED INPUT: 
+	   	String str1 = "This is some text"; 
+		String str2 = "This is some other text";
+		System.out.println(str1.equals(str2)); 
+	*/
+		int tests = 0;
+		int totalTests = 4;
+		
+		if(str1.equals("HelloWorld")) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable str1 not the value of 'HelloWorld'.");
+		}
+		
+		if(str2.equals("HelloWorld")) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable str2 not the value of 'HelloWorld'.");
+		}
+		
+		if(str1 != str2){
+		    tests++;
+		}else{
+		   System.out.println("str1 and str2 were not declared using the new keyword");
+		}
+		if(str1.equals(str2) == true) {
+			tests++;
+		}else {
+			System.out.println("str1 and str2 do not hold the same value");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

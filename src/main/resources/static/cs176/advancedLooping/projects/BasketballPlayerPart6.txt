@@ -1,0 +1,91 @@
+public class BasketballPlayerPart6 {
+	
+	/*
+	Finally, it is time to create our team. You can create as many player objects
+	as you like but they must have only the number of points, rebounds, and 
+	assists as arguments. Afterwards, you must create an array of type BasketballPlayer
+	and put your player objects in the array. Finally, create a Team object called 
+	"myTeam" with your array of players as a constructor argument.
+	*/
+	public static void main(String[] args) {
+		//INJECT HERE
+		/*
+		BasketballPlayer playerObj1 = new BasketballPlayer(40, 10, 15);
+		BasketballPlayer playerObj2 = new BasketballPlayer(25, 25, 20);
+		BasketballPlayer playerObj3 = new BasketballPlayer(15, 15, 40);
+		
+		BasketballPlayer[] players = {playerObj1, playerObj2, playerObj3};
+		Team myTeam = new Team(players);
+		*/
+		System.out.println("Total points: " + myTeam.totalPoints()); // TESTING YOUR CODE
+		System.out.println("Total rebounds: " + myTeam.totalRebounds()); // TESTING YOUR CODE
+		System.out.println("Total assists: " + myTeam.totalAssists()); // TESTING YOUR CODE
+		
+		int score = 1;
+		String tests = "";
+		
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	
+	static class BasketballPlayer {
+		private int points;
+		private int rebounds;
+		private int assists;
+		
+		public BasketballPlayer(int points, int rebounds, int assists) {
+			this.points = points;
+			this.rebounds = rebounds;
+			this.assists = assists;
+		}
+		
+		public double getPoints() {
+			return points;
+		}
+		
+		public double getRebounds() {
+			return rebounds;
+		}
+		
+		public double getAssists() {
+			return assists;
+		}
+	}
+	
+	static class Team {
+		private BasketballPlayer[] players;
+		
+		public Team(BasketballPlayer[] players) {
+			this.players = players;
+		}
+		
+		public double totalPoints() {
+			double teamPoints = 0;
+			for(int i = 0; i < players.length; i++) {
+				teamPoints += players[i].getPoints();
+			}
+			return teamPoints;
+		}
+		
+		public double totalRebounds() {
+			
+			double teamRebounds = 0;
+			for(int i = 0; i < players.length; i++) {
+				teamRebounds += players[i].getRebounds();
+			}
+			return teamRebounds;
+			
+		}
+		
+		public double totalAssists() {
+			
+			double teamAssists = 0;
+			for(int i = 0; i < players.length; i++) {
+				teamAssists += players[i].getAssists();
+			}
+			return teamAssists;
+			
+		}
+	}
+}

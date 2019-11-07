@@ -1,0 +1,89 @@
+import java.util.ArrayList;
+
+public class RemovingItems {
+
+	public static void main(String[] args) {
+		/*
+		The final ArrayList operation we will be covering is removing items
+		with the ".remove()" method:
+		
+		ArrayList<String> reasonsToCode = new ArrayList<String>();
+		reasonsToCode.add("It is fun.");
+		reasonsToCode.add("You can create cool things.");
+		reasonsToCode.add("Change the world.");
+		reasonsToCode.add("I only want money!!!");
+		
+		reasonsToCode.remove(3); // Removes the fourth item
+		
+		In some cases, you might want to remove all the elements in an ArrayList.
+		In that case, you would use the ".clear()" method:
+		
+		reasonsToCode.clear();
+		
+		Your challenge is pretty similar to the last one, except this time you
+		are removing items based on some condition. For your challenge, we have
+		already imported the ArrayList class and created an ArrayList called
+		"emails":
+		
+		ArrayList<String> emails = new ArrayList<String>();
+		
+		Then we added some emails to the ArrayList. We also created a method and For
+		loop to get you started.
+		
+		public void removeEmptyEmails(ArrayList<String> emails) {
+			for(int i = 0; i < emails.size(); i++) {
+				// ENTER CODE BELOW
+				
+				
+				
+			}
+		}
+		
+		It is your task to check for empty Strings in the ArrayList and remove them.
+		*/
+		
+		RemovingItems removingItems = new RemovingItems();
+		
+		ArrayList<String> emails = new ArrayList<String>();
+		emails.add("joe@somesite.edu");
+		emails.add("mary@somesite.edu");
+		emails.add("mark@anothersite.com");
+		emails.add("");
+		emails.add("jen@anothersite.com");
+		emails.add("todd@yetanothersite.com");
+		emails.add("");
+		emails.add("rob@yetanothersite.com");
+
+		removingItems.removeEmptyEmails(emails);
+	}
+	//INJECT HERE
+	/*
+	public void removeEmptyEmails(ArrayList<String> emails) {
+		for(int i = 0; i < emails.size(); i++) {
+			// ENTER CODE BELOW
+			if(emails.get(i).equals("")) {
+				emails.remove(i);
+			}
+			
+		}
+		
+		// DON'T CHANGE THIS LINE
+		test(emails); // TESTING YOUR CODE
+	}
+	*/
+	public void test(ArrayList<String> emails) {
+		int score = 0;
+		String tests = "";
+		
+		if(emails.size() == 6) 
+			score++;
+		else
+			tests += "Test 1 Failed: Did not get the expected size of emails. Are you using the \".equals()\" method to check for an empty String?";
+		
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		
+		System.out.println(result);
+		System.out.println(tests);
+	}
+
+}

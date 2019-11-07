@@ -1,0 +1,35 @@
+/*
+	QUESTION: 
+	Declare a Boolean called myBol and set its value to true.  
+*/
+
+public class DeclareBoolean 
+{	
+	public static void main(String[] args)
+	{	
+		//INJECT HERE
+				
+		/* EXPECTED INPUT: 
+			boolean myBol = true;
+		*/
+		
+		int tests = 0;
+		int totalTests = 1;
+			
+		if(myBol) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myBol is not set to the value of 'true'.");
+		}
+					
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

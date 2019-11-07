@@ -1,0 +1,45 @@
+/*
+	INTRODUCTION: 
+	Within Java programming there are class members called static 
+	variables. Static variables are all instances of the variable 
+	will be set to the initial declaration of the variable.  
+	
+	QUESTION: 
+	Declare a static Boolean called mybol and DO NOT set its value.
+	To do this you would have to declare Boolean', NOT the 'boolean'. 
+	The reason for this will be explained in a later chapter. 
+*/
+
+
+public class DefaultBoolean 
+{
+	//INJECT HERE
+	
+/* EXPECTED INPUT: 
+   static Boolean myBol = null; 
+*/
+		
+	public static void main(String[] args)
+	{		
+		int tests = 0;
+		int totalTests = 2;
+			
+		if(myBol == null) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable Boolean is not static.");
+		}
+
+		// TEST FOR PRINT STATEMENT
+					
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

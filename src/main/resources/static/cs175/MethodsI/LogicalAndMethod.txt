@@ -1,0 +1,50 @@
+/*
+src/main/resources/cs175/logicalOperators/logicalAnd
+*/
+public class LogicalAnd{
+	//INJECT HERE
+	
+	public static void main(String[] args)
+	{
+		LogicalAnd tester = new LogicalAnd();
+		boolean test1 = tester.logicalAnd(true, true);
+		boolean test2 = tester.logicalAnd(true, false);
+		boolean test3 = tester.logicalAnd(false, true);
+		boolean test4 = tester.logicalAnd(false, false);
+		
+		int tests = 0;
+		int totalTests = 4;
+		/* ************************ TEST ************************ */
+		
+		if(test1 == true){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalAnd(true, true);");
+		}
+		if(test2 == false){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalAnd(true, false);");
+		}
+		if(test3 == false){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalAnd(false, true);");
+		}
+		if(test4 == false){
+			tests++;
+		}else{
+			System.out.println("Failed test logicalAnd(false, false);");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

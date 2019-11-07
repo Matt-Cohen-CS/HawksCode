@@ -1,0 +1,80 @@
+/*
+  Arraylists store a collection of elements and can grow/shrink 
+  depending on the amount of elements it contains. 
+  
+  In Big O Notation, what is the average runtime for the get 
+  method of an Arraylist? 
+  
+  ** For this challenge you have 3 attempts.
+ */
+import java.util.Scanner;  // Import the Scanner class
+
+public class Question1 
+{
+	public static void main(String [] args)
+	{			
+		
+		/* ************************ TEST ************************ */		
+		int invalid = 0; 
+		int attempts = 2; 
+		
+		int remainder = attempts - invalid; 
+		
+		String hint = "Does not matter how long it takes to run, only that a constant time was taken.";
+		
+		int tests = 0;
+		int totalTests = 1;
+		
+		boolean off = false; 
+		
+		while (!off)
+		{			
+			Scanner userInput = new Scanner(System.in);  // Create a Scanner object
+			System.out.println("\nWRITE ANSWER HERE: ");
+			String bigOanswer = userInput.nextLine();  // Read user input
+			//INJECT HERE
+			
+			/* EXPECTED INPUT
+			 * O(1)
+			 */
+			
+			if (bigOanswer.equals("O(1)") || bigOanswer.equals(" O(1)") || bigOanswer.equals("1") )
+			{
+				if (bigOanswer.equals("1")) 
+				{
+					System.out.println("\nThis answer is accepted, however, it is not in Big O Notation.");
+				}
+				tests++; 
+				break;
+			}else {
+				System.out.println("\nInvalid Answer, Try again. | Remaining Attempts: " + remainder);
+				invalid++; 
+				remainder--; 
+				
+				if (invalid == attempts)
+				{
+					if (hint.contentEquals(""))
+					{
+						System.out.println(" "); 
+					}else 
+					{
+						System.out.println("HINT: " + hint); 
+					}
+				}
+				if (invalid > attempts)
+				{
+					break;
+				}
+			}	
+		}
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

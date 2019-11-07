@@ -1,0 +1,37 @@
+/*
+src/main/resources/cs175/boolean/logicalOR
+*/
+public class DoubleToString
+{
+	public static void main(String[] args)
+	{
+		//INJECT HERE
+		double checkVar = a;
+		String checkString = str;
+		
+		int tests = 0;
+		int totalTests = 2;
+		
+		/* ************************ TEST ************************ */ 
+		if(checkVar==5) {
+			tests++;
+		}else {
+			System.out.println("The variable a was not initialized to 5");
+		}
+		if(checkString.equals("5.0")) {
+			tests++;
+		}else {
+			System.out.println("The variable str was not casted correctly to the double variable a");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

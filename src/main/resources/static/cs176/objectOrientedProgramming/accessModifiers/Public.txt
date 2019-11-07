@@ -1,0 +1,120 @@
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+
+public class Public {
+	
+	/*
+	The public access modifier makes it so that classes, methods, 
+	or instance variables are accessible by any other code in your program:
+	
+	// Public.java
+	class A {
+		public int a;
+	}
+
+	class B {
+		public static void main(String[] args) {
+			Private obj = new Private();
+			obj.a = 1;
+		}
+	}
+	
+	However, it is usually not a good idea to make all your variables and methods
+	public. When working with classes, you should try to use the most restrictive
+	level of classes that makes sense for your variables and methods. 
+	
+	For your challenge, we have expanded upon the CashRegister class. Create 
+	public getter methods for getting the sales tax and the total. We will 
+	be worrying about getting the subtotal in a later challenge, but for now 
+	create the getTotal method which will return the subtotal plus the sales tax, 
+	and the getTax method which will return the sales tax times the subtotal.
+	
+	*/
+	
+	public static void main(String[] args) {
+		Public publicAccessModifier = new Public();
+		Item testItem = new Item(9.99);
+		CashRegister testCashRegister = new CashRegister(testItem, 1); 
+		
+		int score = 0;
+		String tests = "";
+		
+		double tax = testCashRegister.getTax(); // TESTING YOUR CODE
+		double total = testCashRegister.getTotal(); // TESTING YOUR CODE
+		if(publicAccessModifier.modifiersAreCorrect("public"))
+			score++;
+		else
+			tests += "Test 1 Failed: One or more methods were expected to be \"public\" but were not.\n";
+		if(tax == 0) 
+			score++;
+		else
+			tests += "Test 2 Failed: Did not get the expected value from \"getTax\".\n";
+		if(total == 0.06625)
+			score++;
+		else
+			tests += "Test 3 Failed: Did not get the expected value from \"getTotal\".\n";
+		String result = score == 3 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/3 Test Cases Passed" : "You have some bugs to fix! " + score + "/3 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	
+	//INJECT HERE
+	/*
+	static class CashRegister {
+		private Item item;
+		private int quantity;
+		private final double SALES_TAX = 0.06625;
+		private double subTotal;
+
+		public CashRegister() {
+			quantity = 0;
+			subTotal = 0;
+		}
+		
+		public CashRegister(Item item, int quantity) {
+			this.item = item;
+			this.quantity = quantity;
+		}
+		
+		// ENTER CODE BELOW
+		public double getTax() {
+			return SALES_TAX * subTotal;
+		}
+		
+		public double getTotal() {
+			return subTotal + SALES_TAX;
+		}
+	}
+	*/
+	
+	static class Item {
+		private double cost;
+		
+		public Item(double cost) {
+			this.cost = cost;
+		}
+
+		public double getCost() {
+			return cost;
+		}
+	}
+	// Tests if the methods of a class are private, public, protected, etc.
+	private boolean modifiersAreCorrect(String expectedModifier) {
+		Method[] reflectedClass = CashRegister.class.getDeclaredMethods();
+		boolean isCorrectModifier = false;
+		
+	    for (Method field : reflectedClass) {
+	        int mod = field.getModifiers();
+	        if(Modifier.toString(mod).equals(expectedModifier))
+	        	isCorrectModifier = true;
+	        else {
+	        	isCorrectModifier = false;
+	        	break;
+	        }
+	    }
+	    
+	    return isCorrectModifier;
+	}
+
+}

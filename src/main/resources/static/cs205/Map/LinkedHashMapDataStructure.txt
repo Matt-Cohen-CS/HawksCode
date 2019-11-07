@@ -1,0 +1,57 @@
+import java.util.TreeMap;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+public class LinkedHashMapDataStructure{
+	public static void main (String [] args){
+		//INJECT HERE
+		int tests = 0;
+		if(myLHM.size()==2){
+			tests++;
+		}else{
+			System.out.println("The size of the Map is not two. Test case failed");
+		}
+		if(!(myLHM.isEmpty())){
+			tests++;
+		}else{
+			System.out.println("The Map is declared but has no Mappings");
+		}
+		if(myLHM.containsKey("dog")){
+			tests++;
+		}else{
+			System.out.println("There is no \"dog\" Key");
+		}
+		if(myLHM.containsKey("cat")){
+			tests++;
+		}else{
+			System.out.println("There is no \"cat\" Key");
+		}
+		if(myLHM.get("dog") == 25){
+			tests++;
+		}else{
+			System.out.println("The \"dog\" Key is not Mapped to 25");
+		}
+		if(myGuess.equals("dog")){
+			tests++;
+		}else{
+			System.out.println("Your guess for the first key is wrong. Try again!");
+		}
+		
+		
+		
+		int totalTests = 6;
+		/* ************************ TEST ************************ */
+
+
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\nYou have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

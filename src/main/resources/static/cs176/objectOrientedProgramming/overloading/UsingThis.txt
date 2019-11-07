@@ -1,0 +1,78 @@
+public class UsingThis {
+
+	/*
+	As you may know, it is better not to repeat yourself when programming
+	because it makes your project harder to maintain as it grows in size.
+	You already know how to reuse methods in other files by creating objects,
+	but you may have noticed that overloading constructors and methods have
+	repetitive code in them. 
+	There is actually a way to make it so that we don't repeat ourselves simply 
+	by using the "this" keyword. You have probably seen "this" floating around 
+	in these challenges. The "this" keyword simply refers to the class you are 
+	currently working in. It's the same as using  an object, except you are using 
+	the current class. Here's how you can make your overloaded constructors less 
+	repetitive using "this":
+	
+	class Student {
+		private String name;
+		private String id;
+		
+		public Student() {
+			this("", "");
+		}
+		
+		public Student(String name) {
+			this(name, "");
+		}
+		
+		public Student(String name, String id) {
+			this.name = name;
+			this.team = team;
+		}
+	}
+	
+	As you can see, the last constructor with all our fields as parameters acts
+	as the "template" for our other constructors. When we call this("", "") in
+	the first constructor, we are actually calling the last constructor and setting the
+	name and team to whatever we like. It makes sense to set the name and id to blank
+	when no arguments are passed in, so we set them to empty strings. In the second constructor, we 
+	call the last constructor again but set the name to an argument we pass in.
+	
+	For your challenge, create overloaded constructors for the BasketballPlayer class using
+	the "this" keyword.
+	*/
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BasketballPlayer testObj1 = new BasketballPlayer(); // TESTING YOUR CODE
+		BasketballPlayer testObj2 = new BasketballPlayer(""); // TESTING YOUR CODE
+		BasketballPlayer testObj3 = new BasketballPlayer("", ""); // TESTING YOUR CODE
+		
+		int score = 1;
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+	}
+
+	
+	//INJECT HERE
+	/*
+	// DON'T CHANGE THIS CODE
+	static class BasketballPlayer {
+		private String name;
+		private String team;
+		
+		// ENTER CODE BELOW
+		public BasketballPlayer() {
+			this("", "");
+		}
+		
+		public BasketballPlayer(String name) {
+			this(name, "");
+		}
+		
+		public BasketballPlayer(String name, String team) {
+			this.name = name;
+			this.team = team;
+		}
+	}
+	*/
+}

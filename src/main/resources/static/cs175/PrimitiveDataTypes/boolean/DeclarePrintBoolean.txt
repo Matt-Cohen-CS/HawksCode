@@ -1,0 +1,58 @@
+/*
+	INTRODUCTION: 
+	Within Java, there are a series of system calls that allow a user to 
+	retrieve information, allowing this information to be viewed within the 
+	terminal. One of these system calls is System.out.println(). 
+	
+	System.out.println(); is series of java packages and methods used to 
+	display messages from within console or from a file. There are two ways 
+	a user can view this information placed within the brackets. The first 
+	way is by calling the variable name and the second was is by inputting 
+	a specific message within the print statement that is to be viewed. 
+	To display a specific message double quotation marks are used to 
+	surround the intended message.
+	
+	EXAMPLE: 
+	boolean running = true; 
+	System.out.println( running ); 
+	
+	System.out.println(true); 
+
+	QUESTION: 
+	Declare a boolean called myBol and set its value to true. 
+	Using a print statement, print the variable name. 
+*/ 
+
+public class DeclarePrintBoolean 
+{
+	public static void main(String[] args)
+	{	
+		//INJECT HERE
+		
+		/* EXPECTED INPUT: 
+			boolean myBol = true;
+			System.out.println(myBol);
+		*/
+		
+		int tests = 0;
+		int totalTests = 1;
+			
+		if(myBol) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myBol is not set to the value of 'true'.");
+		}
+		
+		// TEST FOR PRINT STATEMENT
+					
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

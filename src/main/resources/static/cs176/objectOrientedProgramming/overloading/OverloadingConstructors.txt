@@ -1,0 +1,82 @@
+public class OverloadingConstructors {
+	/*
+	We can overload constructors the same way we overload methods:
+	
+	class A {
+		private int i;
+		private String s;
+		private boolean b;
+		
+		public A() {
+			this.i = 0;
+			this.s = "";
+			this.b = false;
+		}
+		public A(int i) {
+			this.i = i;
+			this.s = "";
+			this.b = false;
+		}
+		public A(int i, String s) {
+			this.i = i;
+			this.s = s;
+			this.b = false;
+		}
+		public A(int i, String s, boolean b) {
+			this.i = i;
+			this.s = s;
+			this.b = b;
+		}
+	}
+	
+	This allows us to initialize objects in different ways.
+	
+	For your challenge, create overloaded constructors for all the 
+	instance variables in class "OverloadingConstructor".
+	
+	class OverloadingConstructor {
+		private int i;
+		private String s;
+		
+		// INSERT CODE BELOW
+	}
+	
+	
+	*/
+	public static void main(String[] args) {
+		OverloadingConstructor testObj1 = new OverloadingConstructor(); // TESTING YOUR CODE
+		OverloadingConstructor testObj2 = new OverloadingConstructor(0); // TESTING YOUR CODE
+		OverloadingConstructor testObj3 = new OverloadingConstructor(0, ""); // TESTING YOUR CODE
+		
+		int score = 1;
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+	}
+
+	//INJECT HERE
+	/*
+	static class OverloadingConstructor {
+		int i;
+		String s;
+		
+		// INSERT CODE BELOW
+		public OverloadingConstructor() {
+			i = 0;
+			s = "";
+		}
+		
+		public OverloadingConstructor(int i) {
+			this.i = i;
+			s = "";
+		}
+		
+		public OverloadingConstructor(int i, String s) {
+			this.i = i;
+			this.s = s;
+		}
+		
+	}
+	*/
+
+}
+

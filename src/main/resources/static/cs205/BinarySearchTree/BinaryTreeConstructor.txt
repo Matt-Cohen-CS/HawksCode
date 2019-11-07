@@ -1,0 +1,29 @@
+public BinaryTreeConstructor{
+	public static void main (String [] args){
+	//INJECT HERE
+	int tests = 0;
+	int totalTests = 3;
+	myIntSet.add(5);
+	tests++;
+	myStrSet.add("");
+	tests++;
+	if(myStrSet.contains("first") && myStrSet.contains("second")){
+		tests++;
+	}else{
+		System.out.println("Failed Test case 3, listForSet was not added or was changed.");
+	}
+			
+			/* ************************ TEST ************************ */
+	
+	
+			/* ************************ TEST CASES ************************ */ 
+			if(tests == totalTests)
+			{
+				System.out.println("\nCongratulations!!! You passed the challenge!!!");
+			}else
+			{
+				System.out.println("\nYou have some bugs to fix!");
+				System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+			}
+	}
+}

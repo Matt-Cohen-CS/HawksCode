@@ -1,0 +1,109 @@
+public class ShopPart6 {
+
+	/*
+	Now that you know how to loop through an array, we can finally
+	complete our Shop program! Getting the subtotal is the trickiest part
+	to implement in the CashRegister class. Although, it's nothing that
+	you haven't seen already. 
+	
+	For your challenge, create the getSubtotal() method. For the 
+	getSubtotal method, you're going to first create a variable 
+	to hold the total. Then loop through the CashRegister's array of items, 
+	and get the cost of each item times the item's quantity which gets added 
+	to the total. Finally, return the total.
+	*/
+	public static void main(String[] args) {
+		Item[] testItems = {new Item("Item 1", 0, 1, 1), new Item("Item 2", 1, 2, 1), new Item("Item 3", 2, 3, 1)};
+		CashRegister testCashRegister = new CashRegister(testItems);
+
+		double subtotal = testCashRegister.getSubtotal(); // TESTING YOUR CODE
+		double total = testCashRegister.getTotal(); // TESTING YOUR CODE
+		double tax = testCashRegister.getTax(); // TESTING YOUR CODE
+		int score = 0;
+		String tests = "";
+		if(subtotal == 6.0)
+			score++;
+		else
+			tests += "Test 1 Failed: Did not get the expected value from getSubtotal.\n";
+		
+		if(total == 6.3975)
+			score++;
+		else
+			tests += "Test 2 Failed: Did not get the expected value from getTotal.\n";
+		
+		if(tax == 0.3975)
+			score++;
+		else
+			tests += "Test 3 Failed: Did not get the expected value from getTax.\n";
+		
+		String result = score == 3 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/3 Test Cases Passed" : "You have some bugs to fix! " + score + "/3 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	
+	//INJECT HERE
+	/*
+	static class CashRegister {
+		private Item[] items;
+		private final double SALES_TAX = 0.06625;
+		private double subTotal;
+
+		public CashRegister() {
+			subTotal = 0;
+		}
+		
+		public CashRegister(Item[] items) {
+			this.items = items;
+		}
+
+		public Item[] getItems() {
+			return items;
+		}
+		// ENTER CODE BELOW
+		public double getSubtotal() {
+			double total = 0;
+			for(Item item: items) {
+				total += item.getCost();
+			}
+			return total;
+		}
+		
+		public double getTax() {
+			return SALES_TAX * getSubtotal();
+		}
+
+		public double getTotal() {
+			return getSubtotal() + getTax();
+		}
+	}
+	*/
+	
+	static class Item {
+		private String description;
+		private int itemNumber;
+		private double cost;
+		private int quantity;
+
+		public Item() {
+			
+		}
+		public Item(String description, int itemNumber, double cost, int quantity) {
+			this.description = description;
+			this.itemNumber = itemNumber;
+			this.cost = cost;
+			this.quantity = quantity;
+		}
+		
+		public void setCost(double cost) {
+			this.cost = cost;
+		}
+		
+		public double getCost() {
+			return cost;
+		}
+		
+		public int getQuantity() {
+			return quantity;
+		}
+	}
+}

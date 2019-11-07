@@ -1,0 +1,37 @@
+public class Factorial {	
+//INJECT HERE
+	
+	
+	
+	public static void main (String [] args){
+	int check1 = 3;
+	int check2 = 1;
+	int tests = 0;
+	int totalTests = 2;
+	Factorial f = new Factorial();
+	if (f.factorial(check1)==6){
+		tests++;
+	}else{
+		System.out.println("Failed test case 1, of value 3");
+	}
+	if(f.factorial(check2)==1){
+		tests++;
+	}else{
+		System.out.println("Failed test case 2, of value 1");
+	}
+		
+		
+		/* ************************ TEST ************************ */
+
+
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\nYou have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

@@ -1,0 +1,33 @@
+/*Help Page*/
+
+.helpTopics {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#classTopic table{
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+	padding-left: 10%;
+	padding-right: 10%;
+	width: 100%;
+}
+
+#classTopic table th{
+	width: 20%;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#classTopic table td a{
+	width: 20%;
+	text-align:center;
+	margin-left: 2%;
+	margin-right: 2%;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+

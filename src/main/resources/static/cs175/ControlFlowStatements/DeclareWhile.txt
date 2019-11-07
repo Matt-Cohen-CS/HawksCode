@@ -1,0 +1,54 @@
+
+
+/* Building on knowledge of If Statements, you can test if the statement is True within 
+ * a While loop and set a counter that will automatically increment so that you can�t 
+ * get stuck within an infinite loop. Declare int Counter = 1. While Counter is less 5, 
+ * increment Counter. Print out the concatenated statement (�Counter is � + Counter)
+ *  using the current Counter variable. Once Counter = 5, Print �Done.�
+*/
+
+
+
+public class DeclareWhile {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		//INJECT HERE
+		
+		/*EXPECTED INPUT:
+		int counter = 1;
+		while(counter < 5)
+		{
+			System.out.println("Counter is " + counter);
+			counter ++;
+		}
+		
+		System.out.print("Done.");
+		*/
+
+		 int tests = 0;
+		 int totalTests = 1;
+				
+			if(counter == 5){
+				tests++;
+			}else {
+				System.out.println("\nThe variable counter is not set to the value of 1.");
+			}
+			
+						
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+
+	}
+
+}

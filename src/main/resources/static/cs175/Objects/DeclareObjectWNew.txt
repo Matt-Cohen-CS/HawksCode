@@ -1,0 +1,43 @@
+public class Constructors {
+
+private int theInt;
+
+Constructors(int theInt){
+this.theInt = theInt;
+}
+
+public int getTheInt(){
+	return theInt;
+}
+	
+	public static void main(String[] args) 
+	{
+		//INJECT HERE
+		
+		int tests = 0;
+		int totalTests = 2;
+		/* ************************ TEST ************************ */
+		
+		if(myObj.getTheInt() == 10){
+			tests++;
+		}else{
+			System.out.println("The int parameter was not set to 10");
+		}
+		if(myObj instanceof Constructors){
+			tests++;
+		}else{
+			System.out.println("The Object myObj is not set to the correct Class");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+
+}

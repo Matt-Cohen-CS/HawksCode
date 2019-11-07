@@ -1,0 +1,40 @@
+public class Enum 
+{
+	
+	public static void main(String [] args){
+	int tests = 0;
+	int totalTests = 4;
+	if(Directions.checkDirections(Directions.NORTH).toLowerCase().equals("south")){
+			tests++;
+	}else {
+		System.out.println("Test case of NORTH failed.");
+	}
+	if(Directions.checkDirections(Directions.SOUTH).toLowerCase().equals("north")){
+			tests++;
+	}else {
+		System.out.println("Test case of SOUTH failed.");
+	}
+	if(Directions.checkDirections(Directions.EAST).toLowerCase().equals("west")){
+			tests++;
+	}else{
+		System.out.println("Test case of EAST failed.");
+	}
+	if(Directions.checkDirections(Directions.WEST).toLowerCase().equals("east")){
+			tests++;
+	}else{
+		System.out.println("Test case of WEST failed.");
+	}
+		/* ************************ TEST ************************ */
+
+
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\nYou have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+}
+//INJECT HERE 

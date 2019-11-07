@@ -1,0 +1,84 @@
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+
+public class BasketballPlayerPart1 {
+
+	/*
+	To get more practice accessing and changing private instance variables
+	using setter and getter methods, you will implement the BasketballPlayer
+	class yourself.
+	
+	For your challenge, create the private fields "team" and "name" and create
+	public getter and setter methods for both. Also create a constructor that
+	sets the fields when instantiating an object of the class.
+	*/
+	public static void main(String[] args) {
+		BasketballPlayer testObj = new BasketballPlayer("", ""); // TESTING YOUR CODE
+		testObj.setName(""); // TESTING YOUR CODE
+		testObj.getName(); // TESTING YOUR CODE
+		testObj.setTeam(""); // TESTING YOUR CODE
+		testObj.getTeam(); // TESTING YOUR CODE
+		
+		BasketballPlayerPart1 basketballPlayerPart1 = new BasketballPlayerPart1();
+		
+		int score = 0;
+		String tests = "";
+		if(basketballPlayerPart1.modifiersAreCorrect("private"))
+			score++;
+		else
+			tests += "Test 1 Failed: One or more instance variables were expected to have the default access modifier but did not.";
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	// DON'T CHANGE THIS CODE
+	//INJECT HERE
+	/*
+	static class BasketballPlayer {
+		// ENTER CODE BELOW
+		private String name;
+		private String team;
+		
+		public BasketballPlayer(String name, String team) {
+			this.name = name;
+			this.team = team;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public String getTeam() {
+			return team;
+		}
+
+		public void setTeam(String team) {
+			this.team = team;
+		}
+		
+	}
+	*/
+	
+	// Tests if the instance variables of a class are private, public, protected, etc.
+	private boolean modifiersAreCorrect(String expectedModifier) {
+		Field[] reflectedClass = BasketballPlayer.class.getDeclaredFields(); // CHANGE THIS CLASS
+		boolean isCorrectModifier = false;
+		
+	    for (Field field : reflectedClass) {
+	        int mod = field.getModifiers();
+	        if(Modifier.toString(mod).equals(expectedModifier))
+	        	isCorrectModifier = true;
+	        else {
+	        	isCorrectModifier = false;
+	        	break;
+	        }
+	    }
+	    
+	    return isCorrectModifier;
+	}
+	
+}

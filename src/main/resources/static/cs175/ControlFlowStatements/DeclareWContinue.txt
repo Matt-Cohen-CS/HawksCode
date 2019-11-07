@@ -1,0 +1,57 @@
+
+/*Declare an integer named counter and set it equal to 10. Use a while loop to DECREMENT
+ * the counter to 1. Inside a while loop, while counter is greater than 1, print("Counter "+counter) Use a continue statement to skip the number 5 when the counter
+ *  gets to it. Output the result using a Print statement.
+
+HINT: the continue statement should be nested within the while loop in an if statement.
+
+*/
+
+
+
+public class DeclareWContinue {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//INJECT HERE
+		
+		/* EXPECTED INPUT:
+		int counter = 10;
+
+		while(counter > 1) {
+			
+			counter--;
+			if(counter == 5) {
+				continue;
+			}
+			System.out.println("Counter "+counter);
+		}
+		
+		*/
+
+		 int tests = 0;
+		 int totalTests = 1;
+				
+			if(counter == 1){
+				System.out.println(counter);
+				tests++;
+			}else {
+				System.out.println("\nThe variable counter is not set to the value of 10.");
+			}
+
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+
+
+	}
+
+}

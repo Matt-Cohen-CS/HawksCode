@@ -1,0 +1,33 @@
+public class StaticVariables {
+	/*
+	When a variable is declared static, it can be accessed before any objects of its class
+	are created, and without any reference to an object:
+	// Static.java
+	class A {
+		static int a;
+	}
+	
+	class B {
+		A.a = 5;
+	}
+	A time when static might be useful is when you have a property that is common to all objects.
+	For your challenge, we have created a class "StaticVariable". Create a static field for "counter". Counter
+	will be of type int.
+	*/
+	public static void main(String[] args) {
+		StaticVariable.counter = 0; // TESTING YOUR CODE
+		int score = 1;
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+	}
+	//INJECT HERE
+	/*
+	// A.java
+	static class StaticVariable {
+		static int counter;
+	}
+	*/
+}
+
+
+

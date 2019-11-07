@@ -1,0 +1,50 @@
+/*
+	INTRODUCTION: 
+	Setting a string variable to a value by using double quotation marks
+	and using string literal, which is defined by using new String(),
+	does the same thing within Java programming. All in all it boils 
+	down to developer preference. 
+	
+	QUESTION: 
+	Declare two String variables called str1 and str2. 
+	Set str1 to the value of "blue" and set str2 to a 
+	new String() with the value of "red". 
+ */
+ 
+public class StringLiteral 
+{
+	public static void main(String[] args) 
+	{
+		//INJECT HERE
+				
+		/* EXPECTED INPUT: 
+		   String str1 = "blue"; 
+		   String str2 = new String (str1);   
+		*/
+		
+		int tests = 0;
+		int totalTests = 2;
+		
+		if(str1.equals("blue")) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable str1 is not the value of 'blue'.");
+		}
+		
+		if(str2.equals("blue")) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable str2 is not the value of 'blue' (str1).");
+		}
+				
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

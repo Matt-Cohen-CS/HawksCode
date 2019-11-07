@@ -1,0 +1,78 @@
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+public class Default {
+
+	public static void main(String[] args) {
+		/*
+		The last access modifier we will be looking at in this section is
+		the default access modifier. Using the default access modifier is simple,
+		we basically don't declare an access modifier:
+		// Default.java
+		class A {
+			int a;
+			void display() {
+				System.out.println("Hello from class A");
+			}
+		}
+		
+		class B {
+			A obj = new A();
+			A.display();
+			A.a = 1;
+		}
+		
+		What this does is make our variables and methods accessible from classes
+		only within the same package. It's more restricting than public and
+		protected but less restricting than private. 
+		
+		For your challenge, declare an instance variable "name" with the
+		default access modifier for the class Student:
+
+		*/
+		Default defaultAccessModifier = new Default();
+		
+		Student testObj = new Student("");
+		
+		int score = 0;
+		String tests = "";
+		if(!defaultAccessModifier.modifiersAreCorrect("private") && !defaultAccessModifier.modifiersAreCorrect("public") && !defaultAccessModifier.modifiersAreCorrect("protected"))
+			score++;
+		else
+			tests += "Test 1 Failed: One or more instance variables were expected to have the default access modifier but did not.";
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	
+	//INJECT HERE
+	/*
+	static class Student {
+		// ENTER CODE BELOW
+		String name;
+		
+		// DON'T CHANGE THIS CODE
+		public Student(String name) {
+			this.name = name; // TESTING YOUR CODE
+		}
+	}
+	*/
+	
+	// Tests if the instance variables of a class are private, public, protected, etc.
+	private boolean modifiersAreCorrect(String expectedModifier) {
+		Field[] reflectedClass = Student.class.getDeclaredFields(); // CHANGE THIS CLASS
+		boolean isCorrectModifier = false;
+		
+	    for (Field field : reflectedClass) {
+	        int mod = field.getModifiers();
+	        if(Modifier.toString(mod).equals(expectedModifier))
+	        	isCorrectModifier = true;
+	        else {
+	        	isCorrectModifier = false;
+	        	break;
+	        }
+	    }
+	    
+	    return isCorrectModifier;
+	}
+
+}

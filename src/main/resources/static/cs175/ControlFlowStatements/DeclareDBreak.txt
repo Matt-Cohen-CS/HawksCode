@@ -1,0 +1,72 @@
+
+/* Declare integers a, b, sum, newSum, and counter. Set a=2, set b=5. Write a Do loop
+ that is set to add integers a and b while counter is < -5000. Within the do 
+ section assign sum the value of sum+a+b. Next, set newSum to the value of sum, 
+ then write an if-statement that checks if sum == 7 {break;}. Finally, within 
+ the do set sum = sum + 1000. After the do-while, print out Sum and newSum. 
+ What do you think the values of sum and newSum will be? Do you think they�ll
+  be the same or different?
+
+HINT: Do-While loops are designed to run at least once regardless of the
+ condition set in the While part of the loop. Whatever you write within the 
+ Do statement will run once. A Break statement uses the keyword break in Java. 
+ In this statement, java will �break� you out of any loop and go to the next 
+ statement.
+
+*/
+
+
+
+
+public class DeclareDBreak {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	//INJECT HERE
+	/*	
+		int a=2;
+		int b=5;
+		int sum=0;
+		int newSum=0;
+		int counter= 0;
+		do{
+			sum = sum+a+b;
+			newSum= sum;
+			if (sum==7) {
+				break;
+			}
+			sum=sum+1000;
+			counter++;
+		} while (counter < -5000);
+		
+		System.out.println(newSum);
+		System.out.print(sum);
+		}
+	*/
+		int tests = 0;
+		int totalTests = 1;
+		/* ************************ TEST ************************ */
+				
+			if(counter == 7){ 
+				tests++;
+			}else {
+				System.out.println("\nThe variable counter is not set to the value of 10.");
+			}
+
+			
+			
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+	}
+}
+
+	
+

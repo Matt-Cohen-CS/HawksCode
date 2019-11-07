@@ -1,0 +1,49 @@
+public class ConstructorsTest{
+	
+	public static class Book{
+		private String name;
+		private String author;
+		private int pages;
+		private double price;
+	
+	//INJECT HERE
+	}
+	
+	public static void main(String[] args){
+		System.out.println("An error indicates a failure\n");
+		int score = 0;
+		Book book = new Book("test", "a", 1, 1.99);
+		
+		if(book.name.equals("test")){
+			score++;
+		}else{
+			System.out.println("Constructor is not properly setting the name variable");
+		}
+		
+		if(book.author.equals("a")){
+			score++;
+		}else{
+			System.out.println("Constructor is not properly setting the author variable");
+		}
+		
+		if(book.pages == 1){
+			score++;
+		}else{
+			System.out.println("Constructor is not properly setting the pages variable");
+		}
+		
+		if(book.price == 1.99){
+			score++;
+		}else{
+			System.out.println("Constructor is not properly setting the price variable");
+		}
+		
+		if(score == 4){
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else{
+			System.out.println("You have some bugs to fix!!!");
+		}
+		
+	}
+
+}

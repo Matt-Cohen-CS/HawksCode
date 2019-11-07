@@ -1,0 +1,72 @@
+import java.util.LinkedList;
+import java.util.List;
+
+public class Throw {
+
+	/*
+	We saw in the previous lesson how we can extend either the Exception or
+	RuntimeException classes to create our own exceptions.
+	In order to actually throw the exception, we can use the throw keyword:
+	
+	try {
+		if(!desiredResult) {
+			throw new MyException("This is an example");
+		}
+	} catch(MyException e) {
+		e.printStackTrace();
+	}
+
+	As you can see, the throw keyword lets us throw our custom exception
+	anywhere in the program. It can also throw any checked or unchecked
+	exceptions. 
+	For your challenge, you will throw the ListItemNotFoundException you created
+	when the list item is not found. 
+	
+	*/
+	public static void main(String[] args) {
+		List<String> ourList = new LinkedList<String>();
+		ourList.add("apples");
+		ourList.add("oranges");
+		ourList.add("grapes");
+		ourList.add("mango");
+		ourList.add("peaches");
+		boolean itemNotFound = true;
+	
+		for(int i = 0; i < ourList.size(); i++) {
+			if(ourList.get(i).equals("grapefruit"))
+				itemNotFound = false;
+			else
+				itemNotFound = true;
+		}
+		
+		//INJECT HERE
+		/*
+		try {
+			// DON'T CHANGE THIS LINE
+			if(itemNotFound) {	
+				// ENTER CODE BELOW
+				throw new ListItemNotFoundException("Could not find the list item.");
+			}
+		} catch(ListItemNotFoundException e) {
+
+		}
+		*/
+		finally {
+			int score = 1;
+			
+			String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+			System.out.println(result);
+		}
+	}
+
+}
+
+class ListItemNotFoundException extends Exception {
+	
+	public ListItemNotFoundException() { }
+	
+	public ListItemNotFoundException(String message) {
+		super(message);
+	}
+	
+}

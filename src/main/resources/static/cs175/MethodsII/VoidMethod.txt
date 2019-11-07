@@ -1,0 +1,41 @@
+package booleanChallenges;
+
+/*
+src/main/resources/cs175/boolean/logicalOR
+*/
+import java.lang.reflect.Method;
+public class VoidMethod{
+	//INJECT HERE
+	
+public boolean doesVoidExcist() 
+{
+	VoidMethod method = new VoidMethod();
+	Class m = method.getClass();
+	try {
+		Method method1 = m.getDeclaredMethod("noReturn");
+		method.noReturn();
+		String a = method1.getReturnType().toString();
+		if(a.equals("void")) {
+			return true;
+		}
+		else {
+			throw new NoSuchMethodException();
+		}
+	} catch (NoSuchMethodException | SecurityException e) {
+		System.out.println("The class VoidMethod does not have a method or an incorrect noReturn method.");
+		return false;
+	}
+	
+	
+}
+public static void main(String[] args)
+{
+	VoidMethod m = new VoidMethod();
+		if(m.doesVoidExcist()) {
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else{
+		System.out.println("\n< You have some bugs to fix!");
+		System.out.println(" 0 / 1 Test Cases Passed");
+		}
+	}
+}

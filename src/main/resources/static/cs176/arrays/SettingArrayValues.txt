@@ -1,0 +1,60 @@
+public class SettingArrayValues {
+	public static void main(String[] args) {
+		SettingArrayValues settingArrayValues = new SettingArrayValues();
+		/*
+		Once you instantiate your array, you can give values to it. Say we have an array with a size of 3:
+
+		int[] ourArray = new int[3];
+
+		If we want to set the first element of the array, we get the first index and then assign a value to it:
+		
+		ourArray[0] = 5; // First index
+
+		Remember that arrays always start at 0. We can set the second and third values like this:
+		
+		ourArray[1] = 10; // Second index
+		ourArray[2] = 15; // Third value
+
+		For your challenge, we created an array of type double with a size of 3:
+		
+		double[] newArray = new double[3];
+
+		Assign three values greater than 0 to "newArray"
+		*/
+		
+		double[] newArray = new double[3];
+		
+		//INJECT HERE
+		/*
+		newArray[0] = 1;
+		newArray[1] = 1;
+		newArray[2] = 1;
+		*/
+		settingArrayValues.test(newArray); // TESTING YOUR CODE
+	}
+	
+	public void test(double[] newArray) {
+
+		int score = 0;
+		String tests = "";
+		if(newArray[0] > 0)
+			score++;
+		else
+			tests += "Test 1 Failed: newArray[0] is not greater than 0.\n";
+		
+		if(newArray[1] > 0)
+			score++;
+		else
+			tests += "Test 2 Failed: newArray[1] is not greater than 0.\n";
+		
+		if(newArray[2] > 0)
+			score++;
+		else
+			tests += "Test 3 Failed: newArray[2] is not greater than 0.\n";
+		
+			
+		String result = score == 3 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/3 Test Cases Passed" : "You have some bugs to fix! " + score + "/3 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+}

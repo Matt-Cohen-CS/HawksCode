@@ -1,0 +1,37 @@
+
+public class DoubleToInt{
+	
+	public static void main(String[] args)
+{
+		//INJECT HERE
+	
+		double checkDub = myDouble;
+		int checkInt = myInt;
+		
+		int tests = 0;
+		int totalTests = 2;
+		
+		/* ************************ TEST ************************ */ 
+		if(checkDub==5.5) {
+			tests++;
+		}else {
+			System.out.println("The variable myDouble was not initialized to 5.5");
+		}
+		
+		if(myInt==5) {
+			tests++;
+		}else {
+			System.out.println("The variable myInt was not casted correctly to the double variable myDouble");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

@@ -1,0 +1,53 @@
+/*
+	Declare three int variables called numOne, numTwo and divide. 
+	Set the value of numOne to 63, set the value of numTwo to 3 
+	and set the value of divide to numOne divided by numTwo. 
+*/
+
+public class DivisionInt 
+{
+	public static void main(String[] args) 
+	{
+		//INJECT HERE
+		
+	/* EXPECTED INPUT: 
+		int numOne = 63; 
+		int numTwo  = 3; 
+		int divide = numOne / numTwo; 
+	*/
+
+		int tests = 0;
+		int totalTests = 3;
+			
+		/* ************************ TEST ************************ */ 
+		if(numOne == 63) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable numOne is not set to the value of 63.");
+		}
+		
+		if(numTwo == 3) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable numTwo is not set to the value of 3.");
+		}
+		
+		if(divide == numOne / numTwo) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable divide is not set to numOne divided numTwo.");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+	}
+
+}

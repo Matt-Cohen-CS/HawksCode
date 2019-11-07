@@ -1,0 +1,41 @@
+/*
+	QUESTION: 
+	Declare a static Charset called mychar and DO NOT set its value.
+	To do this you would have to declare 'Charset', NOT the 'char'. 
+	The reason for this will be explained in a later chapter. 
+*/
+
+import java.nio.charset.Charset;
+
+public class DefaultChar 
+{		
+	//INJECT HERE
+	
+/* EXPECTED INPUT: 
+   static Charset myChar; 
+*/
+	
+	public static void main(String[] args)
+	{		
+		int tests = 0;
+		int totalTests = 1;
+		
+		if(myChar == null) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myChar is not set to null.");
+		}
+
+		// TEST FOR PRINT STATEMENT
+						
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

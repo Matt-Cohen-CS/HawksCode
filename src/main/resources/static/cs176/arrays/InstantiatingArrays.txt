@@ -1,0 +1,69 @@
+public class InstantiatingArrays {
+	public static void main(String[] args){
+		
+		/*
+		An array declaration uses square brackets([]) to tell Java that it is an array. The general form of an array declaration is:
+		
+		type varName[];
+		OR
+		type[] varName;
+		
+		Use whichever you prefer, we'll be using the second one throughout this section. To instantiate it, you must use the "new" keyword 
+		and then the type with square brackets again.
+	
+		type[] varName = new type[size];
+		
+		If I were to create an array of chars with a size of 10, it would look like the following:
+		
+		char[] charArray = new char[10];
+		
+		For your challenge, declare and instantiate an array of ints, doubles, Strings, and Objects.
+		
+		NOTE: the variables must be called intArray, doubleArray, stringArray, and objectArray and their sizes must be greater than 0.
+		*/
+		
+		InstantiatingArrays instantiatingArrays = new InstantiatingArrays();
+		
+		//INJECT HERE
+		/*
+		int[] intArray = new int[1];
+		double[] doubleArray = new double[1];
+		String[] stringArray = new String[1];
+		Object[] objectArray = new Object[1];
+		*/
+		
+		instantiatingArrays.test(intArray, doubleArray, stringArray, objectArray); // TESTING YOUR CODE
+	}
+	
+	public void test(int[] intArray, double[] doubleArray, String[] stringArray, Object[] objectArray) {
+		int score = 0;
+		String tests = "";
+		if(intArray.length > 0)
+			score++;
+		else
+			tests += "Test 1 Failed: Expected size of intArray to be greater than 0.\n";
+	
+		if(doubleArray.length > 0)
+			score++;
+		else 
+			tests += "Test 2 Failed: Expected size of doubleArray to be greater than 0.\n";
+		
+		if(stringArray.length > 0)
+			score++;
+		else 
+			tests += "Test 3 Failed: Expected size of stringArray to be greater than 0.\n";
+		
+		if(objectArray.length > 0)
+			score++;
+		else
+			tests += "Test 4 Failed: Expected size of objectArray to be greater than 0.\n";
+
+		String result = score == 4 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/4 Test Cases Passed" : "You have some bugs to fix! " + score + "/4 Test Cases Passed";
+		
+		
+		System.out.println(result);
+		System.out.println(tests);
+	}
+}
+
+

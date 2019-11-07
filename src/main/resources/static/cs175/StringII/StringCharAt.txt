@@ -1,0 +1,45 @@
+/*
+	Challenge:
+	Declare a String variable named str1 and set the value of str1 to 
+	'Hello World'. Declare a char variable named str2 and set the value 
+	of str2 to 'r' from the value of str1, using the charAt() method. 
+	Print the value of str2. 
+*/
+
+public class StringChar 
+{
+	public static void main(String[] args) 
+	{	
+		//INJECT HERE
+		
+	/* EXPECTED INPUT: 
+	   String str1 = "Hello World";
+	   char str2 = str1.charAt(8); 
+	   System.out.println(str2); 
+	*/
+		int tests = 0;
+		int totalTests = 2;
+		
+		if(str1.equals("Hello World")) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable str1 is not the value of 'Hello World'.");
+		}
+		
+		if(str2 == str1.charAt(8)) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable str2 is not equivalent to the value of 'r' using .charAt().");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

@@ -1,0 +1,98 @@
+/*
+	INTRODUCTION: 
+	The plus sign is used within a print statement to separate 
+	variables. This is needed in order to have multiple variables 
+	be strung together to create a readable sentence. 
+	
+	EXAMPLE: without a space
+	String oil = “butter”; 
+	String milk = “cheese”; 
+	
+	System.out.println(oil +  milk); 
+	CONSOLE: buttercheese
+	
+	If a space is needed between two variables a (“ ”) has to be placed. 
+	
+	EXAMPLE: 
+	String oil = “butter”; 
+	String milk = “cheese”; 
+	
+	System.out.println(oil +  “ ” + milk); 
+	CONSOLE: butter cheese
+*/ 
+/*
+	QUESTION: 
+	Declare a byte called myByte and set its value to 38.
+	
+	Declare a short called myShort and set its value to 123.
+	
+	Declare a long called myLong and set its value to -456.
+	
+	Declare a float called myFloat and set its value to 123456789.
+	
+	Declare a double called myDou and set its value to 1.23.
+	
+	Print the value of the variable within a print statement by using the variable name. 
+	Use ( + " | " + ) to separate each variable name within the print statement. 
+*/
+
+public class DeclarePrintNumericalPrimitives 
+{
+	public static void main(String[] args) 
+	{
+		//INJECT HERE
+		
+	/* EXPECTED INPUT: 
+		byte myByte = 38; 
+		short myShort = 123; 
+		long myLong = -456; 
+		float myFloat = 123456789; 
+		double myDou = 1.23; 
+		
+		System.out.println( myByte + " | " + myShort + " | " + myLong + " | " + myFloat + " | " + myDou);
+	*/
+		
+		int tests = 0;
+		int totalTests = 5; 
+		
+		if(myByte == 38) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myByte is not set to the value of 38.");
+		}
+		
+		if(myShort == 123) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myShort is not set to the value of 123.");
+		}
+		
+		if(myLong == -456) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myLong is not set to the value of -456.");
+		}
+		
+		if(myFloat == 123456789) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myFloat is not set to the value of 123456789.");
+		}
+		
+		if(myDou == 1.23) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myDou is not set to the value of 1.23.");
+		}
+			
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

@@ -1,0 +1,58 @@
+public class Throws {
+	/*
+	The throws keyword is used in the signature of a method to indicate that
+	the method might throw an exception:
+	
+	static void myMethod() throws MyException {
+		...
+		throw new MyException();
+	}
+	
+	public static void main(String[] args) {
+		try {
+			myMethod();
+		} catch(MyException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	When we want to call the method anywhere in our code, we must either wrap
+	the method in a try, catch block or make the method that we are calling
+	the method from also throw the exception.
+	
+	For your challenge, change the method signature below so that it throws the
+	ListItemNotFoundException class you created, and then make it throw the exception.
+	 
+	public void searchList() {
+		
+	}
+	*/
+	public static void main(String[] args) {
+		Throws test = new Throws();
+		
+		try {
+			test.searchList(); // TESTING YOUR CODE
+		} catch (ListItemNotFoundException e) { // TESTING YOUR CODE
+			int score = 1;
+			
+			String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+			System.out.println(result);
+		}
+	}
+	
+	//INJECT HERE
+	/*
+	public void searchList() throws ListItemNotFoundException {
+		throw new ListItemNotFoundException();
+	}
+	*/
+}
+
+class ListItemNotFoundException extends Exception {
+	
+	public ListItemNotFoundException() { }
+	
+	public ListItemNotFoundException(String message) {
+		super(message);
+	}
+}

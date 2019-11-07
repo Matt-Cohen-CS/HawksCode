@@ -1,0 +1,88 @@
+/*
+Create a method that accepts four integers, checks if the first two integers are greater than or equal to one another and returns the largest integer of the two variables. 
+For the next two integers check if they are less than or equal to one another and  return the largest. 
+Finally, compare the two remaining integers and return the largest or if they are equal return one of them. 
+The method name must be logicAll
+*/
+public class LogicalAll{
+	//INJECT HERE
+	
+	public static void main(String[] args){
+		LogicalAll equal = new LogicalAll();
+		int test  = equal.logicalAll(12,15,20,25);		// expect 20
+		int test1 = equal.logicalAll(40,25,5,0);  		// expect 40
+		int test2 = equal.logicalAll(9,9,9,9); 	  		// expect 9
+		int test3 = equal.logicalAll(-26,0,0,-5); 		// expect 0
+		int test4 = equal.logicalAll(0,-25,-3,0); 		// expect 0
+		int test5 = equal.logicalAll(-15,-16,-23,-99);	// expect -15
+		int test6 = equal.logicalAll(-9,0,1,-5); 		// expect 0
+		int test7 = equal.logicalAll(4,-5,25,-34); 		// expect 4
+		int test8 = equal.logicalAll(-59,-55,-22,2);	// expect -22
+		int test9 = equal.logicalAll(-59,-59,-59,-59);	// expect -59
+		
+		int tests = 0;
+		int totalTests = 10;
+		/* ************************ TEST ************************ */
+		
+		if(test == 20){
+			tests++;
+		}else{
+			System.out.println("Test case1 of inputs 12,15,20,25 FAILED");
+		}
+		if(test1 == 40){
+			tests++;
+		}else{
+			System.out.println("Test case1 of inputs 40,25,5,0 FAILED");
+		}
+		if(test2 == 9){
+			tests++;
+		}else{
+			System.out.println("Test case1 of inputs 9,9,9,9 FAILED");
+		}
+		if(test3 == 0){
+			tests++;
+		}else{
+			System.out.println("Test case1 of inputs -26,0,0,-5 FAILED");
+		}
+		if(test4 == 0){
+			tests++;
+		}else{
+			System.out.println("Test case1 of inputs 0,-25,-3,0 FAILED");
+		}
+		if(test5 == -15){
+			tests++;
+		}else{
+			System.out.println("Test case1 of inputs -15,-16,-23,-99 FAILED");
+		}
+		if(test6 == 0){
+			tests++;
+		}else{
+			System.out.println("Test case1 of inputs -9,0,1,-5 FAILED");
+		}
+		if(test7 == 4){
+			tests++;
+		}else{
+			System.out.println("Test case1 of inputs 4,-5,25,-34 FAILED");
+		}
+		if(test8 == -22){
+			tests++;
+		}else{
+			System.out.println("Test case1 of inputs -59,-55,-22,2 FAILED");
+		}
+		if(test9 == -59){
+			tests++;
+		}else{
+			System.out.println("Test case1 of inputs -59,-59,-59,-59 FAILED");
+		}
+		
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+}

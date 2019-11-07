@@ -1,0 +1,65 @@
+public class EnhancedForLoop {
+
+	public static void main(String[] args) {
+		/*
+		There is another way of writing For Loops in Java called "Enhanced For Loops":
+		int[] testScores = {90, 89, 78, 94, 53};
+		
+		for(int score: testScores) {
+			System.out.println(score);
+		}
+		
+		OUTPUT:
+		90
+		89
+		78
+		94
+		53
+		
+		This is the same as writing:
+		
+		for(int score = 0; score < testScores.length; score++) {
+			System.out.println(testScores[score]);
+		}
+		
+		They are alternatively known as "For Each Loops" in other programming languages because they iterate through each item in a collection.
+		
+		For your challenge, convert the following For loop into an Enhanced For loop:
+		
+		for(int score = 0; score < testScores.length; score++) {
+			total += testScores[score];
+		}
+		
+		NOTE: we're not going to test if you're using an Enhanced For loop or not, but it is something you should know about
+		and you might like it better than using a For loop in some cases.
+		*/
+		EnhancedForLoop enhancedForLoop = new EnhancedForLoop();
+		
+		int[] testScores = {56, 78, 94, 60, 98, 72};
+		
+		int total = 0;
+		
+		//INJECT HERE
+		/*
+		for(int score: testScores) {
+			total += score;
+		}
+		*/
+		enhancedForLoop.test(total);
+	}
+	
+	public void test(int total) {
+		int score = 0;
+		String tests = "";
+		
+		if(total == 458)
+			score++;
+		else
+			tests += "Test 1 Failed: Did not get the expected total. ";
+		
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+
+}

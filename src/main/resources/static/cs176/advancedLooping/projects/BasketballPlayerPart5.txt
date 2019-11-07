@@ -1,0 +1,125 @@
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+
+public class BasketballPlayerPart5 {
+	
+	/*
+	Now we can move on to the Team class. For our program,
+	we want to be able to get the total points, rebounds, and
+	assists after a game by getting those statistics from our player objects.
+	This challenge might be harder than anything you've done so far,
+	which is why we've implemented the first method for you. It is your task
+	to create the other two methods needed for the Team class.
+	*/
+	public static void main(String[] args) {
+		BasketballPlayerPart5 basketballPlayerPart5 = new BasketballPlayerPart5();
+		
+		BasketballPlayer playerObj1 = new BasketballPlayer(40, 10, 15);
+		BasketballPlayer playerObj2 = new BasketballPlayer(25, 25, 20);
+		BasketballPlayer playerObj3 = new BasketballPlayer(15, 15, 40);
+		
+		BasketballPlayer[] players = {playerObj1, playerObj2, playerObj3};
+		Team testObj = new Team(players);
+		
+		int score = 0;
+		String tests = "";
+		if(basketballPlayerPart5.modifiersAreCorrect("public"))
+			score++;
+		else
+			tests += "Test 1 Failed: One or more methods were expected to be \"public\" but were not.";
+		if(testObj.totalPoints() == 80)
+			score++;
+		else
+			tests += "Test 2 Failed: Did not get the expected result from \"totalPoints()\".";
+		if(testObj.totalRebounds() == 50)
+			score++;
+		else
+			tests += "Test 2 Failed: Did not get the expected result from \"totalRebounds()\".";
+		if(testObj.totalAssists() == 75)
+			score++;
+		else
+			tests += "Test 3 Failed: Did not get the expected result from \"totalAssists()\".";
+		
+		String result = score == 4 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/4 Test Cases Passed" : "You have some bugs to fix! " + score + "/4 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+	
+	private boolean modifiersAreCorrect(String expectedModifier) {
+		Method[] reflectedClass = BasketballPlayer.class.getDeclaredMethods();
+		boolean isCorrectModifier = false;
+		
+	    for (Method field : reflectedClass) {
+	        int mod = field.getModifiers();
+	        if(Modifier.toString(mod).equals(expectedModifier))
+	        	isCorrectModifier = true;
+	        else {
+	        	isCorrectModifier = false;
+	        	break;
+	        }
+	    }
+	    
+	    return isCorrectModifier;
+	}
+	
+	static class BasketballPlayer {
+		private int points;
+		private int rebounds;
+		private int assists;
+		
+		public BasketballPlayer(int points, int rebounds, int assists) {
+			this.points = points;
+			this.rebounds = rebounds;
+			this.assists = assists;
+		}
+		
+		public double getPoints() {
+			return points;
+		}
+		
+		public double getRebounds() {
+			return rebounds;
+		}
+		
+		public double getAssists() {
+			return assists;
+		}
+	}
+	
+	//INJECT HERE
+	/*
+	static class Team {
+		private BasketballPlayer[] players;
+		
+		public Team(BasketballPlayer[] players) {
+			this.players = players;
+		}
+		
+		public double totalPoints() {
+			double teamPoints = 0;
+			for(int i = 0; i < players.length; i++) {
+				teamPoints += players[i].getPoints();
+			}
+			return teamPoints;
+		}
+		
+		public double totalRebounds() {
+			// ENTER CODE BELOW
+			double teamRebounds = 0;
+			for(int i = 0; i < players.length; i++) {
+				teamRebounds += players[i].getRebounds();
+			}
+			return teamRebounds;
+		}
+		
+		public double totalAssists() {
+			// ENTER CODE BELOW
+			double teamAssists = 0;
+			for(int i = 0; i < players.length; i++) {
+				teamAssists += players[i].getAssists();
+			}
+			return teamAssists;
+		}
+	}
+	*/
+}

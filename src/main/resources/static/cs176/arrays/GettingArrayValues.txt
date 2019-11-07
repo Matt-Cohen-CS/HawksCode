@@ -1,0 +1,42 @@
+public class GettingArrayValues {
+	
+	/*
+	In order to get a value from an array, you need to specify the index of the array:
+	
+	int[] ourArray = {1, 2, 3};
+	int first = ourArray[0]; // Gets the first value from the array
+	System.out.println(first); // 1
+	
+	Arrays use "zero-based indexing", which means that they start at 0.
+	
+	For your challenge, get the third value from the array of friends:
+	
+	String[] friends = {...};
+	
+	We have hidden the items from you for testing purposes. Store the third value in a variable called "third".
+	NOTE: Arrays always start at 0.
+	 */
+	
+	public static String[] friends = {"Joe", "Mary", "Bob", "Jess", "Kevin"};
+	
+	public static void main(String[] args) {
+		GettingArrayValues gettingArrayValues = new GettingArrayValues();
+		
+		//INJECT HERE
+//		String third = friends[2];
+		
+		gettingArrayValues.test(third); // TESTING YOUR CODE
+	}
+	
+	public void test(String third) {
+		int score = 0;
+		String tests = "";
+		if(third.equals(friends[2])) 
+			score++;
+		else
+			tests += "Test 1 Failed: Did not get the expected value for \"third\".";
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+}

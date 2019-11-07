@@ -1,0 +1,51 @@
+/*Create a for loop that is set to increment from 1 to 10. Declare an integer i=1. 
+ * Code a break statement at the appropriate interval in the loop to only print the numbers 1-7.
+	HINT: use an if statement nested in the for loop to test when i==8{break;}
+*/
+
+
+
+public class DeclareFBreak {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//INJECT HERE
+		
+		/* EXPECTED INPUT:
+		int i;
+		for( i=1; i<11; i++) {
+			if(i == 8) {
+				break;
+			}
+			
+			System.out.println(i);
+
+		*/
+		
+		
+		int tests = 0;
+		int totalTests = 1;
+		/* ************************ TEST ************************ */
+				
+			if(i == 8){ 
+				tests++;
+			}else {
+				System.out.println("\nThe variable counter is not set to the value of 10.");
+			}
+
+			
+			
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+	}
+
+}

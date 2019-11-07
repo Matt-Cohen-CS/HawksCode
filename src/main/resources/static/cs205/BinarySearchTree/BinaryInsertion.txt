@@ -1,0 +1,38 @@
+public class BinaryInsertion{
+	public static void main (String [] args){
+	//INJECT HERE
+	
+	int tests = 0;
+	int totalTests = 3;
+	String testForTheTree = myTree.getClass().toString();
+	
+	if(testForTheTree.contains("TreeSet")){
+		tests++;
+	}else{
+		System.out.println("Failed test case 1, myTree is not a TreeSet");
+	}
+	if(myTree.contains(5)){
+		tests++;
+	}else{
+		System.out.println("Failed test case 2, myTree does not have the element 5");
+	}
+	if(myTree.size()>=5){
+		tests++;
+	}else{
+		System.out.println("Failed test case 3, myTree does not have 5 elements in it.");
+	}
+			
+			/* ************************ TEST ************************ */
+	
+	
+			/* ************************ TEST CASES ************************ */ 
+			if(tests == totalTests)
+			{
+				System.out.println("\nCongratulations!!! You passed the challenge!!!");
+			}else
+			{
+				System.out.println("\nYou have some bugs to fix!");
+				System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+			}
+	}
+}

@@ -1,0 +1,53 @@
+
+/* Declare an integer called Score. Using a nested If statement, 
+ * check if Score is greater than 90. If Score is greater than 90, 
+ * output �Congrats! You got an A.� If Score is greater than 75 but less than 90,
+ * output �Congrats! You passed.� If Score is less than 75, output �Sorry! Try Again.�
+*/
+
+
+
+public class DeclareNestedIfElse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//INJECT HERE
+			
+			 /* EXPECTED INPUT:
+		int score = 92;
+			if (score > 90) 
+			{
+				System.out.print("Congrats! You got an A");
+			} else if (score > 75) {
+				System.out.print("Congrats! You passed.");
+			} else {
+				System.out.print("Sorry! Try again.");
+			}
+			  */
+			
+		int tests = 0;
+		int totalTests = 1;
+					
+				if(score == 92){
+					tests++;
+				}else {
+					System.out.println("\nThe variable Score is not set to the value of 92.");
+				}
+				
+							
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+
+
+	}
+
+}

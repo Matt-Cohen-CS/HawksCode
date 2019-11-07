@@ -1,0 +1,57 @@
+/* Write a method called DoLoop. In the parenthesis, set an int
+ *  called Sum. Declare two integers name a and b. Set a = 2,
+ *   set b = 5. Declare an integer named counter = 0. Write a 
+ *   Do loop that adds a+b while  counter is < 5. Write a Return 
+ *   statement for Sum.
+
+*/
+
+
+
+public class DeclareDReturn {
+
+//INJECT HERE
+
+/*EXPECTED OUTPUT:
+	public int doLoop(int sum){
+		
+		int counter = 0;
+		int a = 2;
+		int b = 5;
+		
+		do{
+			sum = a+b;
+		}
+		while(counter < 5);
+		counter++;
+		
+		return sum;
+	}
+	
+*/
+	
+	public static void main(String[] args) 
+	{	
+		int tests = 0;
+		int totalTests = 1;
+		/* ************************ TEST ************************ */
+		
+		DeclareDReturn myObj = new DeclareDReturn();
+		int test1 = myObj.doLoop(0); // 28
+		if(test1 == 28) {
+			tests++;
+		}
+		System.out.println(test1);
+
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+	}
+
+}

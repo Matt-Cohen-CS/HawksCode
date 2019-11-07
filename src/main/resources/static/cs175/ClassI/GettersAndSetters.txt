@@ -1,0 +1,63 @@
+
+public class GettersAndSetters
+{
+	//INJECT HERE
+	
+	
+	public boolean doesSetExcist() 
+	{	
+		GettersAndSetters method = new GettersAndSetters();
+		Class m = method.getClass();
+		try {
+			Method method1 = m.getDeclaredMethod("setMyInstance");
+		} catch (NoSuchMethodException | SecurityException e) {
+			System.out.println("The class does not have a method setMyInstance");
+			e.printStackTrace();
+		}
+	}
+	public boolean doesGetExcist() 
+	{	
+		GettersAndSetters method = new GettersAndSetters();
+		Class m = method.getClass();
+		try {
+			Method method1 = m.getDeclaredMethod("getMyInstance");
+		} catch (NoSuchMethodException | SecurityException e) {
+			System.out.println("The class does not have a method setMyInstance");
+			e.printStackTrace();
+		}
+	}
+	public static void main(String[] args)
+	{
+		GettersAndSetters myObj = new GettersAndSetters();
+		int tests = 0;
+		int totaltests = 3;
+		/* ************************ TESTS ************************ */ 
+
+		if(myObj.doesGetExcist()){
+		 	tests++;
+		}else{
+			System.out.println("The getter was not set with the correct name or other errors");
+		}
+		if(myObj.doesSetExcist()){
+		 	tests++;
+		}else{
+			System.out.println("The setter was not set with the correct name or other errors");
+		}
+		myObj.setMyInstance(10);
+		int check = myObj.getMyInstance();
+		if(check==10){
+		tests++;
+		}else{
+			System.out.println("Your getter/setter do not function correctly!");	
+		}
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totaltests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totaltests + " Test Cases Passed");
+		}
+	}
+}

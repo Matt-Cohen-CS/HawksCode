@@ -1,0 +1,48 @@
+/* Declare a String named str outside of a for loop. Assign the text �Hello World� to the string. 
+ * Using the for loop, make the text print out 5 times.
+
+*/
+
+
+
+public class DeclareFor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//INJECT HERE
+		/* EXPECTED INPUT:
+		
+		String str = "Hello World";
+		for (int i=0; i < 5; i++) {
+			System.out.println(str);
+		}
+		
+		*/
+		
+	
+		
+		 int tests = 0;
+		 int totalTests = 1;
+		 /* ************************ TEST ************************ */
+				
+			if(str == "Hello World"){ 
+				tests++;
+			}else {
+				System.out.println("\nThe variable str is not set to the string 'Hello World'");
+			}
+
+			
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+	}
+
+}

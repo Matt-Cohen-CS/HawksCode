@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+
+public class GettingItems {
+
+	public static void main(String[] args) {
+		/*
+		The next ArrayList operation we will be looking at is getting items using the ".get()" method:
+		
+		ArrayList<Integer> myNums = new ArrayList<Integer>();
+		myNums.add(0);
+		myNums.add(1);
+		...
+		System.out.println(myNums.get(2)); // 2
+		
+		For your challenge, we have already imported the ArrayList class and
+		have created an ArrayList called "mystery":
+		
+		ArrayList<String> mystery = new ArrayList<String>();
+		
+		The contents of the ArrayList are unknown to you, it is your task to
+		get the last item of this ArrayList and assign it to a String "lastItem".
+		NOTE: You must use the ".size()" method and remember that arrays use
+		"zero-based indexing", this includes ArrayLists as well. 
+		*/
+		GettingItems gettingItems = new GettingItems();
+		
+		ArrayList<String> mystery = new ArrayList<String>();
+		mystery.add("1F40FC9");
+		mystery.add("526776");
+		mystery.add("ACC28D");
+		mystery.add("48FB10");
+		mystery.add("87C568");
+		
+		//INJECT HERE
+//		String lastItem = mystery.get(mystery.size() - 1);
+		
+		gettingItems.test(mystery, lastItem);
+	}
+	
+	public void test(ArrayList<String> mystery, String lastItem) {
+		int score = 0;
+		String tests = "";
+		if(lastItem.equals(mystery.get(mystery.size()-1)))
+			score++;
+		else
+			tests += "Test 1 Failed: Did not get the expected value from \"lastItem\".";
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+
+}

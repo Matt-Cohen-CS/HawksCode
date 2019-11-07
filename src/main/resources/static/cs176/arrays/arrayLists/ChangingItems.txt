@@ -1,0 +1,97 @@
+import java.util.ArrayList;
+
+public class ChangingItems {
+
+	public static void main(String[] args) {
+		/*
+		Another operation we can do with ArrayLists is changing items at certain indexes using the ".set()" method:
+		
+		ArrayList<Integer> testScores = new ArrayList<Integer>();
+		testScores.add(89);
+		...
+		testScores.set(0, 100); // Changes the item at index 0 to 100
+		
+		With loops, we can efficiently change the contents of an ArrayList without having 
+		to write repetitive code:
+		
+		public void applyCurve(ArrayList<Integer> testScores) {
+			for(int i = 0; i < testScores.size(); i++) {
+				int currentTestScore = testScores.get(i);
+				testScores.set(i, currentTestScore + 10);
+			}
+		}
+		
+		What the code above is doing is adding a curve of 10 points to every score in the "testScores" ArrayList. 
+		Hopefully you can see how using data structures can be useful when writing larger applications. We
+		haven't covered looping through arrays at this point, which is why we made your challenge
+		simpler than the example above. You will get some practice looping through arrays in the 
+		upcoming "advanced looping" section.
+		
+		For your challenge, we have already imported the ArrayList class and created an ArrayList
+		called "bookPrices".
+		
+		ArrayList<Double> bookPrices = new ArrayList<Double>();
+		
+		There are some items in the ArrayList already, and it is your task to apply a 15% discount to books over $60. 
+		We have also created a method and a For loop to get you started:
+		
+		public void applyDiscount(ArrayList<Double> bookPrices) {
+			for(int i = 0; i < bookPrices.size(); i++) {
+				// ENTER CODE BELOW
+				
+				
+				
+				}
+				
+			}
+			
+			test(bookPrices);
+		}
+		*/
+		
+		ChangingItems changingItems = new ChangingItems();
+		
+		ArrayList<Double> bookPrices = new ArrayList<Double>();
+
+		bookPrices.add(12.50);
+		bookPrices.add(13.00);
+		bookPrices.add(50.00);
+		bookPrices.add(75.00);
+		bookPrices.add(125.00);
+		
+		changingItems.applyDiscount(bookPrices);
+	}
+	
+	//INJECT HERE
+	/*
+	public void applyDiscount(ArrayList<Double> bookPrices) {
+		for(int i = 0; i < bookPrices.size(); i++) {
+			// ENTER CODE BELOW
+			double currentBookPrice = bookPrices.get(i);
+			if(currentBookPrice > 60) {
+				bookPrices.set(i, currentBookPrice - (currentBookPrice * 0.15));
+			}
+			
+		}
+		
+		test(bookPrices);
+	}
+	*/
+	public void test(ArrayList<Double> bookPrices) {
+		int score = 0;
+		String tests = "";
+		if(bookPrices.get(3) == 63.75) 
+			score++;
+		else
+			tests += "Test 1 Failed: Did not get the expected value for one of the book prices.\n";
+			
+		if(bookPrices.get(4) == 106.25)
+			score++;
+		else
+			tests += "Test 2 Failed: Did not get the expected value for one of the book prices.\n";			
+		String result = score == 2 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/2 Test Cases Passed" : "You have some bugs to fix! " + score + "/2 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+	}
+
+}

@@ -1,0 +1,34 @@
+/*
+	In Big O Notation, what is the run time that runs at a factorial of its initial time to execute the operation?
+
+ 	** For this challenge you have 3 attempts.
+*/
+import java.util.Scanner;  // Import the Scanner class
+
+public class Question7
+{
+	public static void main(String [] args)
+	{			
+		int score = 0;
+		//INJECT HERE
+		if (answer.equals("BigO(n^2)")){
+		 score++;
+		}	
+		//comment
+			/* EXPECTED INPUT
+			 * O(n)
+			 */
+		/* ************************ TEST CASES ************************ */ 
+		if(score == 1)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\nYou have some bugs to fix!");
+			System.out.println(answer + " is not the correct answer!");
+		}
+	}
+}
+
+
+

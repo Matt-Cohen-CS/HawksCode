@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class Finally {
+
+	public static void main(String[] args) {
+		/*
+		In Java, we can have multiple catch statements:
+		
+		try {
+			...
+		} catch(ExceptionType1 exObj1) {
+			...
+		} catch(ExceptionType2 exObj2) {
+			...
+		}
+		
+		But in some cases, we want a way to execute code whether
+		an exception is handled or not. We can do that with a finally block:
+		
+		try {
+			throw new MyException();
+		} catch(MyException e) {
+			System.out.println("Caught exception.");
+		} finally {
+			System.out.println("Final block will always be executed.");
+		}
+		
+		OUTPUT:
+		Caught exception.
+		Final block will always be executed.
+		
+		The finally block is also useful for preventing resource leaks, it is a good
+		practice to put cleanup code in a finally block.
+		
+		For your challenge, add a finally block after the try block that closes
+		the scanner object. If you don't remember how to do that, the method is just 
+		".close()";
+		
+		*/
+		Scanner scanner = new Scanner("Test\nTest");
+		//INJECT HERE
+		/*
+		// DON'T CHANGE THIS CODE
+		try {
+			scanner.nextLine();
+		} 
+		// ENTER CODE BELOW
+		finally {
+			scanner.close();
+		}
+		*/
+		
+		int score = 0;
+		String tests = "";
+		try {
+			scanner.nextLine();
+			tests += "Test 1 Failed: Scanner was not closed.";
+		} catch(IllegalStateException e) {
+			score++;
+		} finally {
+			String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+			System.out.println(result);
+			System.out.println(tests);
+		}
+	}
+
+}

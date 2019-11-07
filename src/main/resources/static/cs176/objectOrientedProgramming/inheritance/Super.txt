@@ -1,0 +1,105 @@
+public class Super {
+
+	/*
+	The super keyword in Java is used to refer to parent class objects, and you may
+	have seen it in some previous challenges:
+	
+	class Musician {
+		private String name;
+		private String gender;
+		private int age;
+		
+		public Musician(String name, String gender, int age) {
+			this.name = name;
+			this.gender = gender;
+			this.age = age;
+		}
+	}
+	
+	class GuitarPlayer extends Musician {
+		private String bandName;
+		
+		public GuitarPlayer(String name, String gender, int age, String bandName) {
+			super(name, gender, age);
+			this.bandName = bandName;
+		}
+	}
+	
+	We use super here to access the parent class constructor. This example only shows
+	one of the uses of super. We can also use super with methods and variables:
+	
+	class Musician {
+		int count;
+		
+		public void display() {
+			count = 5;
+			System.out.println("Musician");
+		}
+	}
+
+	class GuitarPlayer extends Musician {
+		int count;
+		
+		public void display() {
+			System.out.println("GuitarPlayer");
+			count = 3;
+			super.display(); // Calls the display method from Musician
+			System.out.println(super.count); // Prints count from Musician
+		}
+	}
+	
+	class Main {
+		public static void main(String[] args) {
+			GuitarPlayer obj = new GuitarPlayer();
+			obj.display();
+		}
+	}
+	
+	OUTPUT:
+	GuitarPlayer
+	Musician
+	5
+	
+	For your challenge, create a constructor for BasketballPlayer that uses all the
+	instance variables from Athlete as well as BasketballPlayer's instance variables.
+	
+	*/
+	public static void main(String[] args) {		
+		Athlete testObj = new BasketballPlayer("", "", 0, "", 0); // TESTING YOUR CODE
+
+		int score = 1;
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+	}
+	
+	//INJECT HERE
+	/*
+	//DON'T CHANGE THIS CODE
+	static class Athlete {
+		private String name;
+		private String gender;
+		private int age;
+		
+		public Athlete(String name, String gender, int age) {
+			this.name = name;
+			this.gender = gender;
+			this.age = age;
+		}
+	}
+	
+	
+	static class BasketballPlayer extends Athlete {
+		private String league;
+		private int gamesPlayed;
+		
+		
+		public BasketballPlayer(String name, String gender, int age, String league, int gamesPlayed) {
+			super(name, gender, age);
+			this.league = league;
+			this.gamesPlayed = gamesPlayed;
+		}
+		
+	}
+	*/
+}
+

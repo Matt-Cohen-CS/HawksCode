@@ -1,0 +1,57 @@
+/* Create a for loop that is set to decrement from 10 to 1. Declare an integer myInt=10. 
+ * Code a continue statement at the appropriate interval in the loop to only print the numbers 1,2,3,4,6,7,8,9,10.
+*/
+
+
+public class DeclareFContinue {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//INJECT HERE
+		
+		/*
+		int myInt;
+		int newInt = 0;
+		for(myInt=10; myInt>0; myInt--) {
+			if(myInt == 5) {
+				
+				newInt= myInt;
+				continue;
+				
+			}
+			
+			System.out.println(myInt);
+		}
+		
+		System.out.print(myInt);
+	*/
+		int tests = 0;
+		int totalTests = 2;
+		/* ************************ TEST ************************ */
+				
+			if(newInt == 5){ 
+				tests++;
+			}else {
+				System.out.println("\nThe variable newInt is not set to the value 5");
+			}
+			
+			if(myInt == 0){ 
+				tests++;
+			}else {
+				System.out.println("\nThe variable myInt is not set to the value 10");
+			}
+
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+	}
+
+}

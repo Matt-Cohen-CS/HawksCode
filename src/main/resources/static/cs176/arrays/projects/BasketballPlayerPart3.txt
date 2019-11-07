@@ -1,0 +1,64 @@
+public class BasketballPlayerPart3 {
+	/*
+	For your challenge, we have created the Team and BasketballPlayer
+	class. The constructor for Team takes in a single parameter which
+	is an array of BasketballPlayer objects. It is your task to create
+	three BasketballPlayer objects and then create an array
+	containing the three objects. Then, create a Team object called
+	"myTeam" with the array of players as an argument.
+	
+	NOTE: You may leave the arguments for the BasketballPlayer object
+	constructors blank, or set with a name.
+	*/
+	public static void main(String[] args) {
+		//INJECT HERE
+		/*
+		BasketballPlayer p1 = new BasketballPlayer();
+		BasketballPlayer p2 = new BasketballPlayer();
+		BasketballPlayer p3 = new BasketballPlayer();
+
+		BasketballPlayer[] players = {p1, p2, p3};
+		
+		Team myTeam = new Team(players);
+		*/
+		
+		int score = 0;
+		String tests = "";
+		if(myTeam.getPlayers().length == 3) { // TESTING YOUR CODE
+			score++;
+		} else {
+			tests += "Test 1 Failed: Did not get the expected length for \"players\"\n";
+		}
+		
+		String result = score == 1 ? "\nCongratulations!!! You passed the challenge!!! " + score + "/1 Test Cases Passed" : "You have some bugs to fix! " + score + "/1 Test Cases Passed";
+		System.out.println(result);
+		System.out.println(tests);
+		
+	}
+	
+	static class BasketballPlayer {
+		private String name;
+		
+		public BasketballPlayer() {
+			this.name = "";
+		}
+		
+		public BasketballPlayer(String name) {
+			this.name = name;
+		}
+	}
+	
+	static class Team {
+		private BasketballPlayer[] players;
+		
+		
+		public Team(BasketballPlayer[] players) {
+			this.players = players;
+		}
+		
+		public BasketballPlayer[] getPlayers() {
+			return this.players;
+		}
+	}
+	
+}

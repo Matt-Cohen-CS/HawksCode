@@ -1,0 +1,67 @@
+
+/* Declare an integer named i, set it equal to 1. Create a Do-while loop. 
+ * In the Do section, simply print i. Then write a statement incrementing i by 1. 
+ * Write 3 If statements. First one, check if i == 3 {continue;}. Second one, 
+ * if i == 3 {print (�Congrats you did it right�)}. 
+ * If i == 4 {print (�Congrats you did it right�)}. 
+ * Then close with the While statement that checks the condition (i < 10).
+ *  See what prints out. You have two print statements, but only one will print. 
+ *  Why? What do you think the continue statement did for your if statements?
+
+HINT: Continue is a keyword in Java that is used to �continue� on to the next statement.
+ In a do-while loop, a continue will immediately check the while condition.
+
+*/
+
+
+
+public class DeclareSwitch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//INJECT HERE
+		
+		/*
+		int i=1;
+		
+		do {
+			System.out.println(i);
+			i++;
+			if(i==3) {
+				continue;
+			}
+			if (i==3) {
+					System.out.print("Congrats you did it right");
+			}
+			if(i==4) {
+				System.out.print("Congrats you did it right ");
+
+			}
+		}while(i < 10);
+		
+
+			 int tests = 0;
+			 int totalTests = 1;
+			
+	
+			if(i == 4) {
+				tests++;
+			}
+			
+			*/
+			
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+
+	}
+
+}

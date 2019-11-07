@@ -1,0 +1,50 @@
+/*
+class MyCode implements CodingIsFun {
+    public int stressLevel(int a){
+    return a*3;
+}
+    public String howManyLines(int a){
+    return ""+a;
+}
+}
+*/
+public class Interface 
+{
+	
+	public static void main(String [] args){	
+		MyCode a = new MyCode();
+		int tests = 0;
+		int totalTests = 2;
+		if(a.stressLevel(5) == 15){
+			tests++;
+		}else{
+			System.out.println("Failed test case 1");
+		}
+		if(a.howManyLines(1).contains(1)){
+			tests++;
+		}else{
+			System.out.println("Failed test case 2, you did not use the number given");
+		}
+		
+		
+		
+		
+		/* ************************ TEST ************************ */
+
+
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\nYou have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+		}
+}
+interface CodingIsFun {
+int stressLevel(int a);
+String howManyLines(int myLines);
+}
+//INJECT HERE

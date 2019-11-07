@@ -1,0 +1,94 @@
+/*	
+    INTRODUCTION: 
+	Other numerical data types include byte, short, long, 
+	float and double. The difference between these and 
+	int variables are the lengths of data that they can hold. 
+	
+	Byte: A byte is a primitive data type that is a 8-bit signed 
+	two's complement integer which holds integer between -127 to 127.
+	
+	Short: A short is a primitive data type that is a 16-bit signed 
+	two's complement integer. It has a minimum value of -32,768 and 
+	a maximum value of 32,767 (inclusive). 
+	
+	Long: A long is a primitive data type that 64-bit two's complement 
+	integer. The signed long has a minimum value of -263 and a maximum 
+	value of 263-1. 
+	
+	Float: Used to save memory in large arrays. 
+	
+	Double: Used for decimal variables.
+*/
+/*
+	QUESTION: 
+	Declare a byte called myByte and set its value to 38.
+	
+	Declare a short called myShort and set its value to 123.
+	
+	Declare a long called myLong and set its value to -456.
+	
+	Declare a float called myFloat and set its value to 123456789.
+	
+	Declare a double called myDou and set its value to 1.23.
+
+*/
+
+public class DeclareNumericalPrimitives 
+{
+	public static void main(String[] args) 
+	{
+		//INJECT HERE
+		
+	/* EXPECTED INPUT: 
+		byte myByte = 38; 
+		short myShort = 123; 
+		long myLong = -456; 
+		float myFloat = 123456789; 
+		double myDou = 1.23; 
+	*/
+		
+		int tests = 0;
+		int totalTests = 5; 
+		
+		if(myByte == 38) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myByte is not set to the value of 38.");
+		}
+		
+		if(myShort == 123) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myShort is not set to the value of 123.");
+		}
+		
+		if(myLong == -456) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myLong is not set to the value of -456.");
+		}
+		
+		if(myFloat == 123456789) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myFloat is not set to the value of 123456789.");
+		}
+		
+		if(myDou == 1.23) {
+			tests++;
+		}else {
+			System.out.println("\nThe variable myDou is not set to the value of 1.23.");
+		}
+				
+		/* ************************ TEST CASES ************************ */ 
+		if(tests == totalTests)
+		{
+			System.out.println("\nCongratulations!!! You passed the challenge!!!");
+		}else
+		{
+			System.out.println("\n< You have some bugs to fix!");
+			System.out.println(tests +  " / " + totalTests + " Test Cases Passed");
+		}
+
+	}
+}
